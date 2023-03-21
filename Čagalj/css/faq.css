@@ -19,6 +19,10 @@
   text-align: center;
   grid-column: 3/span 8;
 }
+.naslov .plarge {
+  color: #626262;
+  margin-top: 32px;
+}
 
 .underline {
   border-bottom: 16px solid #FC6536;
@@ -27,216 +31,141 @@
   text-decoration: none;
 }
 
-.text {
+.underline-mobile {
+  text-decoration: none;
+}
+
+.acordation {
   z-index: 2;
   margin-top: 256px;
 }
-.text div {
-  row-gap: 72px;
+.acordation div {
+  row-gap: 104px;
 }
-.text div div {
+.acordation div div {
   grid-column: 3/span 8;
 }
-.text div div .pspread {
-  color: #626262;
-}
-.text div div h3, .text div div h6 {
-  margin-bottom: 16px;
-}
-
-.prituzba {
-  margin-top: 96px;
-}
-
-.prituzba-box {
-  background-color: #F8F8F8;
-  grid-column: 3/span 8;
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  row-gap: 24px;
-}
-.prituzba-box div {
-  display: flex;
-}
-.prituzba-box .psmall {
-  color: #626262;
-  margin-left: 8px;
-}
-
-.prituzba-box-input-1 {
-  grid-gap: 24px;
-}
-.prituzba-box-input-1 div {
-  width: calc(50% - 12px);
-  flex-direction: column;
-  padding: 8px;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-}
-.prituzba-box-input-1 input {
-  height: 24px;
-  width: 100%;
-  z-index: 1;
-  padding: 0px;
-  padding-left: 8px;
-  border: 0px;
-}
-
-textarea:focus, input:focus {
-  outline: none;
-}
-
-input, textarea {
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #0F141E;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #0F141E;
-  opacity: 0.2;
-}
-
-input::placeholder, textarea::placeholder {
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #0F141E;
-  opacity: 0.2;
-}
-
-label {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  z-index: 2;
-  padding-left: 8px;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 16px;
-  color: #0F141E;
-  opacity: 0.8;
-}
-
-.prituzba-box-input-2 {
-  padding-left: 16px;
-  padding-top: 16px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-}
-.prituzba-box-input-2 label {
-  padding: 0;
-}
-
-textarea {
-  width: 100%;
-  height: 120px;
-  resize: vertical;
-  border: 0px;
-  padding: 0;
-}
-
-.checkbox {
-  margin: 0;
-  width: 24px;
-  height: 24px;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.checkbox img {
-  margin: auto;
-  width: 16px;
-  height: 16px;
-  display: none;
-  cursor: pointer;
-}
-
-.active img {
-  display: block;
-}
-
-.button {
-  cursor: pointer;
+.acordation .plarge {
   margin-top: 8px;
+  color: #626262;
+}
+
+.pravne_informacije .plarge {
+  margin-top: 16px !important;
+}
+
+.acordation-grid {
+  margin-top: 56px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  grid-gap: 16px !important;
+}
+
+.faq {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: #F8F8F8;
+  border-radius: 16px;
+}
+
+.faq-heading {
+  display: flex;
   align-items: center;
-  padding: 20px 40px;
-  background: #FC6536;
-  font-family: "Manrope";
-  border-radius: 8px;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: #FFFFFF;
-  width: -moz-fit-content;
-  width: fit-content;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq-heading .pbold {
+  padding-right: 10px;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  color: #626262;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  display: block;
+  width: 16px;
+  border-radius: 50px;
+  height: 2px;
+  background: #0F141E;
+  transition: 0.3s ease-in-out;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  margin-top: -2px;
+  margin-left: 10px;
+  transform: rotate(-45deg);
+}
+
+.active .arrow::after {
+  transform: rotate(45deg);
+}
+.active .arrow::before {
+  transform: rotate(-45deg);
+}
+.active .faq-content {
+  max-height: 500px;
+  margin-top: 16px;
 }
 
 @media only screen and (max-width: 950px) {
   .naslov div div {
     grid-column: 2/span 10;
   }
-  .text div div {
+  .acordation div div {
     grid-column: 2/span 10;
-  }
-  .prituzba-box {
-    grid-column: 2/span 10;
-  }
-  .prituzba-box-input-1 {
-    flex-direction: column;
-  }
-  .prituzba-box-input-1 div {
-    width: calc(100% - 16px);
   }
 }
 @media only screen and (max-width: 650px) {
+  .full-img {
+    height: 800px;
+  }
   .naslov {
     margin-top: 232px;
   }
   .naslov div div {
     grid-column: span 12;
   }
+  .naslov .plarge {
+    display: none;
+  }
   .underline {
-    line-height: 0.94;
+    border-bottom: 0px solid #FC6536;
+    display: inline-block;
+    line-height: 0.6;
+    text-decoration: none;
+  }
+  .underline-mobile {
+    line-height: 1.7;
+    margin-top: -20px;
     border-bottom: 8px solid #FC6536;
+    display: inline-block;
+    text-decoration: none;
   }
-  .text {
-    margin-top: 176px;
+  .acordation {
+    margin-top: 170px;
   }
-  .text div {
-    row-gap: 32px;
+  .acordation div {
+    row-gap: 80px;
   }
-  .text div div {
+  .acordation div div {
     grid-column: span 12;
   }
-  .prituzba {
-    margin-top: 64px;
+  .acordation .plarge {
+    margin-top: 0;
   }
-  .prituzba-box {
-    grid-column: span 12;
-    padding: 24px;
-  }
-  footer {
-    margin-top: 104px;
+  .acordation-grid {
+    margin-top: 32px;
   }
 }/*# sourceMappingURL=faq.css.map */

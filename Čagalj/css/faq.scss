@@ -28,6 +28,10 @@ object-fit: cover;
             grid-column: 3/span 8;
         }
     }
+    .plarge{
+        color:$MiddleGrey;
+        margin-top: 32px;
+    }
     
 }
 .underline{
@@ -36,153 +40,98 @@ object-fit: cover;
   line-height: 0.6;
   text-decoration: none;
 }
-.text{
+.underline-mobile{
+    text-decoration: none;
+}
+.acordation{
     z-index: 2;
     margin-top: 256px;
     div{
-        row-gap: 72px;
+        row-gap: 104px;
         div{
             grid-column: 3/span 8;
-            .pspread{
-                color:$MiddleGrey;
-            }
-            h3,h6{
-                margin-bottom: 16px;
-            }
-
         }
     }
+    .plarge{
+        margin-top: 8px;
+        color: $MiddleGrey;
+    }
 }
-.prituzba{
-    margin-top: 96px;
+.pravne_informacije{
+    .plarge{
+        margin-top: 16px !important;
+    }
 }
-.prituzba-box{
+.acordation-grid{
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    grid-gap:16px !important;
+
+    
+}
+
+.faq{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
     background-color: $LightGrey;
-            grid-column: 3/span 8;
-            padding: 48px;
-            display:flex;
-            flex-direction: column;
-            border-radius: 16px;
-            row-gap: 24px;
-            div{display: flex;}
-            .psmall{
-                color:$MiddleGrey;
-                margin-left: 8px;
-            }
-            
-}
-.prituzba-box-input-1{
-    grid-gap: 24px;
-    div{
-    width: calc(50% - 12px);
-    flex-direction: column;
-    padding: 8px;
-    background-color: $White;
-    border-radius: 4px;
-    }
-    
-    input{
-        height: 24px;
-        width: 100%;
-        z-index: 1;
-        padding: 0px;
-        padding-left: 8px; 
-        border: 0px;    
-    }
-}
-textarea:focus, input:focus{
-    outline: none;
-}
-input,textarea{
-    font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-color:$DarkBlue
-}
-input::placeholder,textarea::placeholder {
-    font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-color: $DarkBlue;
-opacity: 0.2;
-}
-label{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    z-index: 2;
-    padding-left: 8px;
-    font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 10px;
-line-height: 16px;
-color: $DarkBlue;
-opacity: 0.8;
-}
-.prituzba-box-input-2{
-    padding-left: 16px;
-    padding-top: 16px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    background-color: $White;
-    label{
-        padding: 0;
-    }
-}
-textarea{
-    width: 100%;
-    height: 120px;
-    resize: vertical;
-    border: 0px;
-    padding: 0;
+    border-radius: 16px;
+   
     
 }
-.checkbox{
-    margin:0;
-    width: 24px;
-height: 24px;
-background-color: $White;
-border-radius: 4px;
-cursor: pointer;
-img{
-    margin:auto;
-    width: 16px;
-    height: 16px;
-    display: none;
+.faq-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
-}
-}
-.active{
-    img{
-        display: block;
+    .pbold{
+        padding-right: 10px;
     }
 }
+.faq-content{
+    max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  color:$MiddleGrey;
+}
 
+.arrow::before,
+.arrow::after {
+    
+  content: '';
+  display: block;
+  width: 16px;
+  border-radius: 50px;
+  height: 2px;
+  background: $DarkBlue;
+  transition: 0.3s ease-in-out;
+}
 
+.arrow::before {
+  transform: rotate(45deg);
+  
+  
+}
 
-.button{
-    cursor: pointer;
-    margin-top: 8px;
-    display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px 40px;
-background: $Orange;
-font-family: 'Manrope';
-border-radius: 8px;
-font-style: normal;
-font-weight: 800;
-font-size: 16px;
-line-height: 16px;
-letter-spacing: 0.01em;
-color: $White;
-width: fit-content;
+.arrow::after {
+    margin-top: -2px;
+    margin-left: 10px;
+  transform: rotate(-45deg);
+}
+
+.active {
+    .arrow::after{
+        transform: rotate(45deg);
+    }
+    .arrow::before{
+        transform: rotate(-45deg);
+    }
+    .faq-content {
+    max-height: 500px;
+    margin-top: 16px;
+  }
 }
 @media only screen and (max-width: 950px) {
     
@@ -193,26 +142,21 @@ width: fit-content;
             }
         }
     }
-    .text{
+    .acordation{
         div{
             div{
                 grid-column: 2/span 10;
             }
         }
     }
-    .prituzba-box{
-        grid-column: 2/span 10;
-    }
-    .prituzba-box-input-1{
-        flex-direction: column;
-        div{
-            width: calc(100% - 16px);
-        }
-    }
+   
 
 
 }
 @media only screen and (max-width: 650px) {
+    .full-img{
+        height: 800px;
+    }
     .naslov{
         margin-top: 232px;
         div{
@@ -220,28 +164,38 @@ width: fit-content;
                 grid-column: span 12;
             }
         }
+        .plarge{
+            display: none;
+        }
     }
     .underline{
-        line-height: 0.94;
-        border-bottom: 8px solid $Orange;
+        border-bottom: 0px solid $Orange;
+  display: inline-block;
+  line-height: 0.6;
+  text-decoration: none;
     }
-    .text{
-        margin-top: 176px;
+    .underline-mobile{
+        line-height: 1.7;
+        margin-top: -20px;
+        border-bottom: 8px solid $Orange;
+  display: inline-block;
+  text-decoration: none;
+    }
+    .acordation{
+        margin-top: 170px;
         div{
-            row-gap: 32px;
+            row-gap: 80px;
             div{
                 grid-column: span 12;
             }
         }
+        .plarge{
+            margin-top: 0;
+        }
     }
-    .prituzba{
-        margin-top: 64px;
+    .acordation-grid{
+        margin-top: 32px;
     }
-    .prituzba-box{
-        grid-column: span 12;
-        padding: 24px;
-    }
-    footer{
-        margin-top: 104px;
-    }
+    
+    
 }
