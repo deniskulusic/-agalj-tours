@@ -7,7 +7,7 @@ $MiddleGrey:#626262;
 $MediumGrey:#F1F1F1;
 $LightGrey:#F8F8F8;
 .full-img {
-    z-index: 1;
+    z-index: -2;
     position: absolute;
     width: 100%;
     height: 976px;
@@ -35,14 +35,25 @@ object-fit: cover;
     
 }
 .underline{
-    border-bottom: 16px solid $Orange;
-  display: inline-block;
-  line-height: 0.6;
-  text-decoration: none;
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+}
+.underline::before{
+    content: "";
+  position: absolute;
+  height: 16px;
+  background: $Orange;
+  z-index: -1!important;
+  width: 100%;
+  top:54px;
 }
 .underline-mobile{
     text-decoration: none;
+    position: relative;
+    
 }
+
 .acordation{
     z-index: 2;
     margin-top: 256px;
@@ -168,18 +179,21 @@ object-fit: cover;
             display: none;
         }
     }
-    .underline{
-        border-bottom: 0px solid $Orange;
-  display: inline-block;
-  line-height: 0.6;
-  text-decoration: none;
+    .underline::before{
+        display: none;
     }
     .underline-mobile{
-        line-height: 1.7;
-        margin-top: -20px;
-        border-bottom: 8px solid $Orange;
-  display: inline-block;
-  text-decoration: none;
+        white-space: nowrap;
+    }
+    .underline-mobile::before{
+        content: "";
+      position: absolute;
+
+      height: 8px;
+      background: $Orange;
+      z-index: -1!important;
+      width: 100%;
+      top:40px;
     }
     .acordation{
         margin-top: 170px;
