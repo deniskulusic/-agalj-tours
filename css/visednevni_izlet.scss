@@ -1,0 +1,96 @@
+$Orange:#FC6536;
+$DarkBlue:#0F141E;
+$White:#FFFFFF;
+$LightOrange:#FFEBD9;
+$MidnightGrey:#6F7785;
+$MiddleGrey:#626262;
+$MediumGrey:#F1F1F1;
+$LightGrey:#F8F8F8;
+.galery{
+    margin-top: 168px;
+    h2{
+        grid-column: span 12;
+        margin-bottom: 40px;
+    }
+    div{
+        div{
+            grid-column: span 12;
+        }
+        
+    }
+    img{
+        border-radius: 16px;
+    }
+    .button{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 3;
+        padding-top: 20px;
+        padding: 16px 32px;
+        background-color: $White;
+        color: $DarkBlue;
+    }
+}
+.galery-big{
+    position: relative;
+    width: 76.09%;
+    div{
+        padding-top: 50.92%;
+    }
+    
+}
+.flex{
+    display: flex;
+}
+.galery-small{
+    margin-left: 16px;
+    width: 22.65%;
+    row-gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.galery-small-img{
+    width: 100%;
+    position: relative;
+div{
+    padding-top: 82.75%;
+}
+}
+
+.full-page{
+    grid-column: span 7;
+    
+}
+.full-page-grid{
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+}
+.upit{
+    grid-column: 9/13;
+}
+.icons{
+    margin-top: 48px;
+    div{
+        grid-column: span 2;
+        padding-bottom: 24px;
+        display: flex;
+        align-items: center;
+        div{
+            flex-direction: column;
+            padding-bottom: 0;
+            align-items: start;
+        }
+    }
+    .psmall{
+        color:#707070;
+    }
+    img{
+        margin-right: 16px;
+        height: 24px;
+    }
+    margin-bottom: 16px;
+    border-bottom: $MediumGrey 1px solid;
+}
