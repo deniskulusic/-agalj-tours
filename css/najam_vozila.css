@@ -137,6 +137,10 @@
   border-radius: 16px;
 }
 
+.pouzdanost-mobile {
+  display: none;
+}
+
 .pouzdanost-large {
   grid-column: span 8;
   position: relative;
@@ -417,6 +421,12 @@
   .front-car-img {
     grid-column: span 12;
     margin-left: 0;
+  }
+  .pouzdanost-mobile {
+    display: block;
+  }
+  .pouzdanost-desktop {
+    display: none;
   }
 }
 @media only screen and (max-width: 450px) {
