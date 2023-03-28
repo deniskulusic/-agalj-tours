@@ -230,19 +230,13 @@ textarea {
 }
 
 .checkbox {
-  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox] {
   width: 24px;
   height: 24px;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.checkbox img {
-  margin: auto;
-  width: 16px;
-  height: 16px;
-  display: none;
-  cursor: pointer;
 }
 
 .active img {

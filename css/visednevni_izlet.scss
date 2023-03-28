@@ -465,32 +465,20 @@ opacity: 0.8;
         margin-left: 16px;
     }
 }
+
 .checkbox{
-    margin-left: 32px;
-    margin-right: 32px;
     display: flex;
     align-items: center;
-    margin-top: 24px;
     .psmall{
         margin-left: 8px;
     }
+    margin-top: 24px;
 }
-.checkbox-holder{
-display: flex;
-align-items: center;
+input[type='checkbox'] {
     width: 24px;
-height: 24px;
-background-color: $White;
-border-radius: 4px;
-cursor: pointer;
-img{
-    margin:auto;
-    width: 16px;
-    height: 16px;
-    display: none;
-    cursor: pointer;
-}
-}
+    height: 24px;
+    margin-left: 32px;
+ }
 .active{
     img{
         display: block;
@@ -547,9 +535,6 @@ img{
         input{
             background-color: $LightGrey;
         }
-    }
-    .checkbox-holder{
-        border: 1px solid $MediumGrey;
     }
     .mobile-upit{
         

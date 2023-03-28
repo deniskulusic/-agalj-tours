@@ -485,8 +485,6 @@ label {
 }
 
 .checkbox {
-  margin-left: 32px;
-  margin-right: 32px;
   display: flex;
   align-items: center;
   margin-top: 24px;
@@ -495,21 +493,10 @@ label {
   margin-left: 8px;
 }
 
-.checkbox-holder {
-  display: flex;
-  align-items: center;
+input[type=checkbox] {
   width: 24px;
   height: 24px;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.checkbox-holder img {
-  margin: auto;
-  width: 16px;
-  height: 16px;
-  display: none;
-  cursor: pointer;
+  margin-left: 32px;
 }
 
 .active img {
@@ -566,9 +553,6 @@ label {
   }
   .input input {
     background-color: #F8F8F8;
-  }
-  .checkbox-holder {
-    border: 1px solid #F1F1F1;
   }
   .mobile-upit {
     align-items: center;
