@@ -337,9 +337,9 @@
 .upit {
   grid-column: 9/13;
   margin-top: 60px;
+  border-radius: 16px;
   height: -moz-fit-content;
   height: fit-content;
-  border-radius: 16px;
   top: 104px;
   width: 100%;
   background-color: #F8F8F8;
@@ -389,6 +389,24 @@
   align-items: center;
   justify-content: space-between;
   border-left: #F8F8F8 solid 1px;
+}
+.two-input-box .arrow::before,
+.two-input-box .arrow::after {
+  content: "";
+  display: block;
+  width: 9px;
+  border-radius: 50px;
+  height: 1.5px;
+  background: #626262;
+  transition: 0.3s ease-in-out;
+}
+.two-input-box .arrow::before {
+  transform: rotate(45deg);
+}
+.two-input-box .arrow::after {
+  margin-top: -2px;
+  margin-left: 6px;
+  transform: rotate(-45deg);
 }
 .two-input-box div {
   display: flex;
@@ -448,27 +466,6 @@ label {
   opacity: 0.8;
 }
 
-.arrow::before,
-.arrow::after {
-  content: "";
-  display: block;
-  width: 9px;
-  border-radius: 50px;
-  height: 1.5px;
-  background: #626262;
-  transition: 0.3s ease-in-out;
-}
-
-.arrow::before {
-  transform: rotate(45deg);
-}
-
-.arrow::after {
-  margin-top: -2px;
-  margin-left: 6px;
-  transform: rotate(-45deg);
-}
-
 .input {
   display: flex;
   flex-direction: column;
@@ -519,6 +516,10 @@ label {
   display: block;
 }
 
+.upit-up {
+  display: none;
+}
+
 @media only screen and (max-width: 1250px) {
   .icons div {
     grid-column: span 3;
@@ -539,10 +540,82 @@ label {
     order: 2;
   }
   .upit {
-    grid-column: 2/span 10;
-    order: 1;
-    position: relative;
-    top: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #F1F1F1;
+    right: 0;
+    top: auto;
+    max-height: 88px;
+    overflow: hidden;
+    z-index: 9;
+    transition: 0.5s;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .two-input {
+    background-color: #F8F8F8;
+  }
+  .two-input input {
+    background-color: #F8F8F8;
+  }
+  .input {
+    background-color: #F8F8F8;
+  }
+  .input input {
+    background-color: #F8F8F8;
+  }
+  .checkbox-holder {
+    border: 1px solid #F1F1F1;
+  }
+  .mobile-upit {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-upit .price {
+    margin-top: 16px;
+    padding: 4px 12px;
+    margin-left: 24px;
+  }
+  .upit-up {
+    cursor: pointer;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .upit-up .pbold {
+    margin-right: 12px;
+  }
+  .arrow-upit::before,
+  .arrow-upit::after {
+    content: "";
+    display: block;
+    width: 12px;
+    border-radius: 50px;
+    height: 2px;
+    background: #0F141E;
+    transition: 0.3s ease-in-out;
+  }
+  .arrow-upit::before {
+    transform: rotate(-45deg);
+  }
+  .arrow-upit::after {
+    margin-top: -2px;
+    margin-left: 8px;
+    transform: rotate(45deg);
+  }
+  .up-upit {
+    max-height: 2000px;
+    transition: 1s ease-in;
+  }
+  .up-upit .arrow-upit::after {
+    transform: rotate(-45deg);
+  }
+  .up-upit .arrow-upit::before {
+    transform: rotate(45deg);
   }
 }
 @media only screen and (max-width: 650px) {
@@ -562,9 +635,6 @@ label {
     display: flex;
   }
   .full-page {
-    grid-column: span 10;
-  }
-  .upit {
     grid-column: span 10;
   }
   .galery-big div {

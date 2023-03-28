@@ -1,9 +1,3 @@
-const button = document.querySelector(".checkbox");
-const buttonPressed = (e) => {
-  e.target.classList.toggle("active");
-}
-button.addEventListener("click", buttonPressed);
-
 const success=document.querySelector(".success");
 const upitbutton=document.getElementsByClassName("upit-button");
 
@@ -14,10 +8,16 @@ for(j=0;j<upitbutton.length;j++){
     });
     
 }
+const button = document.querySelector(".checkbox");
+const buttonPressed = (e) => {
+  e.target.classList.toggle("active");
+}
+button.addEventListener("click", buttonPressed);
 
 const button2 = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
 const buttonPressed2 = (e) => {
   navbar.classList.toggle("menu-active");
+  console.log("yo");
 }
 button2.addEventListener("click", buttonPressed2);

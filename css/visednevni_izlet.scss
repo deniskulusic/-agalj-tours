@@ -335,8 +335,8 @@ grid-column: span 7;
 .upit{
     grid-column: 9/13;
     margin-top: 60px;
-    height: fit-content;
     border-radius: 16px;
+    height: fit-content;
     top:104px;
     width: 100%;
     background-color: $LightGrey;
@@ -384,6 +384,26 @@ grid-column: span 7;
     align-items: center;
     justify-content: space-between;
     border-left: $LightGrey solid 1px;
+    .arrow::before,
+.arrow::after {
+  content: "";
+  display: block;
+  width: 9px;
+  border-radius: 50px;
+  height: 1.5px;
+  background: #626262;
+  transition: 0.3s ease-in-out;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  margin-top: -2px;
+  margin-left: 6px;
+  transform: rotate(-45deg);
+}
     div{
         
         display: flex;
@@ -427,28 +447,7 @@ line-height: 16px;
 color: $DarkBlue;
 opacity: 0.8;
 }
-.arrow::before,
-.arrow::after {
-    
-  content: '';
-  display: block;
-  width: 9px;
-  border-radius: 50px;
-  height: 1.5px;
-  background: $MiddleGrey;
-  transition: 0.3s ease-in-out;
-}
 
-.arrow::before {
-  transform: rotate(45deg);
-  
-  
-}
-.arrow::after {
-    margin-top: -2px;
-    margin-left: 6px;
-  transform: rotate(-45deg);
-}
 .input{
     display: flex;
     flex-direction: column;
@@ -497,6 +496,9 @@ img{
         display: block;
     }
 }
+.upit-up{
+    display: none;
+}
 @media only screen and (max-width: 1250px) {
 .icons{
     div{
@@ -519,12 +521,86 @@ img{
         order: 2;
     }
     .upit{
-        grid-column: 2/span 10;
-        order: 1;
-        position: relative;
-        top:0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-radius: 0px;
+        background-color: $White;
+        border-top:1px solid $MediumGrey;
+        right: 0;
+        top: auto;
+        max-height: 88px;
+        overflow: hidden;
+        z-index: 9;
+        transition: 0.5s;
+        backdrop-filter: blur(10px);
+
+    }
+    .two-input{
+        background-color: $LightGrey;
+        input{
+            background-color: $LightGrey;
+        }
+    }
+    .input{
+        background-color: $LightGrey;
+        input{
+            background-color: $LightGrey;
+        }
+    }
+    .checkbox-holder{
+        border: 1px solid $MediumGrey;
+    }
+    .mobile-upit{
+        
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        .price{
+            margin-top: 16px;
+            padding: 4px 12px;
+            margin-left:24px ;
+        }
     }
     
+    .upit-up{
+        cursor: pointer;
+        margin-right: 24px;
+        display: flex;
+        align-items: center;
+        .pbold{
+            margin-right: 12px;
+        }
+    }
+
+    .arrow-upit::before,
+.arrow-upit::after {
+  content: '';
+  display: block;
+  width: 12px;
+  border-radius: 50px;
+  height: 2px;
+  background: $DarkBlue;
+  transition: 0.3s ease-in-out;
+}
+.arrow-upit::before {
+    transform: rotate(-45deg);
+}
+.arrow-upit::after {
+    margin-top: -2px;
+    margin-left: 8px;
+  transform: rotate(45deg);
+}
+.up-upit {
+    .arrow-upit::after{
+        transform: rotate(-45deg);
+    }
+    .arrow-upit::before{
+        transform: rotate(45deg);
+    }
+    max-height: 2000px;
+    transition: 1s ease-in;
+}
 }
 @media only screen and (max-width: 650px) {
     .galery-small{
@@ -544,10 +620,6 @@ img{
     }
     .full-page{
         grid-column: span 10;
-    }
-    .upit{
-        grid-column: span 10;
-        
     }
     .galery-big{
         div{
