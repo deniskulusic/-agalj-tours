@@ -8,11 +8,6 @@ for(i=0;i<acordation.length;i++){
         this.classList.toggle('active');
     })
 }
-const button = document.querySelector(".checkbox");
-const buttonPressed = (e) => {
-  e.target.classList.toggle("active");
-}
-button.addEventListener("click", buttonPressed);
 
 const upit=document.querySelector(".upit");
 const upitup=document.querySelector(".upit-up");
@@ -38,3 +33,11 @@ const buttonPressed2 = (e) => {
   console.log("yo");
 }
 button2.addEventListener("click", buttonPressed2);
+
+function reportWindowSize() {
+    if(window.innerWidth>950){
+        navbar.classList.remove("menu-active");
+    }
+  }
+  
+  window.onresize = reportWindowSize;

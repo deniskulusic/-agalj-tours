@@ -190,9 +190,20 @@ align-items: center;
 display: flex;
 column-gap: 64px;
 align-items: center;
+.pbold:hover{
+    position: relative;
+    cursor: pointer;
+    color: $Orange;
+    margin-top: 1px;
+    border-bottom: $Orange 2px solid;
+
+}
+
+
 }
 .menu,.menu-placeholder{
     display: none;
+    cursor: pointer;
 }
 
 .logo{
@@ -246,6 +257,9 @@ img{
 }
 
 .menu-text{
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+            transition-delay: 0s;
     font-family: 'Manrope';
 font-style: normal;
 font-weight: 800;
@@ -255,6 +269,8 @@ letter-spacing: -0.03em;
 color:$DarkBlue;
 margin-top: 24px;
 z-index: 2;
+opacity: 0;
+margin-top: 60px;
 }
 .underline-menu{
     text-decoration: none;
@@ -262,12 +278,14 @@ z-index: 2;
     white-space: nowrap;
 }
 .underline-menu::before{
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
     z-index: -1;
     content: "";
   position: absolute;
   height: 10px;
   background: $Orange;
-  width: 100%;
+  width: 0;
   top:30px;
 }
 footer{
@@ -435,6 +453,21 @@ opacity: 0.2;
 .active-upit{
     display: flex;
 }
+.lngbox{
+    overflow: hidden;
+    height: 0px;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: #0F141E;
+}
+.lng-active{
+    .lngbox{
+        height: 50px;
+    }
+
+}
 @media only screen and (max-width: 950px) {
 
 
@@ -444,7 +477,7 @@ opacity: 0.2;
     .menu{
         display: flex;
         width: 32px;
-        height: 14px;
+        height: 20px;
         transition: all 0.5s ease-in-out;
         align-items: center;
         position: relative;
@@ -466,11 +499,11 @@ opacity: 0.2;
       }
       
       .menu-line::before {
-        transform: translateY(-3.91px);
+        transform: translateY(-5px);
       }
       
       .menu-line::after {
-        transform: translateY(3.91px);
+        transform: translateY(5px);
       }
     .menu-placeholder{
         display: flex;
@@ -478,8 +511,20 @@ opacity: 0.2;
         height: 14px;
     }
     .menu-active {
+        .menu-text{
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.2s;
+            margin-top: 24px;
+            opacity: 1;
+        }
+        .underline-menu::before{
+          width: 100%;
+          
+        }
         .menu-line {
         background-color: transparent !important;
+        
       }
       .menu-line::before {
         transform: rotate(25deg) ;
@@ -489,8 +534,10 @@ opacity: 0.2;
       }
       .menu-mobile{
         height: calc(100vh - 104px);
-      }
-    }
+        
+        }
+    }  
+    
     .footer-top{
         margin-bottom: 84px;
     }
@@ -530,6 +577,12 @@ line-height: 24px;
       
       .navbar{
         height: 72px;
+    }
+    .menu-active {
+
+      .menu-mobile{
+        height: calc(100vh - 72px);
+      }
     }
     .logo{
         img{

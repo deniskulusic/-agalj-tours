@@ -198,9 +198,17 @@ nav {
        column-gap: 64px;
   align-items: center;
 }
+.nav-right .pbold:hover {
+  position: relative;
+  cursor: pointer;
+  color: #FC6536;
+  margin-top: 1px;
+  border-bottom: #FC6536 2px solid;
+}
 
 .menu, .menu-placeholder {
   display: none;
+  cursor: pointer;
 }
 
 .logo img {
@@ -255,6 +263,9 @@ nav {
 }
 
 .menu-text {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
@@ -264,6 +275,8 @@ nav {
   color: #0F141E;
   margin-top: 24px;
   z-index: 2;
+  opacity: 0;
+  margin-top: 60px;
 }
 
 .underline-menu {
@@ -273,12 +286,14 @@ nav {
 }
 
 .underline-menu::before {
+  transition-duration: 1.5s;
+  transition-delay: 0.5s;
   z-index: -1;
   content: "";
   position: absolute;
   height: 10px;
   background: #FC6536;
-  width: 100%;
+  width: 0;
   top: 30px;
 }
 
@@ -457,6 +472,20 @@ footer {
   display: flex;
 }
 
+.lngbox {
+  overflow: hidden;
+  height: 0px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0F141E;
+}
+
+.lng-active .lngbox {
+  height: 50px;
+}
+
 @media only screen and (max-width: 950px) {
   .nav-right {
     display: none;
@@ -464,7 +493,7 @@ footer {
   .menu {
     display: flex;
     width: 32px;
-    height: 14px;
+    height: 20px;
     transition: all 0.5s ease-in-out;
     align-items: center;
     position: relative;
@@ -485,15 +514,25 @@ footer {
     transition: all 0.5s ease-in-out;
   }
   .menu-line::before {
-    transform: translateY(-3.91px);
+    transform: translateY(-5px);
   }
   .menu-line::after {
-    transform: translateY(3.91px);
+    transform: translateY(5px);
   }
   .menu-placeholder {
     display: flex;
     width: 32px;
     height: 14px;
+  }
+  .menu-active .menu-text {
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+    margin-top: 24px;
+    opacity: 1;
+  }
+  .menu-active .underline-menu::before {
+    width: 100%;
   }
   .menu-active .menu-line {
     background-color: transparent !important;
@@ -544,6 +583,9 @@ footer {
   }
   .navbar {
     height: 72px;
+  }
+  .menu-active .menu-mobile {
+    height: calc(100vh - 72px);
   }
   .logo img {
     height: 28px;

@@ -21,3 +21,11 @@ const buttonPressed2 = (e) => {
   navbar.classList.toggle("menu-active");
 }
 button2.addEventListener("click", buttonPressed2);
+
+function reportWindowSize() {
+  if(window.innerWidth>950){
+      navbar.classList.remove("menu-active");
+  }
+}
+
+window.onresize = reportWindowSize;
