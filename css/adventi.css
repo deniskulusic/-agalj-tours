@@ -1,3 +1,7 @@
+.mobile {
+  display: none;
+}
+
 .imgnaslov {
   position: relative;
   width: 100%;
