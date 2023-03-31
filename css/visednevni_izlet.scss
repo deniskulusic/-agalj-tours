@@ -6,6 +6,7 @@ $MidnightGrey:#6F7785;
 $MiddleGrey:#626262;
 $MediumGrey:#F1F1F1;
 $LightGrey:#F8F8F8;
+
 .galery{
     margin-top: 168px;
     h2{
@@ -21,7 +22,7 @@ $LightGrey:#F8F8F8;
     img{
         border-radius: 16px;
     }
-    .button{
+    button{
         position: absolute;
         bottom: 20px;
         right: 20px;
@@ -39,7 +40,7 @@ $LightGrey:#F8F8F8;
     div{
         padding-top: 50.92%;
     }
-    .button{
+    button{
         display: none;
     }
     
@@ -143,8 +144,21 @@ div{
         grid-column: span 7;
         margin-bottom: 16px;
     }
+    
+}
+.more{
+    grid-column: span 7;
+    overflow: hidden;
+    max-height: 0;
+    div{
+        width: 100%;
+    }
+}
+.show-more{
+    max-height: 2000px;
 }
 .text-underline{
+    cursor: pointer;
     font-family: 'Manrope';
 font-style: normal;
 font-weight: 700;
@@ -345,7 +359,7 @@ grid-column: span 7;
         color:$MiddleGrey;
         margin-left: 32px;
     }
-    .button{
+    button{
         margin-left: 32px;
         margin-right: 32px;
         padding: 20px 0px ;
@@ -354,6 +368,18 @@ grid-column: span 7;
         margin-bottom: 32px;
     }
     
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
 }
 .price{
     padding: 8px 16px;
@@ -406,10 +432,10 @@ grid-column: span 7;
   transform: rotate(-45deg);
 }
     div{
-        
+        position: relative;
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 70%;
         margin-left: 16px;
         
     }
@@ -488,6 +514,7 @@ input[type='checkbox'] {
 .upit-up{
     display: none;
 }
+
 @media only screen and (max-width: 1250px) {
 .icons{
     div{
@@ -501,7 +528,7 @@ input[type='checkbox'] {
     }
     .galery-big{
         width: 100%;
-        .button{
+        button{
             display: flex;
         }
     }
@@ -606,7 +633,7 @@ input[type='checkbox'] {
     }
     .galery-big{
         width: 100%;
-        .button{
+        button{
             display: flex;
         }
     }
@@ -667,7 +694,7 @@ input[type='checkbox'] {
         h2{
             margin-bottom: 24px;
         }
-        .button{
+        button{
             right: 24px;
             bottom:24px;
         }

@@ -113,7 +113,7 @@
   align-items: start;
   flex-direction: column;
 }
-.vozni-park-element .button {
+.vozni-park-element button {
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -322,7 +322,7 @@
     align-items: start;
     height: 200px;
   }
-  .vozni-park-element .button {
+  .vozni-park-element button {
     margin-top: 16px;
   }
   .pouzdanost-large {

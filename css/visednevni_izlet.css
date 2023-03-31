@@ -11,7 +11,7 @@
 .galery img {
   border-radius: 16px;
 }
-.galery .button {
+.galery button {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -30,7 +30,7 @@
 .galery-big div {
   padding-top: 50.92%;
 }
-.galery-big .button {
+.galery-big button {
   display: none;
 }
 
@@ -139,7 +139,21 @@
   margin-bottom: 16px;
 }
 
+.more {
+  grid-column: span 7;
+  overflow: hidden;
+  max-height: 0;
+}
+.more div {
+  width: 100%;
+}
+
+.show-more {
+  max-height: 2000px;
+}
+
 .text-underline {
+  cursor: pointer;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -349,13 +363,26 @@
   color: #626262;
   margin-left: 32px;
 }
-.upit .button {
+.upit button {
   margin-left: 32px;
   margin-right: 32px;
   padding: 20px 0px;
   width: calc(100% - 64px);
   margin-top: 40px;
   margin-bottom: 32px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
 }
 
 .price {
@@ -409,9 +436,10 @@
   transform: rotate(-45deg);
 }
 .two-input-box div {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 70%;
   margin-left: 16px;
 }
 .two-input-box div:first-of-type {
@@ -519,7 +547,7 @@ input[type=checkbox] {
   .galery-big {
     width: 100%;
   }
-  .galery-big .button {
+  .galery-big button {
     display: flex;
   }
   .full-page {
@@ -619,7 +647,7 @@ input[type=checkbox] {
   .galery-big {
     width: 100%;
   }
-  .galery-big .button {
+  .galery-big button {
     display: flex;
   }
   .full-page {
@@ -672,7 +700,7 @@ input[type=checkbox] {
   .galery h2 {
     margin-bottom: 24px;
   }
-  .galery .button {
+  .galery button {
     right: 24px;
     bottom: 24px;
   }

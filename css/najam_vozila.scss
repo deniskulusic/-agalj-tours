@@ -110,7 +110,7 @@ $LightGrey:#F8F8F8;
             flex-direction: column;
         }
     }
-    .button{
+    button{
         height: fit-content;
     }
 }
@@ -314,7 +314,7 @@ align-items: center;
     justify-content: center;
     align-items: start;
     height: 200px;
-    .button{
+    button{
         margin-top: 16px;
     }
 }
