@@ -10,22 +10,23 @@ for(i=0;i<acordation.length;i++){
         this.classList.toggle('active');
     })
 }
-const galerybutton=document.querySelector(".galery-open");
+const galerybutton=document.querySelectorAll(".galery-open , .background-gal");
 const galerypopup=document.querySelector(".galerija-fullscreen");
 
-const gal = (e) => {
-  galerypopup.classList.add("active-gal");
-  console.log("yo")
-    
-  }
-galerybutton.addEventListener("click", gal);
+for(i=0;i<galerybutton.length;i++){
+  galerybutton[i].addEventListener('click',function(){
+    galerypopup.classList.toggle("active-gal");
+  })
+}
 
 
 const main =document.querySelector(".main");
 const left = document.querySelector(".button-left");
 const right = document.querySelector(".button-right");
-const elems= document.querySelector(".main img");
+const elems= document.querySelectorAll(".main img");
 var count=0;
+main.scrollTo(0,0)
+console.log(elems.length);
 const leftpress = (e) => {
     if(count!=0){count--}
   main.scrollTo(main.offsetWidth*count,0 );
@@ -66,7 +67,6 @@ const button2 = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
 const buttonPressed2 = (e) => {
   navbar.classList.toggle("menu-active");
-  console.log("yo");
 }
 button2.addEventListener("click", buttonPressed2);
 
@@ -81,16 +81,26 @@ function reportWindowSize() {
 //Language
 
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng , .close-lng");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");
   });
   
 }
+const lngpopupmobile=document.querySelector(".menu-mobile");
+const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
+for(j=0;j<lngpopbutton.length;j++){
+  lngpopbuttonmobile[j].addEventListener('click',function(){
+      lngpopupmobile.classList.toggle("lng-mobile-active");
+  });
+  
+}
 
-const lngbutton=document.querySelectorAll(".buttons button");
+
+const lngbutton=document.querySelectorAll(".buttons button , .lng-mobile-button");
 lngbutton[1].setAttribute('disabled', 'true');
+lngbutton[3].setAttribute('disabled', 'true');
 for(i=0;i<lngbutton.length;i++){
   lngbutton[i].addEventListener('click',function(){
 [].forEach.call(lngbutton, function(el) {

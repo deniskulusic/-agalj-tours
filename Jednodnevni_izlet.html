@@ -14,9 +14,12 @@
 </head>
 <body>
     <div class="galerija-fullscreen">
+        <div class="background-gal">
+        </div>
         <div class="button-left"><img src="assets/img/arrowslider.svg" alt=""></div>
         <div class="main">
-            <img src="assets/img/Plitvice.png" alt=""><img src="assets/img/Advent.png" alt=""><img src="assets/img/Advent.png" alt="">
+            <img src="assets/img/Plitvice.png"  alt="">
+           <img src="assets/img/Advent.png" alt=""><img src="assets/img/Advent.png"  alt="">
         </div>
         <div class="button-right"><img src="assets/img/arrowslider.svg" alt=""></div>
     </div>
@@ -51,30 +54,33 @@
         
 </div>
 </div>
-<nav>
+<nav >
     <div class="maxw container grid">
         <div class="navbar">
     <div class="menu">
         <div class="menu-line"></div>
     </div>
-    <div class="logo"><img src="assets/img/logo.svg" alt="logo"></div>
+    <div class="logo" onClick="location.href='index.html'"><img src="assets/img/logo.svg" alt="logo"></div>
     <div class="menu-placeholder"></div>
     <div class="nav-right">
-        <div class="pbold">Jednodnevni</div>
-        <div class="pbold">Adventi</div>
-        <div class="pbold">Najam vozila</div>
-        <div class="pbold">Kontakt</div>
-        <div class="lng"> <img src="assets/img/Language.svg" alt="">HR </div>
+        <div class="pbold" onClick="location.href='Izlet.html'">Jednodnevni</div>
+        <div class="pbold" onClick="location.href='adventi.html'">Adventi</div>
+        <div class="pbold" onClick="location.href='najam_vozila.html'">Najam vozila</div>
+        <div class="pbold " onClick="location.href='kontakt.html'">Kontakt</div>
+        <div class="lng lng-desktop"> <img src="assets/img/Language.svg" alt="">HR </div>
     </div>
 </div>
 <div class="menu-mobile">
-    <div class="menu-text"><u class="underline-menu"> Jednodnevni izleti</u></div>
-    <div class="menu-text"><u class="underline-menu"> Adventi</u></div>
-    <div class="menu-text"><u class="underline-menu">Najam vozila</u></div>
-    <div class="menu-text"><u class="underline-menu">Kontakt</u></div>
+    <div class="menu-text" onClick="location.href='Izlet.html'"><u class="underline-menu"> Jednodnevni izleti</u></div>
+    <div class="menu-text" onClick="location.href='adventi.html'"><u class="underline-menu"> Adventi</u></div>
+    <div class="menu-text" onClick="location.href='najam_vozila.html'"><u class="underline-menu">Najam vozila</u></div>
+    <div class="menu-text" onClick="location.href='kontakt.html'"><u class="underline-menu">Kontakt</u></div>
     <div class="lng"><img src="assets/img/Language.svg" alt=""> HR</div>
-    <div class="lngbox">
-        
+    <div class="lng-mobile">
+        <div class="lng-mobile-text"> <img src="assets/img/Chevron Down.svg" alt="">
+            Odaberite jezik</div>
+        <button class="lng-mobile-button">English</button>
+            <button class="lng-mobile-button">Hrvatski</button>
     </div>
 </div>
 </div>
@@ -91,7 +97,7 @@
                         </picture>
                     </div>
                     
-                    <button enabled> Sve fotografije</button>
+                    <button enabled class="galery-open"> Sve fotografije</button>
                 </div>
                 <div class="galery-small">
                     <div class="galery-small-img">
@@ -366,23 +372,23 @@
             <div class="footer-middle">
                 <div class="pbold">Usluge</div>
                 <div class="psmall vlinks">
-                    Jednodnevni izleti <br>
-                    adrenalinski izleti <br>
-                    advent <br>
-                    Najam vozila <br>
-                    Servis gospodarskih vozila</div>
+                    <u onClick="location.href='Izlet.html'">Jednodnevni izleti</u> <br> 
+                    <u onClick="location.href='Jednodnevni_izlet.html'">adrenalinski izleti</u>  <br>
+                    <u onClick="location.href='Adventi.html'">advent</u>  <br>
+                    <u onClick="location.href='najam_vozila.html'"> Najam vozila</u>  <br>
+                    <u onClick="location.href='Servis_gospordarskih_vozila.html'">Servis gospodarskih vozila</u> </div>
             </div>
             <div class="footer-middle">
                 <div class="pbold ">Informacije</div>
                 <div class="psmall vlinks">
-                    Česta pitanja<br>O nama<br>Pravilnik poslovanja<br>Pravilnik privatnosti<br>Pravne informacije </div>
+                    <u onClick="location.href='faq.html'">Česta pitanja</u> <br><u onClick="location.href='O_nama.html'">O nama</u> <br><u onClick="location.href='pisani_prigovor.html'">Pisani prigovor</u> <br><u onClick="location.href='pravne_informacije.html'">Pravilnik privatnosti</u> <br><u onClick="location.href='pravne_informacije.html'">Pravne informacije</u>  </div>
             </div>
             <div class="footer-middle">
                 <div class="pbold">Prati nas</div>
                 <div class="socials">
-                    <img src="assets/img/Facebook.svg" alt="">
-                    <img src="assets/img/Instagram.svg" alt="">
-                    <img src="assets/img/Youtube.svg" alt="">
+                    <img src="assets/img/Facebook.svg" alt="" onClick="location.href='https://www.Facebook.com/'">
+                    <img src="assets/img/Instagram.svg" alt="" onClick="location.href='https://www.Instagram.com/'">
+                    <img src="assets/img/Youtube.svg" alt="" onClick="location.href='https://www.Youtube.com/'">
                 </div>
             </div>
             
@@ -395,6 +401,5 @@
     </footer>
     
     <script src="js/jednodnevni_izlet.js"></script>
-    <script src="js/general.js"></script>
 </body>
 </html>

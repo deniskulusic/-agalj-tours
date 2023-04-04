@@ -597,12 +597,21 @@ input[type=checkbox] {
   height: 73.33vh;
   display: flex;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 .main img {
   min-width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.background-gal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .active-gal {
@@ -762,6 +771,17 @@ input[type=checkbox] {
   }
   .map-mobile {
     display: none;
+  }
+  .button-left {
+    display: none;
+  }
+  .button-right {
+    display: none;
+  }
+  .main {
+    width: 90%;
+    overflow: scroll;
+    gap: 24px;
   }
 }
 @media only screen and (max-width: 450px) {

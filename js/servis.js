@@ -2,6 +2,7 @@ const button = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
 const buttonPressed = (e) => {
   navbar.classList.toggle("menu-active");
+  
 }
 button.addEventListener("click", buttonPressed);
 
@@ -10,24 +11,21 @@ const dark=document.querySelector(".dark");
 var pageyoff=wrap.scrollTop;
 var darkfromtop=pageyoff + dark.getBoundingClientRect().top;
 var darkheight=dark.offsetHeight;
+console.log(darkfromtop,darkheight)
 function scroll() {
+    
     if(wrap.scrollTop>(darkfromtop + darkheight)){
         navbar.classList.remove("inverted");
-        
     }
-    else if((wrap.scrollTop>darkfromtop)){
+    else{
         navbar.classList.add("inverted");
     }
-    
-    else{
-        navbar.classList.remove("inverted");
-    }
     if(wrap.scrollTop>wrap.offsetHeight){
-      navbar.classList.remove("transparent");
-    }
-    else{
-        navbar.classList.add("transparent");
-    }
+        navbar.classList.remove("transparent");
+      }
+      else{
+          navbar.classList.add("transparent");
+      }
   }
   wrap.onscroll = scroll;
 function reportWindowSize() {
@@ -71,35 +69,3 @@ for(i=0;i<lngbutton.length;i++){
   })
 }
 
-
-const acordation=document.getElementsByClassName('faq');
-for(i=0;i<acordation.length;i++){
-    acordation[i].addEventListener('click',function(){
-        var elems = document.querySelectorAll(".faq.active");
-[].forEach.call(elems, function(el) {
-    el.classList.remove("active");
-});
-        this.classList.toggle('active');
-    })
-}
-
-const slider =document.querySelector(".slider-holder");
-const left = document.querySelector(".arrow-before");
-const right = document.querySelector(".arrow-after");
-const elems=document.querySelectorAll(".arwelm");
-
-slider.scrollTo(0,0)
-var count=0;
-const leftpress = (e) => {
-    if(count!=0){count--}
-  slider.scrollTo(elems[count].offsetLeft,0 );
-
-  
-}
-const rightpress = (e) => {
-    if(count!=(elems.length-1)){count++}
-    slider.scrollTo(elems[count].offsetLeft,0 );
-    
-  }
-right.addEventListener("click", rightpress);
-left.addEventListener("click", leftpress);

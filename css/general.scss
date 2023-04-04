@@ -209,6 +209,7 @@ align-items: center;
 }
 
 .logo{
+    cursor: pointer;
     img{
         width: 149.64px;
 height: 32px;
@@ -230,6 +231,7 @@ font-weight: 800;
 font-size: 14px;
 line-height: 24px;
 color: $Orange;
+transition: 1s;
 img{
     width: 16px;
     height: auto;
@@ -239,6 +241,7 @@ img{
 .lng:hover{
     background-color: $Orange;
     color: $White;
+    transition: 0s;
     img{
         filter:brightness(1000%);
     }
@@ -259,6 +262,7 @@ img{
 }
 
 .menu-text{
+    cursor: pointer;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
             transition-delay: 0s;
@@ -294,7 +298,10 @@ footer{
     width: 100%;
     background-color:$DarkBlue;
     margin-top: 256px;
-    
+    u{
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
 .footer-top{
     grid-column: span 12;
@@ -329,6 +336,7 @@ footer{
     img{
         height: 24px;
         width: auto;
+        cursor: pointer;
     }
 }
 .footer-bottom{
@@ -585,7 +593,12 @@ margin-left: 32px;
             filter:  brightness(10000%) ; 
         }
     }
-    
+    .lng-mobile-text{
+    color:$White;
+    img{
+        filter:  brightness(10000%) ; 
+    }
+    }
     .menu-line{
         background-color: $White;
 }
@@ -613,8 +626,15 @@ transition: 1s;
     img{
         filter:  brightness(10000%) ; 
     }
+    
 }
-
+.lng-mobile-text{
+    color:$White;
+    cursor: pointer;
+    img{
+        filter:  brightness(10000%) ; 
+    }
+    }
 .menu-line{
     background-color: $White;
 }
@@ -638,6 +658,39 @@ color: $White;
 .transparent.menu-active{
     background-color: #0F141E;
 }
+.lng-mobile{
+    position: absolute;
+    overflow: hidden;
+    bottom: 48px;
+    max-height: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    button{
+        width: 100%;
+    }
+    transition: 0.5s;
+    
+}
+.lng-mobile-text{
+    cursor: pointer;
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+letter-spacing: -0.03em;
+color:$DarkBlue;
+img{
+    margin-right: 8px;
+
+}
+}
+
 @media only screen and (max-width: 950px) {
 
 
@@ -647,6 +700,7 @@ color: $White;
    .menu{
     display: flex;
    }
+
     .menu-placeholder{
         display: flex;
         width: 32px;
@@ -654,7 +708,7 @@ color: $White;
     }
     .menu-active {
         .menu-text{
-            transition-duration: 1s;
+            transition-duration: 1.5s;
             transition-timing-function: ease-in-out;
             transition-delay: 0.2s;
             margin-top: 24px;
@@ -679,7 +733,26 @@ color: $White;
         
         }
     }  
-    
+    .lng-mobile-active{
+        .lng-mobile{
+            transition: 1.5s;
+            max-height: 1000px;
+        }
+        .lng{
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+            
+            opacity: 0; 
+            margin-bottom:250px ;
+        }
+        .menu-text{
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+            opacity: 0;
+        }
+    }
     .footer-top{
         margin-bottom: 84px;
     }
