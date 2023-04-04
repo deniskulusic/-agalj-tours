@@ -137,6 +137,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 picture {
@@ -567,38 +568,94 @@ button:disabled {
   display: flex;
 }
 
+.menu {
+  display: none;
+  width: 32px;
+  height: 20px;
+  transition: all 0.5s ease-in-out;
+  align-items: center;
+  position: relative;
+}
+
+.menu-line {
+  width: 100%;
+  height: 2px;
+  background-color: #0F141E;
+}
+
+.menu-line::before, .menu-line::after {
+  margin-left: 0 !important;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #0F141E;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-line::before {
+  transform: translateY(-5px);
+}
+
+.menu-line::after {
+  transform: translateY(5px);
+}
+
+.inverted {
+  background-color: #0F141E;
+}
+.inverted .logo img {
+  filter: brightness(10000%);
+}
+.inverted .menu-line {
+  background-color: #FFFFFF;
+}
+.inverted .menu-line::before, .inverted .menu-line::after {
+  background-color: #FFFFFF;
+}
+.inverted .menu-text {
+  color: #FFFFFF;
+}
+.inverted .nav-right .pbold {
+  color: #FFFFFF;
+}
+.inverted .nav-right .pbold:hover {
+  color: #FC6536;
+}
+
+.transparent {
+  background-color: rgba(15, 20, 30, 0);
+  transition: 1s;
+}
+.transparent .logo img {
+  filter: brightness(10000%);
+}
+.transparent .menu-line {
+  background-color: #FFFFFF;
+}
+.transparent .menu-line::before, .transparent .menu-line::after {
+  background-color: #FFFFFF;
+}
+.transparent .menu-text {
+  color: #FFFFFF;
+}
+.transparent .nav-right .pbold {
+  color: #FFFFFF;
+}
+.transparent .nav-right .pbold:hover {
+  color: #FC6536;
+}
+
+.transparent.menu-active {
+  background-color: #0F141E;
+}
+
 @media only screen and (max-width: 950px) {
   .nav-right {
     display: none;
   }
   .menu {
     display: flex;
-    width: 32px;
-    height: 20px;
-    transition: all 0.5s ease-in-out;
-    align-items: center;
-    position: relative;
-    display: flex;
-  }
-  .menu-line {
-    width: 100%;
-    height: 2px;
-    background-color: #0F141E;
-  }
-  .menu-line::before, .menu-line::after {
-    margin-left: 0 !important;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: #0F141E;
-    transition: all 0.5s ease-in-out;
-  }
-  .menu-line::before {
-    transform: translateY(-5px);
-  }
-  .menu-line::after {
-    transform: translateY(5px);
   }
   .menu-placeholder {
     display: flex;

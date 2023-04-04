@@ -1,3 +1,5 @@
+//Accordation
+
 const acordation=document.getElementsByClassName('faq');
 for(i=0;i<acordation.length;i++){
     acordation[i].addEventListener('click',function(){
@@ -8,6 +10,37 @@ for(i=0;i<acordation.length;i++){
         this.classList.toggle('active');
     })
 }
+const galerybutton=document.querySelector(".galery-open");
+const galerypopup=document.querySelector(".galerija-fullscreen");
+
+const gal = (e) => {
+  galerypopup.classList.add("active-gal");
+  console.log("yo")
+    
+  }
+galerybutton.addEventListener("click", gal);
+
+
+const main =document.querySelector(".main");
+const left = document.querySelector(".button-left");
+const right = document.querySelector(".button-right");
+const elems= document.querySelector(".main img");
+var count=0;
+const leftpress = (e) => {
+    if(count!=0){count--}
+  main.scrollTo(main.offsetWidth*count,0 );
+
+  
+}
+const rightpress = (e) => {
+    if(count!=(elems.length-1)){count++}
+    main.scrollTo(main.offsetWidth*count,0 );
+    
+  }
+
+right.addEventListener("click", rightpress);
+left.addEventListener("click", leftpress);
+//Mobile upit up/down
 
 const upit=document.querySelector(".upit");
 const upitup=document.querySelector(".upit-up");
@@ -15,9 +48,10 @@ upitup.onclick = function() {
     upit.classList.toggle("up-upit");
 };
 
+//Success popup
+
 const success=document.querySelector(".success");
 const upitbutton=document.getElementsByClassName("upit-button");
-
 for(j=0;j<upitbutton.length;j++){
     upitbutton[j].addEventListener('click',function(){
         success.classList.toggle("active-upit");
@@ -25,6 +59,8 @@ for(j=0;j<upitbutton.length;j++){
     });
     
 }
+
+//Menu dropdown
 
 const button2 = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
@@ -42,7 +78,9 @@ function reportWindowSize() {
   
   window.onresize = reportWindowSize;
 
-  const lngpopup=document.querySelector(".lng-popup");
+//Language
+
+const lngpopup=document.querySelector(".lng-popup");
 const lngpopbutton=document.querySelectorAll(".lng , .close-lng");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
@@ -50,7 +88,6 @@ for(j=0;j<lngpopbutton.length;j++){
   });
   
 }
-
 
 const lngbutton=document.querySelectorAll(".buttons button");
 lngbutton[1].setAttribute('disabled', 'true');
@@ -63,11 +100,12 @@ for(i=0;i<lngbutton.length;i++){
   })
 }
 
+//Show more
+
 const more=document.querySelector(".more");
 var showmore=document.querySelector(".text-underline");
 const morepressed = (e) => {
- 
-  more.classList.toggle("show-more");
+more.classList.toggle("show-more");
   if (showmore.innerHTML === "Prikaži više") {
     showmore.innerHTML = "Prikaži manje";
   } else {
@@ -75,3 +113,5 @@ const morepressed = (e) => {
   }
 }
 showmore.addEventListener("click", morepressed);
+
+

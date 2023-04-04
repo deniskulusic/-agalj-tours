@@ -1,3 +1,5 @@
+//Accordation
+
 const acordation=document.getElementsByClassName('faq');
 for(i=0;i<acordation.length;i++){
     acordation[i].addEventListener('click',function(){
@@ -9,6 +11,7 @@ for(i=0;i<acordation.length;i++){
     })
 }
 
+//Menu
 const button = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
 const buttonPressed = (e) => {
@@ -24,6 +27,8 @@ function reportWindowSize() {
   }
   
   window.onresize = reportWindowSize;
+
+//Language
 
   const lngpopup=document.querySelector(".lng-popup");
 const lngpopbutton=document.querySelectorAll(".lng , .close-lng");

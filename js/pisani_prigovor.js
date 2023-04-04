@@ -1,8 +1,4 @@
-const button = document.querySelector(".checkbox");
-const buttonPressed = (e) => {
-  e.target.classList.toggle("active");
-}
-button.addEventListener("click", buttonPressed);
+
 
 const success=document.querySelector(".success");
 const upitbutton=document.getElementsByClassName("upit-button");

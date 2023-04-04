@@ -539,6 +539,76 @@ input[type=checkbox] {
   display: none;
 }
 
+.galerija-fullscreen {
+  width: 100%;
+  height: 100vh;
+  background-color: #0F141E;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 20;
+}
+
+.button-right {
+  margin-left: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 1px #FFFFFF solid;
+  border-radius: 100%;
+}
+.button-right img {
+  transform: scaleX(-1);
+  filter: brightness(100000%);
+}
+
+.button-right:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-left {
+  margin-right: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 1px #FFFFFF solid;
+  border-radius: 100%;
+}
+.button-left img {
+  filter: brightness(100000%);
+}
+
+.button-right:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-left:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.main {
+  scroll-behavior: smooth;
+  width: 63.65%;
+  height: 73.33vh;
+  display: flex;
+  overflow: hidden;
+}
+.main img {
+  min-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.active-gal {
+  display: flex;
+}
+
 @media only screen and (max-width: 1250px) {
   .icons div {
     grid-column: span 3;

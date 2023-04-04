@@ -1,3 +1,5 @@
+//Success
+
 const success=document.querySelector(".success");
 const upitbutton=document.getElementsByClassName("upit-button");
 
@@ -8,6 +10,8 @@ for(j=0;j<upitbutton.length;j++){
     });
     
 }
+
+//Menu
 
 const button2 = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
@@ -24,6 +28,8 @@ function reportWindowSize() {
 }
 
 window.onresize = reportWindowSize;
+
+//Language
 
 const lngpopup=document.querySelector(".lng-popup");
 const lngpopbutton=document.querySelectorAll(".lng , .close-lng");

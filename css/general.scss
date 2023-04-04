@@ -135,6 +135,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 picture {
     position: absolute;
@@ -153,6 +154,7 @@ object-fit: cover;
 section{
     width: 100%;
     height: auto;
+
 }
 .grid {
     display: grid;
@@ -545,44 +547,106 @@ margin-left: 32px;
 .active-lng{
     display: flex;
 }
+.menu{
+    display: none;
+    width: 32px;
+    height: 20px;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+    position: relative;
+}
+.menu-line{
+        width: 100%;
+        height: 2px;
+        background-color: $DarkBlue;
+}
+.menu-line::before, .menu-line::after {
+    margin-left: 0 !important;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $DarkBlue;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-line::before {
+    transform: translateY(-5px);
+  }
+  
+  .menu-line::after {
+    transform: translateY(5px);
+  }
 
+.inverted{
+    background-color: $DarkBlue;
+    .logo{
+        img{
+            filter:  brightness(10000%) ; 
+        }
+    }
+    
+    .menu-line{
+        background-color: $White;
+}
+
+.menu-line::before, .menu-line::after {
+    background-color: $White;
+    
+}
+.menu-text{
+    color: $White;
+}
+.nav-right{
+    .pbold{
+        color:$White;
+    }
+    .pbold:hover{
+        color:$Orange
+    }
+}
+}
+.transparent{
+background-color: rgba(15, 20, 30,0);
+transition: 1s;
+.logo{
+    img{
+        filter:  brightness(10000%) ; 
+    }
+}
+
+.menu-line{
+    background-color: $White;
+}
+
+.menu-line::before, .menu-line::after {
+background-color: $White;
+
+}
+.menu-text{
+color: $White;
+}
+.nav-right{
+.pbold{
+    color:$White;
+}
+.pbold:hover{
+    color:$Orange
+}
+}
+}
+.transparent.menu-active{
+    background-color: #0F141E;
+}
 @media only screen and (max-width: 950px) {
 
 
     .nav-right{
         display: none;
     }
-    .menu{
-        display: flex;
-        width: 32px;
-        height: 20px;
-        transition: all 0.5s ease-in-out;
-        align-items: center;
-        position: relative;
-        display: flex;
-    }
-    .menu-line{
-            width: 100%;
-            height: 2px;
-            background-color: $DarkBlue;
-    }
-    .menu-line::before, .menu-line::after {
-        margin-left: 0 !important;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: $DarkBlue;
-        transition: all 0.5s ease-in-out;
-      }
-      
-      .menu-line::before {
-        transform: translateY(-5px);
-      }
-      
-      .menu-line::after {
-        transform: translateY(5px);
-      }
+   .menu{
+    display: flex;
+   }
     .menu-placeholder{
         display: flex;
         width: 32px;
@@ -623,6 +687,7 @@ margin-left: 32px;
         grid-column: span 5;
         margin-top: 56px;
     }
+    
 }
 @media only screen and (max-width: 650px) {
     h1{
