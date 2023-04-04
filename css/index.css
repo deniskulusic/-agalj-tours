@@ -217,12 +217,13 @@
   position: absolute;
   left: 0;
   width: calc(50vw + 640px);
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
   scroll-behavior: smooth;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-.slider .slider-holder::-webkit-scrollbar {
-  display: none;
+.slider .slider-holder-first::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 .slider-element {
@@ -360,9 +361,6 @@
 .slider-dark .slider .slider-holder {
   -ms-overflow-style: auto; /* IE and Edge */
   scrollbar-width: auto;
-}
-.slider-dark .slider .slider-holder::-webkit-scrollbar {
-  display: auto;
 }
 .slider-dark .slider-element-picture {
   height: 600px;

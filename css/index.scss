@@ -223,14 +223,18 @@ backdrop-filter: blur(50px);
         position: absolute;
         left: 0;
         width: calc(50vw + 640px);
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;
         scroll-behavior: smooth;
+        overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-.slider-holder::-webkit-scrollbar {
-    display: none;
-  }
+.slider-holder-first::-webkit-scrollbar {
+    width: 0 !important;
+    }
 }
+
+    
+    
 
 .slider-element{
     display: flex;
@@ -362,9 +366,7 @@ z-index: 2;
             -ms-overflow-style: auto;  /* IE and Edge */
             scrollbar-width: auto;
     }
-    .slider-holder::-webkit-scrollbar {
-        display: auto;
-      }
+   
     }
     .slider-element-picture{
         height: 600px;
