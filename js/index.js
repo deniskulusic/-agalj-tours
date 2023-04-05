@@ -83,13 +83,19 @@ for(i=0;i<acordation.length;i++){
     })
 }
 
-const slider =document.querySelector(".slider-holder");
+const slider =document.querySelector(" .slider-holder");
 const left = document.querySelector(".arrow-before");
 const right = document.querySelector(".arrow-after");
 const elems=document.querySelectorAll(".arwelm");
 
+const sliderd =document.querySelector(".slider-dark .slider-holder");
+const leftd = document.querySelector(" .dark .arrow-before");
+const rightd = document.querySelector(".dark .arrow-after");
+const elemsd=document.querySelectorAll(".arwelmd");
 slider.scrollTo(0,0)
+sliderd.scrollTo(0,0)
 var count=0;
+var countd=0;
 const leftpress = (e) => {
     if(count!=0){count--}
   slider.scrollTo(elems[count].offsetLeft,0 );
@@ -103,3 +109,18 @@ const rightpress = (e) => {
   }
 right.addEventListener("click", rightpress);
 left.addEventListener("click", leftpress);
+
+
+const leftpressd = (e) => {
+  if(countd!=0){countd--}
+sliderd.scrollTo(elemsd[countd].offsetLeft,0 );
+
+
+}
+const rightpressd = (e) => {
+  if(countd!=(elemsd.length-1)){countd++}
+  sliderd.scrollTo(elemsd[countd].offsetLeft,0 );
+  
+}
+rightd.addEventListener("click", rightpressd);
+leftd.addEventListener("click", leftpressd);
