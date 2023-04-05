@@ -222,7 +222,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.slider .slider-holder-first::-webkit-scrollbar {
+.slider .slider-holder::-webkit-scrollbar {
   width: 0 !important;
 }
 
@@ -325,6 +325,10 @@
   background-color: #0F141E;
   position: relative;
 }
+.slider-dark .arrow-slider {
+  grid-column: span 6;
+  margin-top: 50px;
+}
 .slider-dark div {
   position: relative;
 }
@@ -357,10 +361,6 @@
 .slider-dark .slider {
   margin-bottom: 600px;
   margin-top: 80px;
-}
-.slider-dark .slider .slider-holder {
-  -ms-overflow-style: auto; /* IE and Edge */
-  scrollbar-width: auto;
 }
 .slider-dark .slider-element-picture {
   height: 600px;
@@ -834,14 +834,14 @@ input[type=checkbox] {
     grid-column: span 12;
     margin-top: 32px;
   }
-  .underline::before {
-    height: 10px;
-    top: 25px;
-  }
 }
 @media only screen and (max-width: 650px) {
   .two-input {
     width: 90%;
+  }
+  .underline::before {
+    height: 10px;
+    top: 25px;
   }
   .two-input-box {
     width: 100%;

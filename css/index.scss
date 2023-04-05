@@ -228,7 +228,7 @@ backdrop-filter: blur(50px);
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-.slider-holder-first::-webkit-scrollbar {
+.slider-holder::-webkit-scrollbar {
     width: 0 !important;
     }
 }
@@ -330,6 +330,10 @@ color: $Orange;
     margin-bottom: 240px;
     background-color: $DarkBlue;
     position: relative;
+    .arrow-slider{
+        grid-column: span 6;
+        margin-top: 50px;
+    }
     div{
         position: relative;
     }
@@ -362,11 +366,6 @@ z-index: 2;
     .slider{
         margin-bottom: 600px;
         margin-top: 80px;
-        .slider-holder{
-            -ms-overflow-style: auto;  /* IE and Edge */
-            scrollbar-width: auto;
-    }
-   
     }
     .slider-element-picture{
         height: 600px;
@@ -802,6 +801,7 @@ input[type='checkbox'] {
         border-radius: 8px;
     }
     .slider-dark{
+        
         h2{
             grid-column: span 12;
         }
@@ -839,10 +839,7 @@ input[type='checkbox'] {
         }
         
     }
-    .underline::before{
-        height: 10px;
-        top:25px;
-    }
+    
 
  } 
  @media only screen and (max-width: 650px) {
@@ -852,6 +849,10 @@ input[type='checkbox'] {
         
         
         
+    }
+    .underline::before{
+        height: 10px;
+        top:25px;
     }
     .two-input-box{
         width: 100%;
