@@ -19,6 +19,9 @@ function scroll() {
     
     paralax.style.position="relative"
   }
+  else{
+    paralax.style.position="sticky"
+  }
     if(wrap.scrollTop>(darkfromtop + darkheight)){
         body.classList.remove("inverted");
     }
