@@ -61,6 +61,9 @@ function scroll() {
     }
     else{
         navbar.classList.add("transparent");
+   
+    paralax.style.position="sticky"
+  
     }
   }
   wrap.onscroll = scroll;
