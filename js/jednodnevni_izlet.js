@@ -44,7 +44,6 @@ const leftpress = (e) => {
     if(count!=0){count--}
   main.scrollTo(main.offsetWidth*count,0 );
   num1.innerHTML = count+1;
-
 }
 const rightpress = (e) => {
     if(count!=(elems.length-1)){count++}

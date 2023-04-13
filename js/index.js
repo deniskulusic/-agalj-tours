@@ -1,35 +1,32 @@
 const button = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
+const body=document.querySelector("body");
 const buttonPressed = (e) => {
   navbar.classList.toggle("menu-active");
 }
 button.addEventListener("click", buttonPressed);
 
+
 const wrap=document.querySelector(".wrapper");
 const dark=document.querySelector(".dark");
-var pageyoff=wrap.scrollTop;
-var darkfromtop=pageyoff + dark.getBoundingClientRect().top;
-var darkheight=dark.offsetHeight;
-function scroll() {
-    if(wrap.scrollTop>(darkfromtop + darkheight)){
-        navbar.classList.remove("inverted");
-        
-    }
-    else if((wrap.scrollTop>darkfromtop)){
-        navbar.classList.add("inverted");
-    }
-    
-    else{
-        navbar.classList.remove("inverted");
-    }
-    if(wrap.scrollTop>wrap.offsetHeight){
-      navbar.classList.remove("transparent");
-    }
-    else{
-        navbar.classList.add("transparent");
-    }
-  }
-  wrap.onscroll = scroll;
+var pageyoff;
+var darkfromtop;
+var darkheight;
+const paralax=document.getElementById("naslov");
+setTimeout(function() {
+pageyoff=wrap.scrollTop;
+darkfromtop=pageyoff + dark.getBoundingClientRect().top;
+darkheight=dark.offsetHeight;
+}, 1000);
+var int
+if((window.innerWidth)>1420){
+  int=window.innerWidth/2-640
+}
+else{
+int=70
+}
+
+  console.log(int)
 function reportWindowSize() {
   if(window.innerWidth>950){
       navbar.classList.remove("menu-active");
@@ -37,10 +34,36 @@ function reportWindowSize() {
   pageyoff=wrap.scrollTop;
   darkfromtop=pageyoff + dark.getBoundingClientRect().top;
   darkheight=dark.offsetHeight;
+  if(window.innerWidth>1420){
+    int=window.innerWidth/2-640  }
+  else{
+  int=70
+  }
 }
 
 window.onresize = reportWindowSize;
+function scroll() {
 
+    if(wrap.scrollTop>(darkfromtop + darkheight)){
+        body.classList.remove("inverted");
+        
+    }
+    else if((wrap.scrollTop>darkfromtop)){
+        body.classList.add("inverted");
+    }
+    
+    else{
+        body.classList.remove("inverted");
+    }
+    if(wrap.scrollTop+70>wrap.offsetHeight){
+      navbar.classList.remove("transparent");
+      paralax.style.position="relative"
+    }
+    else{
+        navbar.classList.add("transparent");
+    }
+  }
+  wrap.onscroll = scroll;
 const lngpopup=document.querySelector(".lng-popup");
 const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
 for(j=0;j<lngpopbutton.length;j++){
@@ -106,13 +129,13 @@ var count=0;
 var countd=0;
 const leftpress = (e) => {
     if(count!=0){count--}
-  slider.scrollTo(elems[count].offsetLeft,0 );
+  slider.scrollTo(elems[count].offsetLeft-int,0 );
 
   
 }
 const rightpress = (e) => {
     if(count!=(elems.length-1)){count++}
-    slider.scrollTo(elems[count].offsetLeft,0 );
+    slider.scrollTo(elems[count].offsetLeft-int,0 );
     
   }
 right.addEventListener("click", rightpress);
@@ -121,13 +144,13 @@ left.addEventListener("click", leftpress);
 
 const leftpressd = (e) => {
   if(countd!=0){countd--}
-sliderd.scrollTo(elemsd[countd].offsetLeft,0 );
+sliderd.scrollTo(elemsd[countd].offsetLeft-int,0 );
 
 
 }
 const rightpressd = (e) => {
   if(countd!=(elemsd.length-1)){countd++}
-  sliderd.scrollTo(elemsd[countd].offsetLeft,0 );
+  sliderd.scrollTo(elemsd[countd].offsetLeft-int,0 );
   
 }
 rightd.addEventListener("click", rightpressd);

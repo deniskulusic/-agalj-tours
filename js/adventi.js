@@ -12,7 +12,13 @@ const dark=document.querySelector(".dark");
 var pageyoff=wrap.scrollTop;
 var darkfromtop=pageyoff + dark.getBoundingClientRect().top;
 var darkheight=dark.offsetHeight;
+const paralax=document.getElementById("naslov");
+
 function scroll() {
+  if(wrap.scrollTop>wrap.clientHeight){
+    
+    paralax.style.position="relative"
+  }
     if(wrap.scrollTop+70>(darkfromtop + darkheight)){
         body.classList.remove("inverted");
         

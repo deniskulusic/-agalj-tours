@@ -1,5 +1,7 @@
 const button = document.querySelector(".menu");
 const navbar=document.querySelector("nav");
+const body=document.querySelector("body");
+const paralax=document.getElementById("naslov");
 const buttonPressed = (e) => {
   navbar.classList.toggle("menu-active");
   
@@ -13,13 +15,19 @@ var darkfromtop=pageyoff + dark.getBoundingClientRect().top;
 var darkheight=dark.offsetHeight;
 console.log(darkfromtop,darkheight)
 function scroll() {
+  if(wrap.scrollTop>wrap.clientHeight){
     
+    paralax.style.position="relative"
+  }
     if(wrap.scrollTop>(darkfromtop + darkheight)){
-        navbar.classList.remove("inverted");
+        body.classList.remove("inverted");
+    }
+    else if(wrap.scrollTop +70>wrap.clientHeight){
+        body.classList.add("inverted");
     }
     else{
-        navbar.classList.add("inverted");
-    }
+      body.classList.remove("inverted");
+  }
     if(wrap.scrollTop>wrap.offsetHeight){
         navbar.classList.remove("transparent");
       }
