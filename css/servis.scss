@@ -12,9 +12,12 @@ $LightGrey:#F8F8F8;
     overflow-x: hidden;
     perspective: 1px;
 }
+
 .imgnaslov{
-    z-index: -2;
+    z-index: -3;
     position: sticky;
+    transform-style: flat;
+    transform: translateZ(-3px) scale(4);
     height: 100vh;
     width: 100%;
     top:0;
@@ -36,7 +39,7 @@ $LightGrey:#F8F8F8;
 }
 .imgnaslov_content{
     transform-style: preserve-3d;
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     top: 50.9vh;
     height: 58vh;
@@ -53,7 +56,7 @@ $LightGrey:#F8F8F8;
 .paralax{
     background-color: $White;
     position: relative;
-
+    z-index: -1;
 }
 
   .underline-naslov{
@@ -68,7 +71,8 @@ $LightGrey:#F8F8F8;
   background: $Orange;
   z-index: -1!important;
   width: 100%;
-  top:55px;
+  top: 100%;
+  margin-top: -19px;
 }
 
 .paragraph-text{
@@ -100,6 +104,7 @@ $LightGrey:#F8F8F8;
     padding-top: 120px;
     background-color: $DarkBlue;
     z-index: -1;
+    position: relative;
 }
 .quote{
     grid-column: 3/span 8;
@@ -124,7 +129,8 @@ color: $MediumGrey;
   background: $Orange ;
   z-index: -1;
   width: 100%;
-  top:30px;
+  top: 100%;
+  margin-top: -6px;
 }
 
 .img-grid{
@@ -174,7 +180,8 @@ color: $MediumGrey;
         margin-top: 88px;
     }
     .underline-naslov::before{
-        top:44px;
+        top: 100%;
+  margin-top: -15px;
     }
 }
 .map-s{
@@ -271,7 +278,8 @@ color: $MediumGrey;
     .underline-naslov::before{
         height: 10px;
         width: 100%;
-        top:30px;
+        
+  margin-top: -10px;
       }
     .paragraph-text{
         
@@ -306,7 +314,8 @@ line-height: 48px;
 .img-heading{
     margin-top: 140px;
     .underline-naslov::before {
-        top: 25px;
+        
+  margin-top: -8px;
       }
     h2 {
     grid-column: span 12;

@@ -12,7 +12,9 @@
 
 .imgnaslov {
   z-index: -2;
+  transform: translateZ(-3px) scale(4);
   position: sticky;
+  transform-style: flat;
   height: 100vh;
   width: 100%;
   top: 0;
@@ -208,7 +210,7 @@
 .slider {
   margin-bottom: 968px;
   margin-top: 64px;
-  grid-column: span 12;
+  width: 100%;
 }
 .slider .slider-holder {
   overflow-x: scroll;
@@ -222,6 +224,7 @@
   overflow: -moz-scrollbars-none;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-left: calc(50vw - 640px);
 }
 .slider .slider-holder::-webkit-scrollbar {
   width: 0 !important;
@@ -373,6 +376,19 @@
   z-index: 2;
 }
 
+.arwelmd picture {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.arwelmd picture img {
+  transition: 1s;
+  transform: scale(1);
+}
+
+.arwelmd:hover img {
+  transform: scale(1.3);
+}
+
 .individualno-img-center {
   position: relative;
   width: 100%;
@@ -490,7 +506,8 @@
   z-index: -1;
   background: #FC6536;
   width: 100%;
-  top: 42px;
+  margin-top: -17px;
+  top: 100%;
 }
 
 .tradicija-text {
@@ -786,6 +803,7 @@ input[type=checkbox] {
 @media only screen and (max-width: 1450px) {
   .slider .slider-holder {
     width: calc(100vw - 70px);
+    padding-left: 70px;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -842,7 +860,7 @@ input[type=checkbox] {
   }
   .underline::before {
     height: 10px;
-    top: 25px;
+    margin-top: -8px;
   }
   .two-input-box {
     width: 100%;
@@ -993,6 +1011,7 @@ input[type=checkbox] {
   }
   .slider .slider-holder {
     width: calc(100vw - 24px);
+    padding-left: 24px;
   }
   .circle {
     left: 0px;

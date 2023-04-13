@@ -40,7 +40,8 @@ u::before {
   background: #FC6536;
   z-index: -1 !important;
   width: 100%;
-  top: 54px;
+  top: 100%;
+  margin-top: -19px;
 }
 
 .text {

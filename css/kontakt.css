@@ -32,7 +32,8 @@
   background: #FC6536;
   z-index: -1 !important;
   width: 100%;
-  top: 54px;
+  top: 100%;
+  margin-top: -20px;
 }
 
 .map-s {
@@ -366,7 +367,7 @@ button {
   }
   .underline::before {
     height: 10px;
-    top: 30px;
+    margin-top: -10px;
   }
 }
 @media only screen and (max-width: 450px) {

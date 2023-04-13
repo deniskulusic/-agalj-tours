@@ -39,7 +39,8 @@
   background: #FC6536;
   z-index: -1;
   width: 100%;
-  top: 55px;
+  margin-top: -20px;
+  top: 100%;
 }
 
 .parkovi {
@@ -164,7 +165,7 @@ h5 {
   color: #F1F1F1;
 }
 .adrenalin .underline-naslov::before {
-  top: 42px;
+  margin-top: -17px;
 }
 .adrenalin .inner-title {
   position: absolute;
@@ -231,20 +232,20 @@ h5 {
 
 .two-img-holder {
   padding-top: 51.29%;
-  perspective: 10px;
 }
 .two-img-holder picture {
-  transform-style: preserve-3d;
   overflow: hidden;
   border-radius: 16px;
 }
 .two-img-holder picture img {
   transition: 1s;
-  transform: translateZ(0px);
+  transform: scale(1);
+  -webkit-transform: scalee(1);
 }
 
 .two-img-holder:hover picture img {
-  transform: translateZ(1px);
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
 }
 
 .text {
@@ -333,7 +334,9 @@ h5 {
 
 .imgnaslov {
   z-index: -2;
+  transform: translateZ(-3px) scale(4);
   position: sticky;
+  transform-style: flat;
   height: 100vh;
   width: 100%;
   top: 0;
@@ -470,11 +473,11 @@ h5 {
     grid-column: span 12;
   }
   .adrenalin .underline-naslov::before {
-    top: 25px;
+    margin-top: -10px;
   }
   .underline-naslov::before {
     height: 10px;
-    top: 30px;
+    margin-top: -10px;
   }
   .adrenalin {
     padding-top: 104px;

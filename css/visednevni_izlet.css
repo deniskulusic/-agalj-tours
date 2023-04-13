@@ -419,6 +419,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 8px;
   margin-top: 24px;
 }
+.two-input input {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type=date]::-webkit-input-placeholder {
+  visibility: hidden !important;
+}
 
 .two-input-box {
   display: flex;
