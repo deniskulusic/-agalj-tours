@@ -18,6 +18,13 @@ width: 100%;
 object-fit: cover;
     }
   }
+  nav{
+    -webkit-transition: background-color 0.2s ease-in; /* Safari */
+          transition: background-color 0.2s ease-in;
+  }
+  .menu-active{
+    background-color: $White !important;
+  }
 .naslov
 {
     z-index: 2;
@@ -67,6 +74,10 @@ object-fit: cover;
         margin-top: 8px;
         color: $MiddleGrey;
     }
+    .pspread{
+        margin-top: 16px;
+        color: $MiddleGrey;
+    }
 }
 .pravne_informacije{
     .plarge{
@@ -83,8 +94,8 @@ object-fit: cover;
 }
 
 .faq{
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 28px;
+    padding-bottom: 28px;
     padding-left: 32px;
     padding-right: 32px;
     background-color: $LightGrey;

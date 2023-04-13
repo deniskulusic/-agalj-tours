@@ -1,4 +1,5 @@
 const button = document.querySelector(".menu");
+const body=document.querySelector("body");
 const navbar=document.querySelector("nav");
 const buttonPressed = (e) => {
   navbar.classList.toggle("menu-active");
@@ -12,18 +13,18 @@ var pageyoff=wrap.scrollTop;
 var darkfromtop=pageyoff + dark.getBoundingClientRect().top;
 var darkheight=dark.offsetHeight;
 function scroll() {
-    if(wrap.scrollTop>(darkfromtop + darkheight)){
-        navbar.classList.remove("inverted");
+    if(wrap.scrollTop+70>(darkfromtop + darkheight)){
+        body.classList.remove("inverted");
         
     }
-    else if((wrap.scrollTop>darkfromtop)){
-        navbar.classList.add("inverted");
+    else if((wrap.scrollTop+70>darkfromtop)){
+        body.classList.add("inverted");
     }
     
     else{
-        navbar.classList.remove("inverted");
+        body.classList.remove("inverted");
     }
-    if(wrap.scrollTop>wrap.offsetHeight){
+    if(wrap.scrollTop+70>wrap.offsetHeight){
       navbar.classList.remove("transparent");
     }
     else{

@@ -111,8 +111,8 @@ backdrop-filter: blur(50px);
 .two-input-box{
     display:flex;
     width: 33%;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     align-items: center;
     justify-content: space-between;
     border:1px solid white;
@@ -125,9 +125,10 @@ backdrop-filter: blur(50px);
     }
     input{
         background-color: transparent;
-        border: none;
+        border: 0px;
+        padding:0;
         color:$White;
-        margin-left: 4px;
+        margin-left: 8px;
     }
     .arrow::before,
 .arrow::after {
@@ -418,15 +419,16 @@ z-index: 2;
 .individualno-text-element{
     display: flex;
     align-items: center;
+    margin-top: 24px;
     div:first-of-type{
-        background-color: $LightGrey;
+        background-color: $MediumGrey;
         border-radius: 16px;
         img{
             padding: 16px;
             height: 32px;
         }
         margin-right: 32px;
-        margin-top: 24px;
+        
     }
 }
 
@@ -771,6 +773,8 @@ input[type='checkbox'] {
     height: 24px;
     margin-right: 8px;
  }
+
+
  @media only screen and (max-width: 1450px) {
 
     .slider{

@@ -80,18 +80,15 @@ $LightGrey:#F8F8F8;
     .adrenalin{
         padding-top: 240px;
         padding-bottom: 240px;
-        margin-top: 240px;
-        margin-bottom: 240px;
-        background-color: $DarkBlue;
         h2{
             grid-column: span 7;
-            color:white;
+            color:$DarkBlue;
             z-index: 2;
         }
         .pspread{
             grid-column: span 5;
             margin-top: 8px;
-            color:$MediumGrey;
+            color:$MiddleGrey;
         }
         .underline-naslov::before{
             top:42px;
@@ -129,8 +126,22 @@ $LightGrey:#F8F8F8;
     }
     .two-img-holder{
         padding-top: 51.29%;
-        img{
+        perspective: 10px;
+        picture{
+            transform-style: preserve-3d;
+            overflow: hidden;
             border-radius: 16px;
+            img{
+                transition: 1s;
+                transform: translateZ(0px);
+            }}
+    }
+    .two-img-holder:hover{
+        picture{
+            
+            img{
+                transform: translateZ(1px);
+            }
         }
     }
     .text {
@@ -196,9 +207,9 @@ $LightGrey:#F8F8F8;
     .bus-img{
         position: absolute;
         right: 0;
-        top:0;
-        width: 66.17%;
-        height: 100%;
+        top:24px;
+        width: 62.81%;
+        height: calc(100% - 24px);
         display: flex;
         align-items: center;
     }
@@ -207,7 +218,7 @@ $LightGrey:#F8F8F8;
     width: 100%;
     }
     .bus-img-center-holder{
-        padding-top: 54.17%;
+        padding-top: 50.68%;
     }
     .inner-text{
         margin-bottom: 4px;
@@ -267,11 +278,28 @@ $LightGrey:#F8F8F8;
         
     }
     .paralax{
+        transition: 0.5s;
         background-color: $White;
         position: relative;
 
     }
-    
+    .inverted{
+        
+        .paralax{
+            
+            background-color: $DarkBlue;
+        }
+        h2{
+            color: $White;
+        }
+        h4{
+            color:$White;
+        }
+        .pspread{
+            
+            color:$MediumGrey;
+        }
+        }
     @media only screen and (max-width: 950px) {
 
         .city {

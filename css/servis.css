@@ -206,6 +206,7 @@
 
 .map-holder {
   padding-top: 44.52%;
+  margin-top: 0 !important;
 }
 .map-holder img {
   border-radius: 16px;

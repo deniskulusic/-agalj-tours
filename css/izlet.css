@@ -160,7 +160,7 @@ h5 {
 }
 .adrenalin .pspread {
   grid-column: span 5;
-  margin-top: 24px;
+  margin-top: 8px;
   color: #F1F1F1;
 }
 .adrenalin .underline-naslov::before {
@@ -231,9 +231,20 @@ h5 {
 
 .two-img-holder {
   padding-top: 51.29%;
+  perspective: 10px;
 }
-.two-img-holder img {
+.two-img-holder picture {
+  transform-style: preserve-3d;
+  overflow: hidden;
   border-radius: 16px;
+}
+.two-img-holder picture img {
+  transition: 1s;
+  transform: translateZ(0px);
+}
+
+.two-img-holder:hover picture img {
+  transform: translateZ(1px);
 }
 
 .text {
@@ -297,9 +308,9 @@ h5 {
 .bus-img {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 66.17%;
-  height: 100%;
+  top: 24px;
+  width: 62.81%;
+  height: calc(100% - 24px);
   display: flex;
   align-items: center;
 }
@@ -310,7 +321,7 @@ h5 {
 }
 
 .bus-img-center-holder {
-  padding-top: 54.17%;
+  padding-top: 50.68%;
 }
 
 .wrapper {

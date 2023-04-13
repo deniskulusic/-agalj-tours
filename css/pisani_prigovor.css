@@ -11,6 +11,14 @@
   object-fit: cover;
 }
 
+nav { /* Safari */
+  transition: background-color 0.2s ease-in;
+}
+
+.menu-active {
+  background-color: #FFFFFF !important;
+}
+
 .naslov {
   margin-top: 264px;
 }
@@ -85,7 +93,7 @@ u::before {
   flex-direction: column;
   padding: 8px;
   background-color: #FFFFFF;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .prituzba-box-input-1 input {
   height: 24px;

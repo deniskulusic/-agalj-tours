@@ -1,15 +1,14 @@
 
-
 const success=document.querySelector(".success");
 const upitbutton=document.getElementsByClassName("upit-button");
 
 for(j=0;j<upitbutton.length;j++){
     upitbutton[j].addEventListener('click',function(){
         success.classList.toggle("active-upit");
-        upit.classList.remove("up-upit");
     });
     
 }
+
 
 
 const button2 = document.querySelector(".menu");
@@ -27,7 +26,17 @@ function reportWindowSize() {
   }
 }
 window.onresize = reportWindowSize;
-
+navbar.style.backgroundColor="transparent";
+function scroll() {
+  if(window.pageYOffset>0){
+    navbar.style.backgroundColor="#FFFFFF";
+    
+  }
+  else{
+    navbar.style.backgroundColor="transparent";
+  }
+}
+window.onscroll = scroll;
 
 const lngpopup=document.querySelector(".lng-popup");
 const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
@@ -37,16 +46,6 @@ for(j=0;j<lngpopbutton.length;j++){
   });
   
 }
-const lngpopupmobile=document.querySelector(".menu-mobile");
-const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
-for(j=0;j<lngpopbutton.length;j++){
-  lngpopbuttonmobile[j].addEventListener('click',function(){
-      lngpopupmobile.classList.toggle("lng-mobile-active");
-  });
-  
-}
-
-
 const lngbutton=document.querySelectorAll(".buttons button , .lng-mobile-button");
 lngbutton[1].setAttribute('disabled', 'true');
 lngbutton[3].setAttribute('disabled', 'true');
@@ -58,3 +57,16 @@ for(i=0;i<lngbutton.length;i++){
       this.setAttribute('disabled', 'true');
   })
 }
+
+const lngpopupmobile=document.querySelector(".menu-mobile");
+const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
+for(j=0;j<lngpopbutton.length;j++){
+  lngpopbuttonmobile[j].addEventListener('click',function(){
+      lngpopupmobile.classList.toggle("lng-mobile-active");
+  });
+  
+}
+
+
+
+

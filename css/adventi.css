@@ -71,19 +71,16 @@ h5 {
 .adrenalin {
   padding-top: 240px;
   padding-bottom: 240px;
-  margin-top: 240px;
-  margin-bottom: 240px;
-  background-color: #0F141E;
 }
 .adrenalin h2 {
   grid-column: span 7;
-  color: white;
+  color: #0F141E;
   z-index: 2;
 }
 .adrenalin .pspread {
   grid-column: span 5;
   margin-top: 8px;
-  color: #F1F1F1;
+  color: #626262;
 }
 .adrenalin .underline-naslov::before {
   top: 42px;
@@ -123,9 +120,20 @@ h5 {
 
 .two-img-holder {
   padding-top: 51.29%;
+  perspective: 10px;
 }
-.two-img-holder img {
+.two-img-holder picture {
+  transform-style: preserve-3d;
+  overflow: hidden;
   border-radius: 16px;
+}
+.two-img-holder picture img {
+  transition: 1s;
+  transform: translateZ(0px);
+}
+
+.two-img-holder:hover picture img {
+  transform: translateZ(1px);
 }
 
 .text {
@@ -189,9 +197,9 @@ h5 {
 .bus-img {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 66.17%;
-  height: 100%;
+  top: 24px;
+  width: 62.81%;
+  height: calc(100% - 24px);
   display: flex;
   align-items: center;
 }
@@ -202,7 +210,7 @@ h5 {
 }
 
 .bus-img-center-holder {
-  padding-top: 54.17%;
+  padding-top: 50.68%;
 }
 
 .inner-text {
@@ -263,8 +271,22 @@ h5 {
 }
 
 .paralax {
+  transition: 0.5s;
   background-color: #FFFFFF;
   position: relative;
+}
+
+.inverted .paralax {
+  background-color: #0F141E;
+}
+.inverted h2 {
+  color: #FFFFFF;
+}
+.inverted h4 {
+  color: #FFFFFF;
+}
+.inverted .pspread {
+  color: #F1F1F1;
 }
 
 @media only screen and (max-width: 950px) {

@@ -117,6 +117,7 @@
 }
 .numbers div .plarge {
   color: #626262;
+  margin-bottom: 0;
 }
 
 .num {
@@ -135,9 +136,20 @@
 
 .two-img-holder {
   padding-top: 73.06%;
+  perspective: 10px;
 }
-.two-img-holder img {
+.two-img-holder picture {
+  transform-style: preserve-3d;
+  overflow: hidden;
   border-radius: 16px;
+}
+.two-img-holder picture img {
+  transition: 1s;
+  transform: translateZ(0px);
+}
+
+.two-img-holder:hover picture img {
+  transform: translateZ(1px);
 }
 
 .text {

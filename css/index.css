@@ -108,8 +108,8 @@
 .two-input-box {
   display: flex;
   width: 33%;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   align-items: center;
   justify-content: space-between;
   border: 1px solid white;
@@ -127,9 +127,10 @@
 }
 .two-input-box input {
   background-color: transparent;
-  border: none;
+  border: 0px;
+  padding: 0;
   color: #FFFFFF;
-  margin-left: 4px;
+  margin-left: 8px;
 }
 .two-input-box .arrow::before,
 .two-input-box .arrow::after {
@@ -415,12 +416,12 @@
 .individualno-text-element {
   display: flex;
   align-items: center;
+  margin-top: 24px;
 }
 .individualno-text-element div:first-of-type {
-  background-color: #F8F8F8;
+  background-color: #F1F1F1;
   border-radius: 16px;
   margin-right: 32px;
-  margin-top: 24px;
 }
 .individualno-text-element div:first-of-type img {
   padding: 16px;

@@ -2,12 +2,20 @@
 
 const acordation=document.getElementsByClassName('faq');
 for(i=0;i<acordation.length;i++){
+  
     acordation[i].addEventListener('click',function(){
+    var faqa=this.classList.contains("active");
         var elems = document.querySelectorAll(".faq.active");
 [].forEach.call(elems, function(el) {
     el.classList.remove("active");
 });
-        this.classList.toggle('active');
+
+if(faqa) {
+  this.classList.remove("active");
+        }
+        else{
+          this.classList.add("active");
+        }
     })
 }
 const galerybutton=document.querySelectorAll(".galery-open , .background-gal");
@@ -24,19 +32,25 @@ const main =document.querySelector(".main");
 const left = document.querySelector(".button-left");
 const right = document.querySelector(".button-right");
 const elems= document.querySelectorAll(".main img");
+const num1=document.querySelector(".num1");
+const num2=document.querySelector(".num2");
+
+
 var count=0;
-main.scrollTo(0,0)
-console.log(elems.length);
+num1.innerHTML = count+1;
+num2.innerHTML = elems.length;
+main.scrollTo(0,0);
 const leftpress = (e) => {
     if(count!=0){count--}
   main.scrollTo(main.offsetWidth*count,0 );
+  num1.innerHTML = count+1;
 
-  
 }
 const rightpress = (e) => {
     if(count!=(elems.length-1)){count++}
     main.scrollTo(main.offsetWidth*count,0 );
-    
+    num1.innerHTML = count+1;
+
   }
 
 right.addEventListener("click", rightpress);
@@ -88,16 +102,6 @@ for(j=0;j<lngpopbutton.length;j++){
   });
   
 }
-const lngpopupmobile=document.querySelector(".menu-mobile");
-const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
-for(j=0;j<lngpopbutton.length;j++){
-  lngpopbuttonmobile[j].addEventListener('click',function(){
-      lngpopupmobile.classList.toggle("lng-mobile-active");
-  });
-  
-}
-
-
 const lngbutton=document.querySelectorAll(".buttons button , .lng-mobile-button");
 lngbutton[1].setAttribute('disabled', 'true');
 lngbutton[3].setAttribute('disabled', 'true');
@@ -109,6 +113,17 @@ for(i=0;i<lngbutton.length;i++){
       this.setAttribute('disabled', 'true');
   })
 }
+const lngpopupmobile=document.querySelector(".menu-mobile");
+const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
+for(j=0;j<lngpopbutton.length;j++){
+  lngpopbuttonmobile[j].addEventListener('click',function(){
+      lngpopupmobile.classList.toggle("lng-mobile-active");
+  });
+  
+}
+
+
+
 
 //Show more
 

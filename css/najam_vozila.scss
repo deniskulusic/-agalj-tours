@@ -202,8 +202,27 @@ margin-top: 80px;
 }
 .two-img-holder{
     padding-top: 73.06%;
+    perspective: 10px;
+picture{
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-radius: 16px;
     img{
-        border-radius: 16px;
+        transition: 1s;
+        transform: translateZ(0px);
+    }
+}
+    
+        
+        
+    
+}
+.two-img-holder:hover{
+    picture{
+        
+        img{
+            transform: translateZ(1px);
+        }
     }
 }
 .text {

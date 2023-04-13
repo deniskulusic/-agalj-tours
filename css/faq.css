@@ -11,6 +11,14 @@
   object-fit: cover;
 }
 
+nav { /* Safari */
+  transition: background-color 0.2s ease-in;
+}
+
+.menu-active {
+  background-color: #FFFFFF !important;
+}
+
 .naslov {
   z-index: 2;
   margin-top: 264px;
@@ -59,6 +67,10 @@
   margin-top: 8px;
   color: #626262;
 }
+.acordation .pspread {
+  margin-top: 16px;
+  color: #626262;
+}
 
 .pravne_informacije .plarge {
   margin-top: 16px !important;
@@ -72,8 +84,8 @@
 }
 
 .faq {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   padding-left: 32px;
   padding-right: 32px;
   background-color: #F8F8F8;

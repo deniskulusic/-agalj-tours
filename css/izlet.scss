@@ -169,7 +169,7 @@ color: $White;
         }
         .pspread{
             grid-column: span 5;
-            margin-top: 24px;
+            margin-top: 8px;
             color:$MediumGrey;
         }
         .underline-naslov::before{
@@ -239,8 +239,22 @@ color: $White;
     }
     .two-img-holder{
         padding-top: 51.29%;
-        img{
+        perspective: 10px;
+        picture{
+            transform-style: preserve-3d;
+            overflow: hidden;
             border-radius: 16px;
+            img{
+                transition: 1s;
+                transform: translateZ(0px);
+            }}
+    }
+    .two-img-holder:hover{
+        picture{
+            
+            img{
+                transform: translateZ(1px);
+            }
         }
     }
     .text {
@@ -306,9 +320,9 @@ color: $White;
     .bus-img{
         position: absolute;
         right: 0;
-        top:0;
-        width: 66.17%;
-        height: 100%;
+        top:24px;
+        width: 62.81%;
+        height: calc(100% - 24px);
         display: flex;
         align-items: center;
     }
@@ -317,7 +331,7 @@ color: $White;
     width: 100%;
     }
     .bus-img-center-holder{
-        padding-top: 54.17%;
+        padding-top: 50.68%;
     }
 
 

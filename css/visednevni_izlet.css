@@ -188,6 +188,7 @@
   margin-top: 40px;
   padding-bottom: 40px;
   border-bottom: #F1F1F1 1px solid;
+  width: calc(100% - 60px);
 }
 .nositi h4 {
   margin-bottom: 16px;
@@ -199,14 +200,21 @@
   margin-top: 16px;
   background-color: #F8F8F8;
   padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 116px;
 }
 .nositi img {
   height: 32px;
 }
 .nositi .pmedium {
-  margin-top: 60px;
   padding: 0;
   margin-left: 0;
+  margin-top: 0;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .nositi-grid {
@@ -235,7 +243,7 @@
 }
 
 .map-holder {
-  padding-top: 44.52%;
+  padding-top: 43.56%;
 }
 .map-holder img {
   border-radius: 16px;
@@ -408,7 +416,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-right: 32px;
   display: flex;
   background-color: #FFFFFF;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-top: 24px;
 }
 
@@ -421,24 +429,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   border-left: #F8F8F8 solid 1px;
 }
-.two-input-box .arrow::before,
-.two-input-box .arrow::after {
-  content: "";
-  display: block;
-  width: 9px;
-  border-radius: 50px;
-  height: 1.5px;
-  background: #626262;
-  transition: 0.3s ease-in-out;
-}
-.two-input-box .arrow::before {
-  transform: rotate(45deg);
-}
-.two-input-box .arrow::after {
-  margin-top: -2px;
-  margin-left: 6px;
-  transform: rotate(-45deg);
-}
 .two-input-box div {
   position: relative;
   display: flex;
@@ -449,7 +439,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .two-input-box div:first-of-type {
   border-left: none;
 }
-.two-input-box span {
+.two-input-box img {
   margin-right: 16px;
 }
 .two-input-box input::-moz-placeholder {
@@ -481,6 +471,7 @@ input::placeholder {
 
 input {
   border: 0px;
+  padding: 0;
 }
 
 input:focus {
@@ -505,7 +496,7 @@ label {
   margin-right: 32px;
   margin-top: 16px;
   background-color: #FFFFFF;
-  border-radius: 4px;
+  border-radius: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -514,6 +505,8 @@ label {
 }
 .input input {
   margin-left: 16px;
+  height: 24px;
+  padding: 0;
 }
 
 .checkbox {
@@ -559,6 +552,7 @@ input[type=checkbox] {
   width: 40px;
   border: 1px #FFFFFF solid;
   border-radius: 100%;
+  z-index: 3;
 }
 .button-right img {
   transform: scaleX(-1);
@@ -578,9 +572,25 @@ input[type=checkbox] {
   width: 40px;
   border: 1px #FFFFFF solid;
   border-radius: 100%;
+  z-index: 3;
 }
 .button-left img {
   filter: brightness(100000%);
+}
+
+.fotonum {
+  position: absolute;
+  display: flex;
+  color: #FFFFFF;
+  top: calc(10vh - 18px);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  color: #FFFFFF;
+  top: calc(10vh - 18px);
+  right: 18vw;
 }
 
 .button-right:hover {
@@ -608,6 +618,7 @@ input[type=checkbox] {
 }
 
 .background-gal {
+  z-index: 1;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -745,6 +756,9 @@ input[type=checkbox] {
   .check {
     grid-column: span 12;
   }
+  .nositi {
+    width: 100%;
+  }
   .nositi div {
     grid-column: span 3;
   }
@@ -783,6 +797,12 @@ input[type=checkbox] {
     overflow: scroll;
     gap: 24px;
   }
+  .fotonum {
+    display: none;
+  }
+  .close {
+    display: none;
+  }
 }
 @media only screen and (max-width: 450px) {
   .galery-big div {
@@ -810,8 +830,5 @@ input[type=checkbox] {
   }
   .nositi h4 {
     margin-bottom: 4px;
-  }
-  .nositi .pmedium {
-    margin-top: 66px;
   }
 }/*# sourceMappingURL=visednevni_izlet.css.map */

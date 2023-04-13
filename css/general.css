@@ -179,6 +179,7 @@ section {
 }
 
 nav {
+  transition: 0.5s;
   z-index: 10;
   width: 100%;
   position: fixed;
@@ -186,11 +187,19 @@ nav {
 }
 
 .navbar {
+  margin-left: 80px;
+  margin-right: 80px;
   grid-column: span 12;
   height: 104px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.navbar .pbold {
+  transition: color 0.5s;
+}
+.navbar .pbold:hover {
+  transition: color 0s;
 }
 
 .nav-right {
@@ -313,6 +322,10 @@ footer u {
   text-decoration: none;
   cursor: pointer;
 }
+footer u:hover {
+  text-decoration: underline;
+  text-decoration-color: #F1F1F1;
+}
 
 .footer-top {
   grid-column: span 12;
@@ -418,7 +431,7 @@ button:disabled {
   text-align: center;
   width: 100%;
   background-color: #FFFFFF;
-  border-radius: 16px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -437,6 +450,7 @@ button:disabled {
   margin-top: 32px;
 }
 .success button {
+  padding: 19px 39px;
   margin: auto;
   margin-top: 24px;
   margin-bottom: 64px;
@@ -472,7 +486,7 @@ button:disabled {
 .lng-popup .maxw-inner {
   width: 100%;
   background-color: #FFFFFF;
-  border-radius: 16px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -491,7 +505,7 @@ button:disabled {
   margin-top: 32px;
 }
 .lng-popup .inner-title-lng {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
@@ -563,6 +577,14 @@ button:disabled {
   justify-content: center;
 }
 
+.background-s {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0F141E;
+  opacity: 80%;
+}
+
 .background {
   position: absolute;
   width: 100%;
@@ -612,37 +634,37 @@ button:disabled {
   transform: translateY(5px);
 }
 
-.inverted {
+.inverted nav {
   background-color: #0F141E;
 }
-.inverted .logo img {
+.inverted nav .logo img {
   filter: brightness(10000%);
 }
-.inverted .lng-mobile-text {
+.inverted nav .lng-mobile-text {
   color: #FFFFFF;
 }
-.inverted .lng-mobile-text img {
+.inverted nav .lng-mobile-text img {
   filter: brightness(10000%);
 }
-.inverted .menu-line {
+.inverted nav .menu-line {
   background-color: #FFFFFF;
 }
-.inverted .menu-line::before, .inverted .menu-line::after {
+.inverted nav .menu-line::before, .inverted nav .menu-line::after {
   background-color: #FFFFFF;
 }
-.inverted .menu-text {
+.inverted nav .menu-text {
   color: #FFFFFF;
 }
-.inverted .nav-right .pbold {
+.inverted nav .nav-right .pbold {
   color: #FFFFFF;
 }
-.inverted .nav-right .pbold:hover {
+.inverted nav .nav-right .pbold:hover {
   color: #FC6536;
 }
 
 .transparent {
   background-color: rgba(15, 20, 30, 0);
-  transition: 1s;
+  transition: 0.5s;
 }
 .transparent .logo img {
   filter: brightness(10000%);
@@ -688,6 +710,7 @@ button:disabled {
 }
 .lng-mobile button {
   width: 100%;
+  margin-top: 0;
 }
 
 .lng-mobile-text {
@@ -703,6 +726,43 @@ button:disabled {
 }
 .lng-mobile-text img {
   margin-right: 8px;
+}
+
+input[type=checkbox] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  display: block;
+  /* Grays/Medium Gray */
+  cursor: pointer;
+  border: 1px solid #F1F1F1;
+  border-radius: 4px;
+  position: relative;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 12px;
+  border-right: 2px solid #FC6536;
+  border-bottom: 2px solid #FC6536;
+  transform: translate(-50%, -50%) rotateZ(40deg);
+  left: 50%;
+  top: 45%;
+  display: none;
+}
+
+input[type=checkbox]:checked::before {
+  display: block;
 }
 
 @media only screen and (max-width: 950px) {
@@ -827,5 +887,13 @@ button:disabled {
   .container {
     padding-left: 24px;
     padding-right: 24px;
+  }
+  .success button {
+    margin-bottom: 24px;
+    width: 85.32%;
+  }
+  .navbar {
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }/*# sourceMappingURL=general.css.map */
