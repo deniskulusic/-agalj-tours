@@ -613,6 +613,11 @@ align-items: center;
         border: 1px solid $White;
         margin-top: 24px;
     }
+    button:hover{
+        background-color: $White;
+        color: $DarkBlue;
+    
+    }
 }
 
 .acordation{

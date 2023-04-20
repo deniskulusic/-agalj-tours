@@ -602,6 +602,10 @@
   border: 1px solid #FFFFFF;
   margin-top: 24px;
 }
+.adventure-img-content button:hover {
+  background-color: #FFFFFF;
+  color: #0F141E;
+}
 
 .acordation {
   z-index: 2;
