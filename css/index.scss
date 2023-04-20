@@ -367,7 +367,7 @@ color: $Orange;
 
 .slider-dark{
     padding-top: 240px;
-    padding-bottom: 104px;
+    padding-bottom: 240px;
     margin-bottom: 240px;
     position: relative;
     .arrow-slider{
@@ -851,7 +851,7 @@ input[type='checkbox'] {
  }
  .upit{
     display: none;
-
+    
 }
 
  @media only screen and (max-width: 1450px) {
@@ -875,8 +875,7 @@ input[type='checkbox'] {
         border-radius: 0px;
         border-top-right-radius: 16px;
         border-top-left-radius: 16px;
-        background: rgba(15, 20, 30, 0.4);
-        backdrop-filter: blur(50px);
+
         right: 0;
         top: auto;
         max-height: 0px;
@@ -895,6 +894,8 @@ input[type='checkbox'] {
     .up-upit {
         max-height: 2000px;
         transition: 1s ease-in;
+        background: rgba(15, 20, 30, 0.4);
+    backdrop-filter: blur(50px);
     }
     
 .input{
