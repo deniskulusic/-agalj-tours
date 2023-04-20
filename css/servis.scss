@@ -12,7 +12,35 @@ $LightGrey:#F8F8F8;
     overflow-x: hidden;
     perspective: 1px;
 }
-
+.inverted{
+    h4{
+        color:$White;
+        
+    }
+    h2{
+        color:$White;
+    }
+    h5{
+        color:$White;
+    }
+    .psmall{
+        color:$MediumGrey;
+    }
+    .pspread{
+        color:$MediumGrey;
+    }
+    .pbold{
+        color: $White;
+    }
+    .plarge{
+        color:$MediumGrey;
+    }
+    .paralax{
+            
+        background-color: $DarkBlue;
+    }
+    
+}
 .imgnaslov{
     z-index: -3;
     position: sticky;
@@ -57,6 +85,7 @@ $LightGrey:#F8F8F8;
     background-color: $White;
     position: relative;
     z-index: -1;
+    transition: 0.5s;
 }
 
   .underline-naslov{
@@ -135,8 +164,10 @@ color: $MediumGrey;
 
 .img-grid{
     background-color: $DarkBlue;
+    padding-bottom: 104px;
+    transition: 0.5s;
     padding-top:  216px - 38px;
-    padding-bottom: 240px;
+    margin-bottom: 240px;
     h6{
         margin-top: 40px;
         color: $MediumGrey;

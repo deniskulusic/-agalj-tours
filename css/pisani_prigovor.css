@@ -218,7 +218,8 @@ button {
   u::before {
     height: 8px;
     width: 100%;
-    top: 35px;
+    top: 100%;
+    margin-top: -10px;
   }
   .text {
     margin-top: 176px;

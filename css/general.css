@@ -325,6 +325,7 @@ footer u {
 footer u:hover {
   text-decoration: underline;
   text-decoration-color: #F1F1F1;
+  color: #F1F1F1;
 }
 
 .footer-top {
@@ -332,7 +333,7 @@ footer u:hover {
   margin-top: 120px;
 }
 .footer-top h6 {
-  color: #F1F1F1;
+  color: #F1F1F1 !important;
 }
 
 .footer-middle {
@@ -425,7 +426,7 @@ button:disabled {
   display: none;
   align-items: center;
   position: fixed;
-  z-index: 11;
+  z-index: 15;
 }
 .success .maxw-inner {
   text-align: center;
@@ -669,21 +670,11 @@ button:disabled {
 .transparent .logo img {
   filter: brightness(10000%);
 }
-.transparent .lng-mobile-text {
-  color: #FFFFFF;
-  cursor: pointer;
-}
-.transparent .lng-mobile-text img {
-  filter: brightness(10000%);
-}
 .transparent .menu-line {
   background-color: #FFFFFF;
 }
 .transparent .menu-line::before, .transparent .menu-line::after {
   background-color: #FFFFFF;
-}
-.transparent .menu-text {
-  color: #FFFFFF;
 }
 .transparent .nav-right .pbold {
   color: #FFFFFF;
@@ -693,6 +684,16 @@ button:disabled {
 }
 
 .transparent.menu-active {
+  background-color: #FFFFFF;
+  color: #0F141E;
+}
+.transparent.menu-active .logo img {
+  filter: brightness(100%);
+}
+.transparent.menu-active .menu-line {
+  background-color: #0F141E;
+}
+.transparent.menu-active .menu-line::before, .transparent.menu-active .menu-line::after {
   background-color: #0F141E;
 }
 
@@ -797,7 +798,7 @@ input[type=checkbox]:checked::before {
     transform: rotate(-25deg);
   }
   .menu-active .menu-mobile {
-    height: calc(100vh - 104px);
+    height: calc(100svh - 104px);
   }
   .lng-mobile-active .lng-mobile {
     transition: 1.5s;
@@ -871,6 +872,12 @@ input[type=checkbox]:checked::before {
     margin-top: 48px;
     grid-column: span 12;
   }
+  .footer-middle .pbold {
+    margin-bottom: 16px;
+  }
+  .socials img {
+    height: 32px;
+  }
   .footer-bottom {
     margin-top: 32px;
     flex-direction: column;
@@ -881,12 +888,24 @@ input[type=checkbox]:checked::before {
   .footer-bottom .psmall {
     padding-top: 12px;
     padding-bottom: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
   }
 }
 @media only screen and (max-width: 450px) {
   .container {
     padding-left: 24px;
     padding-right: 24px;
+  }
+  .success h4 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .success .plarge {
+    width: calc(100% - 48px);
   }
   .success button {
     margin-bottom: 24px;

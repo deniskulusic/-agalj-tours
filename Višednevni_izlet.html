@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/visednevni_izlet.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -130,39 +130,46 @@
             <div class="icons full-page-grid">
                 <div>
                     <img src="assets/img/Calendar.svg" alt="">
-                    <div>
-                        <div class="pbold">Jednodnevni</div>
-                        <div class="psmall">Vrsta izleta</div>
-                    </div>
-                </div>
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
-                    <div>
-                        <div class="pbold">Autobus</div>
-                        <div class="psmall">Vrsta prijevoza</div>
-                    </div>
+                    <div class="pbold">Višednevni</div>
+                    <div class="psmall">Vrsta izleta</div>
                 </div>
+            </div>
+            <div>
+                <img src="assets/img/Bus1.svg" alt="">
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
-                    <div>
-                        <div class="pbold">Grad Omiš</div>
-                        <div class="psmall">Mjesto polaska</div>
-                    </div>
+                    <div class="pbold">Autobus</div>
+                    <div class="psmall">Vrsta prijevoza</div>
                 </div>
+            </div>
+            <div class="last">
+                <img src="assets/img/meta.svg" alt="">
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
-                    <div>
-                        <div class="pbold">08:00h</div>
-                        <div class="psmall">Vrijeme polaska</div>
-                    </div>
+                    <div class="pbold">Trogir, Omiš, Split, Trogir</div>
+                    <div class="psmall">Mjesto polaska</div>
                 </div>
+            </div>
+            <div>
+                <img src="assets/img/streamlinehq-calendar-interface-essential-24 6.svg" alt="">
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
-                    <div>
-                        <div class="pbold">17:00h</div>
-                        <div class="psmall">Vrijeme povratka</div>
-                    </div>
+                    <div class="pbold">08:00h</div>
+                    <div class="psmall">Vrijeme polaska</div>
                 </div>
+            </div>
+            <div >
+                <img src="assets/img/streamlinehq-calendar-interface-essential-24 6.svg" alt="">
+                <div>
+                    <div class="pbold">17:00h</div>
+                    <div class="psmall">Vrijeme povratka</div>
+                </div>
+            </div>
+            <div class="last">
+                <img src="assets/img/Calendar.svg" alt="">
+                <div>
+                    <div class="pbold">19.12.2023</div>
+                    <div class="psmall">Sljedeći datum polaska</div>
+                </div>
+            </div>
             </div>
             <div class="o-izletu full-page-grid">
                 <h4>O izletu</h4>
@@ -207,7 +214,7 @@
                     <img src="assets/img/Warning.svg" alt="">
                     <div class="psmall">Sed non mollis orci, vitae tempus</div>
                 </div>
-                <div class="pbold">
+                <div class="pbold ">
                     Dodatne opcije
                 </div>
                 <div class="check">
@@ -287,7 +294,7 @@
             </div>
             </div>
                 </div>
-                <div class="map-information map-mobile">
+                <div class="map-information">
                     <div class="pbold">Ulica Ante Starčevića 30,  Makarska</div>
                     <div class="plarge">Adresa (polazište #1)</div>
                 </div>
@@ -295,11 +302,11 @@
                     <div class="pbold">Primjer adresa 27, Omiš</div>
                     <div class="plarge">Adresa (polazište #2)</div>
                 </div>
-                <div class="map-information map-mobile">
+                <div class="map-information ">
                     <div class="pbold">Obala kneza Domagoja 12, Split</div>
                     <div class="plarge">Adresa (polazište #3)</div>
                 </div>
-                <div class="map-information map-mobile">
+                <div class="map-information ">
                     <div class="pbold">Dr Franje Tudmana 2, Trogir</div>
                     <div class="plarge">Adresa (polazište #4)</div>
                 </div>
@@ -355,20 +362,21 @@
                 <span class="arrow-upit"></span>
             </div>
             </div>
+
                 <div class="two-input">
-                    <div class="two-input-box">
+                    <div class="two-input-box" >
                         <div>
                             <label>Datum</label>
-                            <input type="date" required placeholder="Odaberi">
+                            <input type="text" required placeholder="Odaberi" id="datepicker">
                         </div>
                         <img src="assets/img/Calendar.svg" alt="">
                     </div>
                     <div class="two-input-box">
                         <div>
-                            <label>Datum</label>
-                            <input type="date" required placeholder="Odaberi">
+                            <label>Broj osoba</label>
+                            <input type="text" required placeholder="Odaberi" >
                         </div>
-                        <img src="assets/img/Calendar.svg" alt="">
+                        <span class="arrow"></span>
                     </div>
                 </div>
                 <div class="input">
@@ -385,6 +393,9 @@
                 </div>
                 
                 <button class="upit-button" enabled>Pošalji upit</button>
+        </div>
+        <div class="upit-background">
+
         </div>
     </section>
     <footer>
@@ -432,6 +443,10 @@
         </div>
     </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/jednodnevni_izlet.js"></script>
+    <script>
+        flatpickr("#datepicker", {});
+    </script>
 </body>
 </html>

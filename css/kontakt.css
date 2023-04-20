@@ -11,6 +11,14 @@
   object-fit: cover;
 }
 
+nav { /* Safari */
+  transition: background-color 0.2s ease-in;
+}
+
+.menu-active {
+  background-color: #FFFFFF !important;
+}
+
 .naslov {
   z-index: 2;
   margin-top: 264px;
@@ -325,7 +333,7 @@ button {
   .naslov {
     text-align: center;
   }
-  br {
+  .naslov br {
     display: none;
   }
   .prituzba-box {

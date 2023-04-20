@@ -5,6 +5,31 @@
   perspective: 1px;
 }
 
+.inverted h4 {
+  color: #FFFFFF;
+}
+.inverted h2 {
+  color: #FFFFFF;
+}
+.inverted h5 {
+  color: #FFFFFF;
+}
+.inverted .psmall {
+  color: #F1F1F1;
+}
+.inverted .pspread {
+  color: #F1F1F1;
+}
+.inverted .pbold {
+  color: #FFFFFF;
+}
+.inverted .plarge {
+  color: #F1F1F1;
+}
+.inverted .paralax {
+  background-color: #0F141E;
+}
+
 .imgnaslov {
   z-index: -3;
   position: sticky;
@@ -50,6 +75,7 @@
   background-color: #FFFFFF;
   position: relative;
   z-index: -1;
+  transition: 0.5s;
 }
 
 .underline-naslov {
@@ -133,8 +159,10 @@
 
 .img-grid {
   background-color: #0F141E;
+  padding-bottom: 104px;
+  transition: 0.5s;
   padding-top: 178px;
-  padding-bottom: 240px;
+  margin-bottom: 240px;
 }
 .img-grid h6 {
   margin-top: 40px;

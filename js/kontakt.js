@@ -28,7 +28,17 @@ function reportWindowSize() {
 }
 
 window.onresize = reportWindowSize;
-
+navbar.style.backgroundColor="transparent";
+function scroll() {
+  if(window.pageYOffset>0){
+    navbar.style.backgroundColor="#FFFFFF";
+    
+  }
+  else{
+    navbar.style.backgroundColor="transparent";
+  }
+}
+window.onscroll = scroll;
 //Language
 
 const lngpopup=document.querySelector(".lng-popup");
@@ -52,7 +62,7 @@ for(i=0;i<lngbutton.length;i++){
 }
 const lngpopupmobile=document.querySelector(".menu-mobile");
 const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
-for(j=0;j<lngpopbutton.length;j++){
+for(j=0;j<lngpopbuttonmobile.length;j++){
   lngpopbuttonmobile[j].addEventListener('click',function(){
       lngpopupmobile.classList.toggle("lng-mobile-active");
   });

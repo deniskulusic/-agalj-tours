@@ -205,7 +205,8 @@ object-fit: cover;
       background: $Orange;
       z-index: -1!important;
       width: 100%;
-      top:40px;
+      top:100%;
+      margin-top: -9px;
     }
     .acordation{
         margin-top: 170px;

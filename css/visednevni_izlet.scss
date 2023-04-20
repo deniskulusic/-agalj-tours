@@ -88,6 +88,9 @@ div{
             align-items: start;
         }
     }
+    .last{
+        grid-column: span 3;
+    }
     .psmall{
         color:#707070;
     }
@@ -380,18 +383,6 @@ grid-column: span 7;
     }
     
 }
-input[type="date"]::-webkit-calendar-picker-indicator {
-    background: transparent;
-    bottom: 0;
-    color: transparent;
-    cursor: pointer;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
-}
 .price{
     padding: 8px 16px;
     background-color: $Orange;
@@ -417,14 +408,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-size: 16px;
         line-height: 20px;
     }
-}
-input::-webkit-calendar-picker-indicator{
-    display: none;
+    span{
+        margin-right: 16px;
+
+    }
+    .arrow::after{
+        width: 10px;
+
+    }
+    .arrow::before{
+        width: 10px;
+        margin-left: 3px;
+    }
 }
 
-input[type="date"]::-webkit-input-placeholder{ 
-    visibility: hidden !important;
-}
 
 .two-input-box{
     display:flex;
@@ -596,7 +593,14 @@ background-color: rgba(255,255,255,0.5);
     overflow: hidden;
     position: relative;
     z-index: 2;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(63.65%);
     img{
+        scroll-snap-align: start;
         min-width: 100%;
 height: 100%;
 -o-object-fit: cover;
@@ -604,7 +608,9 @@ object-fit: cover;
     }
     
 }
-
+.main::-webkit-scrollbar {
+    width: 0 !important;
+    }
     .background-gal{
         z-index: 1;
         position: absolute;
@@ -616,6 +622,7 @@ object-fit: cover;
 .active-gal{
     display: flex;
 }
+
 @media only screen and (max-width: 1250px) {
 .icons{
     div{
@@ -648,7 +655,7 @@ object-fit: cover;
         top: auto;
         max-height: 88px;
         overflow: hidden;
-        z-index: 9;
+        z-index: 12;
         transition: 0.5s;
         backdrop-filter: blur(10px);
 
@@ -676,7 +683,18 @@ object-fit: cover;
             margin-left:24px ;
         }
     }
-    
+    .upit-background{
+        height:0px;
+        transition: opacity 0.5s;
+        background-color: $DarkBlue;
+        opacity: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 11;
+    }
+
     .upit-up{
         cursor: pointer;
         margin-right: 24px;
@@ -720,6 +738,13 @@ object-fit: cover;
             opacity: 0;
         }
     }
+    
+}
+.up-upitb{
+        height: 100vh;
+        opacity: 0.8;
+        
+    
 }
 }
 @media only screen and (max-width: 650px) {
@@ -791,15 +816,16 @@ object-fit: cover;
         display: none;
       }
       .main{
-        width: 90%;
+        width: 100%;
+        height: 250px;
         overflow:scroll;
-        gap:24px;
       }
       .fotonum{
-        display: none;
+        top: 24px;
     }
     .close{
-        display: none;
+        top: 24px;;
+        right: 24px;
     }
 }
 @media only screen and (max-width: 450px) {
@@ -823,6 +849,10 @@ object-fit: cover;
         padding-bottom: 8px;
         div {
             padding-bottom: 32px;
+            grid-column: span 3;
+          }
+          .last{
+            grid-column: span 6;
           }
     }
     .nositi{

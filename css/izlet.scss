@@ -9,6 +9,42 @@ $LightGrey:#F8F8F8;
 .mobile{
     display: none;
 }
+.inverted{
+    h4{
+        color:$White;
+        
+    }
+    h2{
+        color:$White;
+    }
+    h5{
+        color:$White;
+    }
+    .psmall{
+        color:$MediumGrey;
+    }
+    .pspread{
+        color:$MediumGrey;
+    }
+    .pbold{
+        color: $White;
+    }
+    .plarge{
+        color:$MediumGrey;
+    }
+    .paralax{
+            
+        background-color: $DarkBlue;
+    }
+    .adrenalin{
+        h2{
+            color:$White;
+        }
+        .pspread{
+            color:$MediumGrey;
+        }
+    }
+}
 .imgnaslov {
     position: relative;
     width: 100%;
@@ -159,19 +195,16 @@ color: $White;
     
     .adrenalin{
         padding-top: 240px;
-        padding-bottom: 240px;
-        margin-top: 240px;
         margin-bottom: 240px;
-        background-color: $DarkBlue;
         h2{
             grid-column: span 7;
-            color:white;
+            color:$DarkBlue;
             z-index: 2;
         }
         .pspread{
             grid-column: span 5;
             margin-top: 8px;
-            color:$MediumGrey;
+            color:$MiddleGrey;
         }
         .underline-naslov::before{
             margin-top: -17px;
@@ -253,8 +286,8 @@ color: $White;
         picture{
             
             img{
-                transform: scale(1.3);
-                -webkit-transform:scale(1.3) ;
+                transform: scale(1.1);
+                -webkit-transform:scale(1.1) ;
             }
         }
     }
@@ -386,7 +419,7 @@ color: $White;
     .paralax{
         background-color: $White;
         position: relative;
-
+        transition: 0.5s;
     }
 
     @media only screen and (max-width: 950px) {

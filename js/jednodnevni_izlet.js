@@ -39,6 +39,10 @@ const num2=document.querySelector(".num2");
 var count=0;
 num1.innerHTML = count+1;
 num2.innerHTML = elems.length;
+function scroll() {
+  num1.innerHTML = Math.round(main.scrollLeft/main.offsetWidth)+1;
+}
+main.onscroll = scroll;
 main.scrollTo(0,0);
 const leftpress = (e) => {
     if(count!=0){count--}
@@ -58,10 +62,13 @@ left.addEventListener("click", leftpress);
 
 const upit=document.querySelector(".upit");
 const upitup=document.querySelector(".upit-up");
-upitup.onclick = function() {
-    upit.classList.toggle("up-upit");
-};
-
+const upitback=document.querySelector(".upit-background");
+function upitupf() {
+  upit.classList.toggle("up-upit");
+    upitback.classList.toggle("up-upitb");
+}
+upitup.onclick=upitupf;
+upitback.onclick=upitupf;
 //Success popup
 
 const success=document.querySelector(".success");
@@ -70,6 +77,7 @@ for(j=0;j<upitbutton.length;j++){
     upitbutton[j].addEventListener('click',function(){
         success.classList.toggle("active-upit");
         upit.classList.remove("up-upit");
+        upitback.classList.remove("up-upitb");
     });
     
 }
@@ -114,7 +122,8 @@ for(i=0;i<lngbutton.length;i++){
 }
 const lngpopupmobile=document.querySelector(".menu-mobile");
 const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
-for(j=0;j<lngpopbutton.length;j++){
+for(j=0;j<lngpopbuttonmobile.length;j++){
+  
   lngpopbuttonmobile[j].addEventListener('click',function(){
       lngpopupmobile.classList.toggle("lng-mobile-active");
   });

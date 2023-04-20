@@ -83,6 +83,9 @@
   padding-bottom: 0;
   align-items: start;
 }
+.icons .last {
+  grid-column: span 3;
+}
 .icons .psmall {
   color: #707070;
 }
@@ -384,19 +387,6 @@
   margin-bottom: 32px;
 }
 
-input[type=date]::-webkit-calendar-picker-indicator {
-  background: transparent;
-  bottom: 0;
-  color: transparent;
-  cursor: pointer;
-  height: auto;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-}
-
 .price {
   padding: 8px 16px;
   background-color: #FC6536;
@@ -423,13 +413,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 16px;
   line-height: 20px;
 }
-
-input::-webkit-calendar-picker-indicator {
-  display: none;
+.two-input span {
+  margin-right: 16px;
 }
-
-input[type=date]::-webkit-input-placeholder {
-  visibility: hidden !important;
+.two-input .arrow::after {
+  width: 10px;
+}
+.two-input .arrow::before {
+  width: 10px;
+  margin-left: 3px;
 }
 
 .two-input-box {
@@ -621,12 +613,23 @@ input[type=checkbox] {
   overflow: hidden;
   position: relative;
   z-index: 2;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(63.65%);
 }
 .main img {
+  scroll-snap-align: start;
   min-width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.main::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 .background-gal {
@@ -671,7 +674,7 @@ input[type=checkbox] {
     top: auto;
     max-height: 88px;
     overflow: hidden;
-    z-index: 9;
+    z-index: 12;
     transition: 0.5s;
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
@@ -697,6 +700,17 @@ input[type=checkbox] {
     margin-top: 16px;
     padding: 4px 12px;
     margin-left: 24px;
+  }
+  .upit-background {
+    height: 0px;
+    transition: opacity 0.5s;
+    background-color: #0F141E;
+    opacity: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
   }
   .upit-up {
     cursor: pointer;
@@ -738,6 +752,10 @@ input[type=checkbox] {
   .up-upit .upit-up .pbold {
     transition: 0.5s;
     opacity: 0;
+  }
+  .up-upitb {
+    height: 100vh;
+    opacity: 0.8;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -805,15 +823,16 @@ input[type=checkbox] {
     display: none;
   }
   .main {
-    width: 90%;
+    width: 100%;
+    height: 250px;
     overflow: scroll;
-    gap: 24px;
   }
   .fotonum {
-    display: none;
+    top: 24px;
   }
   .close {
-    display: none;
+    top: 24px;
+    right: 24px;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -836,6 +855,10 @@ input[type=checkbox] {
   }
   .icons div {
     padding-bottom: 32px;
+    grid-column: span 3;
+  }
+  .icons .last {
+    grid-column: span 6;
   }
   .nositi div {
     margin-top: 20px;

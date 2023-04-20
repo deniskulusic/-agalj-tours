@@ -18,6 +18,13 @@ width: 100%;
 object-fit: cover;
     }
   }
+  nav{
+    -webkit-transition: background-color 0.2s ease-in; /* Safari */
+          transition: background-color 0.2s ease-in;
+  }
+  .menu-active{
+    background-color: $White !important;
+  }
 .naslov
 {
     z-index: 2;
@@ -328,10 +335,11 @@ button{
 }
 .naslov{
     text-align: center;
+    br{
+        display: none;
+    }
 }
-br{
-    display: none;
-}
+
 .prituzba-box{
     grid-column: span 12;
     padding: 24px;

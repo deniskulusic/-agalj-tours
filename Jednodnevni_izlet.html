@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/visednevni_izlet.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -138,28 +138,28 @@
                     </div>
                 </div>
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
+                    <img src="assets/img/Bus1.svg" alt="">
                     <div>
                         <div class="pbold">Autobus</div>
                         <div class="psmall">Vrsta prijevoza</div>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
+                    <img src="assets/img/meta.svg" alt="">
                     <div>
                         <div class="pbold">Grad Omiš</div>
                         <div class="psmall">Mjesto polaska</div>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
+                    <img src="assets/img/streamlinehq-calendar-interface-essential-24 6.svg" alt="">
                     <div>
                         <div class="pbold">08:00h</div>
                         <div class="psmall">Vrijeme polaska</div>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/img/Calendar.svg" alt="">
+                    <img src="assets/img/streamlinehq-calendar-interface-essential-24 6.svg" alt="">
                     <div>
                         <div class="pbold">17:00h</div>
                         <div class="psmall">Vrijeme povratka</div>
@@ -333,14 +333,14 @@
                     <div class="two-input-box">
                         <div>
                             <label>Datum</label>
-                            <input type="date" placeholder="Odaberi">
+                            <input type="text" placeholder="Odaberi" id="datepicker">
                         </div>
                         <img src="assets/img/Calendar.svg" alt="">
                     </div>
                     <div class="two-input-box">
                         <div>
                             <label>Datum</label>
-                            <input type="date" placeholder="Odaberi">
+                            <input type="text" placeholder="Odaberi" id="datepicker">
                         </div>
                         <img src="assets/img/Calendar.svg" alt="">
                     </div>
@@ -359,6 +359,9 @@
                 </div>
                 
                 <button class="upit-button" enabled> Pošalji upit</button>
+        </div>
+        <div class="upit-background">
+
         </div>
     </section>
     <footer>
@@ -407,6 +410,11 @@
     </div>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/jednodnevni_izlet.js"></script>
+    <script>
+        flatpickr("#datepicker", {});
+    </script>
+
 </body>
 </html>
