@@ -861,7 +861,7 @@ input[type=checkbox]:checked::before {
     height: 72px;
   }
   .menu-active .menu-mobile {
-    height: calc(100vh - 72px);
+    height: calc(100dvh - 72px);
   }
   .logo img {
     height: 28px;
