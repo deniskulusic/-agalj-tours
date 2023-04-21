@@ -803,7 +803,7 @@ input[type=checkbox]:checked::before {
     transform: rotate(-25deg);
   }
   .menu-active .menu-mobile {
-    height: calc(100svh - 104px);
+    height: calc(100dvh - 104px);
   }
   .lng-mobile-active .lng-mobile {
     transition: 1.5s;
