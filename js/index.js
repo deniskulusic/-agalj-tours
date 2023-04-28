@@ -13,11 +13,10 @@ var pageyoff;
 var darkfromtop;
 var darkheight;
 const paralax=document.getElementById("naslov");
-setTimeout(function() {
+
 pageyoff=wrap.scrollTop;
 darkfromtop=pageyoff + dark.getBoundingClientRect().top;
 darkheight=dark.offsetHeight;
-}, 3000);
 var int
 if((window.innerWidth)>1420){
   int=window.innerWidth/2-640

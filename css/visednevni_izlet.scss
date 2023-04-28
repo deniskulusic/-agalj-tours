@@ -6,7 +6,9 @@ $MidnightGrey:#6F7785;
 $MiddleGrey:#626262;
 $MediumGrey:#F1F1F1;
 $LightGrey:#F8F8F8;
-
+.menu-active{
+    z-index: 20;
+}
 .galery{
     margin-top: 168px;
     h2{
@@ -100,6 +102,14 @@ div{
     }
     padding-bottom: 16px;
     border-bottom: $MediumGrey 1px solid;
+}
+
+.flatpickr-calendar{
+    font-family: 'Manrope';
+    .selected{
+        background: $Orange !important;
+        border-color: $Orange !important;
+    }
 }
 .o-izletu{
     margin-top: 40px;
@@ -745,6 +755,9 @@ object-fit: cover;
         opacity: 0.8;
         
     
+}
+.upit-footer{
+    max-height: 0px;
 }
 }
 @media only screen and (max-width: 650px) {

@@ -44,6 +44,13 @@ $LightGrey:#F8F8F8;
             color:$MediumGrey;
         }
     }
+    .individualno-text-element {
+        div:first-of-type {
+        background-color: #2C3038;
+        img{
+            filter: brightness(10000%);
+        }}
+      }
 }
 .wrapper{
     height: 100dvh;
@@ -258,7 +265,6 @@ backdrop-filter: blur(50px);
         overflow-x: scroll;
         overflow-y: hidden;
         display: flex;
-        gap: 40px;
         position: absolute;
         left: 0;
         width: calc(50vw + 640px) ;
@@ -281,6 +287,7 @@ backdrop-filter: blur(50px);
     display: flex;
     flex-direction: column;
     min-width: 400px ;
+    margin-right: 40px;
     .eyebrow{
         margin-top: 32px;
     }
@@ -291,13 +298,29 @@ backdrop-filter: blur(50px);
 
 }
 
+    
+
+.slider-element-picture:hover{
+    picture{
+        
+        img{
+            transform: scale(1.1);
+            -webkit-transform:scale(1.1) ;
+        }
+    }
+}
 .slider-element-picture{
     position: relative;
     width: 100%;
     height: 568px;
-    img{
+    picture{
+        overflow: hidden;
         border-radius: 16px;
-    }
+        img{
+            transition: 1s;
+            transform: scale(1);
+            -webkit-transform:scale(1) ;
+        }}
     h5{
         color:$White;
         position: absolute;
@@ -433,6 +456,10 @@ z-index: 2;
         img{
             
             transform: scale(1.1);
+        }
+        .inner-title{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
         }
     
 }
@@ -1190,12 +1217,11 @@ input[type='checkbox'] {
     .slider{
         margin-top: 40px;
         margin-bottom: 676px;
-        .slider-holder{
-            gap:24px;
-        }
+        
     }
     .slider-element{
         min-width: 274px;
+        margin-right: 24px;
         h4{
             width: 75%;
             margin-bottom: 8px;

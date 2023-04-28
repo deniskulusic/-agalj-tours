@@ -62,12 +62,26 @@ $LightGrey:#F8F8F8;
         margin-right: 8px;
     }
 }
-    .city-holder{
-        padding-top: 157.24%;
-                img{
-                    border-radius: 16px;
-                }
+.city-holder{
+    padding-top: 157.24%;
+    picture{
+        overflow: hidden;
+        border-radius: 16px;
+        img{
+            transition: 1s;
+            transform: scale(1);
+            -webkit-transform:scale(1) ;
+        }}
+}
+.city-holder:hover{
+    picture{
+        
+        img{
+            transform: scale(1.1);
+            -webkit-transform:scale(1.1) ;
+        }
     }
+}
     h5{
         color:$White;
         position: absolute;
@@ -116,11 +130,30 @@ $LightGrey:#F8F8F8;
     }
     .big-img-holder{
         padding-top: 82.58%;
-        img{
+        picture{
+            overflow: hidden;
             border-radius: 16px;
+            img{
+                transition: 1s;
+                transform: scale(1);
+                -webkit-transform:scale(1) ;
+            }}
+    }
+    .big-img:hover{
+        .big-img-holder{
+            picture{
+            
+                img{
+                    transform: scale(1.1);
+                    -webkit-transform:scale(1.1) ;
+                }
+            }
+        }
+        .inner-text{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
         }
     }
-
     .two-img{
         grid-column: span 12;
         position: relative;
@@ -137,13 +170,17 @@ $LightGrey:#F8F8F8;
                 -webkit-transform:scale(1) ;
             }}
     }
-    .two-img-holder:hover{
+    .two-img:hover{
         picture{
             
             img{
                 transform: scale(1.1);
                 -webkit-transform:scale(1.1) ;
             }
+        }
+        .text{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
         }
     }
     .text {
@@ -303,6 +340,15 @@ $LightGrey:#F8F8F8;
             
             color:$MediumGrey;
         }
+        .bus{
+            background-color:  #2C3038;
+        }
+        .inner-title2{
+            color:$White;
+        }
+        .bus-text .plarge {
+            color:$MediumGrey;
+          }
         }
     @media only screen and (max-width: 950px) {
 

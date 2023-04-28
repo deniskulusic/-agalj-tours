@@ -5,6 +5,15 @@
 .inverted h4 {
   color: #FFFFFF;
 }
+.inverted .bus {
+  background-color: #2C3038;
+}
+.inverted .inner-title2 {
+  color: #FFFFFF;
+}
+.inverted .bus-text .plarge {
+  color: #F1F1F1;
+}
 .inverted h2 {
   color: #FFFFFF;
 }
@@ -85,6 +94,10 @@
   position: relative;
   grid-column: span 6;
 }
+.parkovi div div:hover .inner-text {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
 .parkovi div .inner-title {
   position: absolute;
   width: 37%;
@@ -105,8 +118,19 @@
 .parkovi-holder {
   padding-top: 82.56%;
 }
-.parkovi-holder img {
+.parkovi-holder picture {
+  overflow: hidden;
   border-radius: 16px;
+}
+.parkovi-holder picture img {
+  transition: 1s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.parkovi-holder:hover picture img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 .inner-text {
@@ -156,8 +180,19 @@
 .city-holder {
   padding-top: 157.24%;
 }
-.city-holder img {
+.city-holder picture {
+  overflow: hidden;
   border-radius: 16px;
+}
+.city-holder picture img {
+  transition: 1s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.city-holder:hover picture img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 h5 {
@@ -174,8 +209,19 @@ h5 {
 .parkovi2-holder {
   padding-top: 49.03%;
 }
-.parkovi2-holder img {
+.parkovi2-holder picture {
+  overflow: hidden;
   border-radius: 16px;
+}
+.parkovi2-holder picture img {
+  transition: 1s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.parkovi2-holder:hover picture img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 .adrenalin {
@@ -218,8 +264,23 @@ h5 {
 .big-img-holder {
   padding-top: 51.29%;
 }
-.big-img-holder img {
+.big-img-holder picture {
+  overflow: hidden;
   border-radius: 16px;
+}
+.big-img-holder picture img {
+  transition: 1s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.big-img:hover .big-img-holder picture img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+.big-img:hover .inner-text {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .small-img {
@@ -248,8 +309,19 @@ h5 {
   padding-top: 114%;
   position: relative;
 }
-.small-img-holder img {
+.small-img-holder picture {
+  overflow: hidden;
   border-radius: 16px;
+}
+.small-img-holder picture img {
+  transition: 1s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.small-img-holder:hover picture img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 .two-img {
@@ -271,9 +343,13 @@ h5 {
   -webkit-transform: scalee(1);
 }
 
-.two-img-holder:hover picture img {
+.two-img:hover picture img {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
+}
+.two-img:hover .text {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .text {
@@ -649,5 +725,8 @@ h5 {
     margin-top: 0;
     bottom: 32px;
     width: 50%;
+  }
+  .imgnaslov_content h1 {
+    text-align: center;
   }
 }/*# sourceMappingURL=izlet.css.map */

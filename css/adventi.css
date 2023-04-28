@@ -56,8 +56,19 @@
 .city-holder {
   padding-top: 157.24%;
 }
-.city-holder img {
+.city-holder picture {
+  overflow: hidden;
   border-radius: 16px;
+}
+.city-holder picture img {
+  transition: 1s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.city-holder:hover picture img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 h5 {
@@ -111,8 +122,23 @@ h5 {
 .big-img-holder {
   padding-top: 82.58%;
 }
-.big-img-holder img {
+.big-img-holder picture {
+  overflow: hidden;
   border-radius: 16px;
+}
+.big-img-holder picture img {
+  transition: 1s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.big-img:hover .big-img-holder picture img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+.big-img:hover .inner-text {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .two-img {
@@ -134,9 +160,13 @@ h5 {
   -webkit-transform: scale(1);
 }
 
-.two-img-holder:hover picture img {
+.two-img:hover picture img {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
+}
+.two-img:hover .text {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .text {
@@ -291,6 +321,15 @@ h5 {
   color: #FFFFFF;
 }
 .inverted .pspread {
+  color: #F1F1F1;
+}
+.inverted .bus {
+  background-color: #2C3038;
+}
+.inverted .inner-title2 {
+  color: #FFFFFF;
+}
+.inverted .bus-text .plarge {
   color: #F1F1F1;
 }
 

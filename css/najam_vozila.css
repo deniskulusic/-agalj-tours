@@ -231,8 +231,12 @@ nav { /* Safari */
   transform: scale(1);
 }
 
-.two-img-holder:hover picture img {
+.two-img:hover picture img {
   transform: scale(1.1);
+}
+.two-img:hover .text {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .text {

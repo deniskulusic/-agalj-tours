@@ -34,7 +34,21 @@ const right = document.querySelector(".button-right");
 const elems= document.querySelectorAll(".main img");
 const num1=document.querySelector(".num1");
 const num2=document.querySelector(".num2");
+const footer=document.querySelector("footer");
+var pageyoff=window.scrollY;
+var footerftomtop =pageyoff + footer.getBoundingClientRect().top;
+const upit=document.querySelector(".upit");
+const upitup=document.querySelector(".upit-up");
+const upitback=document.querySelector(".upit-background");
+function reportWindowSize() {
+  if(window.innerWidth>950){
+      navbar.classList.remove("menu-active");
+  }
+  pageyoff=window.scrollY;
+  footerftomtop =pageyoff + footer.getBoundingClientRect().top;
+}
 
+window.onresize = reportWindowSize;
 
 var count=0;
 num1.innerHTML = count+1;
@@ -59,10 +73,16 @@ const rightpress = (e) => {
 right.addEventListener("click", rightpress);
 left.addEventListener("click", leftpress);
 //Mobile upit up/down
+function scroll_body(){
+  if(window.scrollY + window.innerHeight>footerftomtop+100){
+    upit.classList.add("upit-footer");
+  }
+  else{
+    upit.classList.remove("upit-footer");
+  }
+}
 
-const upit=document.querySelector(".upit");
-const upitup=document.querySelector(".upit-up");
-const upitback=document.querySelector(".upit-background");
+document.body.onscroll = scroll_body;
 function upitupf() {
   upit.classList.toggle("up-upit");
     upitback.classList.toggle("up-upitb");
@@ -91,13 +111,7 @@ const buttonPressed2 = (e) => {
 }
 button2.addEventListener("click", buttonPressed2);
 
-function reportWindowSize() {
-    if(window.innerWidth>950){
-        navbar.classList.remove("menu-active");
-    }
-  }
-  
-  window.onresize = reportWindowSize;
+
 
 //Language
 

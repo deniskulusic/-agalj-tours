@@ -14,6 +14,15 @@ $LightGrey:#F8F8F8;
         color:$White;
         
     }
+    .bus{
+        background-color:  #2C3038;
+    }
+    .inner-title2{
+        color:$White;
+    }
+    .bus-text .plarge {
+        color:$MediumGrey;
+      }
     h2{
         color:$White;
     }
@@ -96,6 +105,12 @@ $LightGrey:#F8F8F8;
             position: relative;
             grid-column: span 6;
         }
+        div:hover{
+            .inner-text{
+                text-decoration: underline;
+                text-decoration-thickness: 3px;
+            }
+        }
         .inner-title{
             position: absolute;
             width: 37%;
@@ -115,13 +130,29 @@ $LightGrey:#F8F8F8;
         
     }
 }
+
 .parkovi-holder{
     padding-top:82.56%;
-    img{
+    picture{
+        overflow: hidden;
         border-radius: 16px;
-    }
+        img{
+            transition: 1s;
+            transform: scale(1);
+            -webkit-transform:scale(1) ;
+        }}
 }
 
+.parkovi-holder:hover{
+    picture{
+        
+        img{
+            transform: scale(1.1);
+            -webkit-transform:scale(1.1) ;
+        }
+    }
+    
+}
 .inner-text{
     margin-bottom: 4px;
     font-family: 'Manrope';
@@ -171,9 +202,23 @@ color: $White;
 }
     .city-holder{
         padding-top: 157.24%;
-                img{
-                    border-radius: 16px;
-                }
+        picture{
+            overflow: hidden;
+            border-radius: 16px;
+            img{
+                transition: 1s;
+                transform: scale(1);
+                -webkit-transform:scale(1) ;
+            }}
+    }
+    .city-holder:hover{
+        picture{
+            
+            img{
+                transform: scale(1.1);
+                -webkit-transform:scale(1.1) ;
+            }
+        }
     }
     h5{
         color:$White;
@@ -188,11 +233,24 @@ color: $White;
 
     .parkovi2-holder{
         padding-top: 49.03%;
-        img{
+        picture{
+            overflow: hidden;
             border-radius: 16px;
+            img{
+                transition: 1s;
+                transform: scale(1);
+                -webkit-transform:scale(1) ;
+            }}
+    }
+    .parkovi2-holder:hover{
+        picture{
+            
+            img{
+                transform: scale(1.1);
+                -webkit-transform:scale(1.1) ;
+            }
         }
     }
-    
     .adrenalin{
         padding-top: 240px;
         margin-bottom: 240px;
@@ -230,8 +288,28 @@ color: $White;
     }
     .big-img-holder{
         padding-top: 51.29%;
-        img{
+        picture{
+            overflow: hidden;
             border-radius: 16px;
+            img{
+                transition: 1s;
+                transform: scale(1);
+                -webkit-transform:scale(1) ;
+            }}
+    }
+    .big-img:hover{
+        .big-img-holder{
+            picture{
+            
+                img{
+                    transform: scale(1.1);
+                    -webkit-transform:scale(1.1) ;
+                }
+            }
+        }
+        .inner-text{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
         }
     }
     .small-img{
@@ -262,9 +340,22 @@ color: $White;
     .small-img-holder{
         padding-top: 114%;
         position: relative;
-        img{
+        picture{
+            overflow: hidden;
             border-radius: 16px;
-        }
+            img{
+                transition: 1s;
+                transform: scale(1);
+                -webkit-transform:scale(1) ;
+            }}
+    }
+    .small-img-holder:hover{
+        picture{
+            
+            img{
+                transform: scale(1.1);
+                -webkit-transform:scale(1.1) ;
+            }}
     }
     .two-img{
         grid-column: span 12;
@@ -282,13 +373,17 @@ color: $White;
                 -webkit-transform:scalee(1) ;
             }}
     }
-    .two-img-holder:hover{
+    .two-img:hover{
         picture{
             
             img{
                 transform: scale(1.1);
                 -webkit-transform:scale(1.1) ;
             }
+        }
+        .text{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
         }
     }
     .text {
@@ -678,6 +773,8 @@ color: $White;
             bottom: 32px;
             width: 50%;
         }
-
+        .imgnaslov_content h1 {
+            text-align: center;
+          }
     }
     

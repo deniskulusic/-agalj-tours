@@ -593,6 +593,7 @@ margin-left: 32px;
         width: 100%;
         height: 2px;
         background-color: $DarkBlue;
+        transition: all 0.5s ease-in-out;
 }
 .menu-line::before, .menu-line::after {
     margin-left: 0 !important;
