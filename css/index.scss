@@ -1268,14 +1268,18 @@ input[type='checkbox'] {
             height: 400px;
             width: 256px;
         }
-        .slider-holder{
-            gap:24px;
+        .slider-element{
+            min-width: 256px;
         }
         .slider{
             margin-top: 56px;
             margin-bottom: 400px;
         }
-
+        .inner-title{
+            left:32px;
+            bottom: 32px;
+            width: 50%;
+          }
     }
     .slider{
        
@@ -1363,4 +1367,5 @@ input[type='checkbox'] {
       .dotted-line{
         display: none;
       }
+      
  }

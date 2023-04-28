@@ -1224,12 +1224,17 @@ input[type=checkbox] {
     height: 400px;
     width: 256px;
   }
-  .slider-dark .slider-holder {
-    gap: 24px;
+  .slider-dark .slider-element {
+    min-width: 256px;
   }
   .slider-dark .slider {
     margin-top: 56px;
     margin-bottom: 400px;
+  }
+  .slider-dark .inner-title {
+    left: 32px;
+    bottom: 32px;
+    width: 50%;
   }
   .slider .slider-holder {
     width: calc(100vw - 24px);
