@@ -9,9 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/general.css">
         <link rel="stylesheet" type="text/css" href="./css/najam_vozila.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="success">
+        <div class="background"></div>
+        <div class="maxw container">
+            <div class="maxw-inner">
+            <div class="img-holder">
+                <img src="assets/img/PaperPlane.png" alt="">
+                </div> 
+                <h4>Vaš upit je poslan</h4>
+                <div class="plarge">Uskoro ćemo vam se povratno javiti s najboljom
+                    ponudom za odabrani izlet.</div>
+                    <button class="upit-button" enabled>Zatvori</button>
+            </div>
+    </div>
+</div>
     <div class="lng-popup">
         <div class="background"></div>
         <div class="maxw container">
@@ -23,6 +38,95 @@
                 <button disabled>Hrvatski</button>
             </div>
             <div class="close-lng">
+            </div>
+            </div>
+            
+    </div>
+    </div>
+    <div class="vozila-popup">
+        <div class="background-v"></div>
+        <div class="maxw">
+            <div class="maxw-inner">
+            <h4>Najam vozila</h4>
+            <div class="vozila-input">
+            <div class="pmedium">Tip korisnika</div>
+            <div class="radio">
+                <div>
+                <input type="radio" name="fav_language" >
+                <label for="html" class="pmedium">Privatna osoba</label>
+            </div>
+            <div>
+                <input type="radio" name="fav_language" >
+                <label class="pmedium">Pravna osoba</label>
+                
+            </div>
+            </div>
+            
+                <div class="input">
+                    <div>
+                    <label>Ime i prezime</label>
+                    <input type="text" placeholder="Upišite ime i prezime">
+                </div>
+                <span class="arrow"></span>
+                </div>
+                <div class="input">
+                    <div>
+                    <label>Broj putnika</label>
+                    <input type="text" placeholder="Upišite broj putnika">
+                </div>
+                <span class="arrow"></span>
+                </div>
+                <div class="two-input">
+                    <div class="two-input-box" >
+                        <div>
+                            <label>Datum polaska</label>
+                            <input type="text" required placeholder="Odaberi" id="datepicker">
+                        </div>
+                        <img src="assets/img/Calendar.svg" alt="">
+                    </div>
+                    <div class="two-input-box" >
+                        <div>
+                            <label>Datum povratka</label>
+                            <input type="text" required placeholder="Odaberi" id="datepicker">
+                        </div>
+                        <img src="assets/img/Calendar.svg" alt="">
+                    </div>
+                    
+                </div>
+                <div class="input">
+                    <div>
+                    <label>Tip vozila</label>
+                    <input type="text" placeholder="Upišite tip vozila">
+                </div>
+                <span class="arrow"></span>
+                </div>
+                <div class="input">
+                    <div>
+                    <label>Vaš email</label>
+                    <input type="text" placeholder="Upišite email">
+                </div>
+                
+                </div>
+                <div class="input">
+                    <div>
+                    <label>Tip vožnje</label>
+                    <input type="text" placeholder="Upišite tip vožnje">
+                </div>
+                <span class="arrow"></span>
+                </div>
+                <div class="prituzba-box-input-2">
+                    <label>Destinacija</label>
+                    <textarea placeholder="Napišite vašu napomenu"></textarea>
+                </div>
+                <div class="prituzba-box-input-2">
+                    <label>Ostale napomene</label>
+                    <textarea placeholder="Napišite vašu napomenu"></textarea>
+                </div>
+            </div>
+            <div class="button-div">
+                <button class="upit-button back-vozilo">Pošalji upit</button>
+            </div>
+            <div class="close-lng-v">
             </div>
             </div>
             
@@ -112,7 +216,7 @@
                     <div class="psmall">Osobno vozilo (do 5 putnika)</div>
                 </div>
             </div>
-            <button enabled>Odaberi</button>
+            <button enabled class="back-vozilo">Odaberi</button>
         </div>
         
         <div class="vozni-park-element">
@@ -123,7 +227,7 @@
                     <div class="psmall">Kombi (do 12 osoba)</div>
                 </div>
             </div>
-            <button enabled>Odaberi</button>
+            <button enabled class="back-vozilo">Odaberi</button>
         </div>
         <div class="vozni-park-element">
             <div>
@@ -133,7 +237,7 @@
                     <div class="psmall">Autobus (do 45 osoba)</div>
                 </div>
             </div>
-            <button enabled>Odaberi</button>
+            <button enabled class="back-vozilo">Odaberi</button>
         </div>
     </div>
 </section>
@@ -292,6 +396,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut tincidunt nequ
     </div>
 </div>
 </footer>
-    <script src="js/general.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  
+    <script src="js/vozila.js"></script>
+    <script>
+        flatpickr("#datepicker", {});
+    </script>
 </body>
 </html>

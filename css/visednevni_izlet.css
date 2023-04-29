@@ -542,10 +542,6 @@ input[type=checkbox] {
   margin-left: 32px;
 }
 
-.active img {
-  display: block;
-}
-
 .upit-up {
   display: none;
 }
