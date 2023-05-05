@@ -1,7 +1,7 @@
 //Success
 
 const success=document.querySelector(".success");
-const upitbutton=document.getElementsByClassName("upit-button");
+const upitbutton=document.querySelectorAll(".upit-button , .background-s");
 
 for(j=0;j<upitbutton.length;j++){
     upitbutton[j].addEventListener('click',function(){
