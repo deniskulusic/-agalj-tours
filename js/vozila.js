@@ -1,10 +1,32 @@
 const vozilopopup=document.querySelector(".vozila-popup");
 const vozilopopbutton=document.querySelectorAll(".back-vozilo , .background-v , .close-lng-v");
+const tipvozila=document.querySelector(".tip-vozila");
 for(j=0;j<vozilopopbutton.length;j++){
-  vozilopopbutton[j].addEventListener('click',function(){
-      vozilopopup.classList.toggle("active-vozila");
-  });
   
+  if(j==3){
+    vozilopopbutton[j].addEventListener('click',function(){
+      vozilopopup.classList.toggle("active-vozila");
+      tipvozila.value="Mazda 3";
+  });
+  }
+  else if(j==4){
+    vozilopopbutton[j].addEventListener('click',function(){
+      vozilopopup.classList.toggle("active-vozila");
+      tipvozila.value="Citroen Jumper";
+  });
+  }
+  else if(j==5){
+    vozilopopbutton[j].addEventListener('click',function(){
+      vozilopopup.classList.toggle("active-vozila");
+      tipvozila.value="Setra 411";
+  });
+  }
+  else{
+    vozilopopbutton[j].addEventListener('click',function(){
+      vozilopopup.classList.toggle("active-vozila");
+      
+  });
+  }
 }
 
 
@@ -58,6 +80,7 @@ const lngpopbuttonmobile=document.querySelectorAll(".lng-mobile-text , .lng");
 for(j=0;j<lngpopbuttonmobile.length;j++){
   lngpopbuttonmobile[j].addEventListener('click',function(){
       lngpopupmobile.classList.toggle("lng-mobile-active");
+      
   });
   
 }

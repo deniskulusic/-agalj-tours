@@ -611,6 +611,9 @@ label {
   color: #0F141E;
 }
 .input input {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
   margin-left: 16px;
   height: 24px;
   padding: 0;
