@@ -146,7 +146,7 @@
 
 .two-input-box {
   display: flex;
-  width: 33%;
+  width: 50%;
   padding-top: 7px;
   padding-bottom: 7px;
   align-items: center;
@@ -1030,9 +1030,6 @@ input[type=checkbox] {
   */
   .two-input {
     width: 60%;
-  }
-  .two-input .two-input-box:first-of-type {
-    display: none;
   }
   .two-input .two-input-box:last-of-type {
     display: none;

@@ -1,7 +1,77 @@
+
+
+(()=>{
+    
+  "use strict";
+  class e{
+      constructor(e,t,a,n){
+          this.name=e.value,
+          this.email=t.value,
+          this.date=a.value,
+          this.brojosoba=n.value
+      }
+      validateData(){
+          return{
+              "name-ok":""!=this.name,
+              "email-ok":(e=this.email,!!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e)),
+              "date-ok":""!=this.date,
+              "brojosoba-ok":""!=this.brojosoba};
+          var e
+      }
+      sendEmail(){
+          var e=new FormData;
+          e.append("action","send_email"),
+          e.append("name",this.name),
+          e.append("email",this.email);
+          e.append("date",this.date);
+          e.append("brojosoba",this.brojosoba);
+          var t=new XMLHttpRequest;
+          t.onreadystatechange=function(){
+              4==this.readyState&&200==this.status&&("success"==JSON.parse(this.response).status?alert("Inquiry succesfully sent!"):alert("There was problem with sending inquiry!"))},
+              t.open("POST",config.ajaxurl,!0),
+              t.setRequestHeader("enctype","multipart/form-data"),
+              t.send(e)
+          }
+          
+          
+          
+          }
+  function a(t){
+      const a=t.currentTarget.parentElement;
+      let n=[a.querySelector("#name"),"name-ok"],
+      r=[a.querySelector("#email"),"email-ok"],
+      s=[a.querySelector("#date"),"date-ok"],
+      l=[a.querySelector("#brojosoba"),"brojosoba-ok"],
+      c=[n,r,s,l];
+      console.log(n[0])
+      const d=new e(n[0],r[0],s[0],l[0]),
+      u=d.validateData();
+      let m=true;
+      const success=document.querySelector(".success");
+      for(let e of c)
+      u[e[1]]?e[0].parentElement.removeAttribute("error"):(e[0].parentElement.setAttribute("error",""),m=false);
+      if(m){
+        success.classList.toggle("active-upit");
+        d.sendEmail();
+       
+      }
+  }
+  document.addEventListener("DOMContentLoaded",(
+      function(){
+        const upitbutton=document.querySelector(".upit-button");
+        upitbutton.addEventListener("click",a);
+      const success=document.querySelector(".success");
+const upitbuttonclose=document.querySelectorAll(".upit-button-close , .background-s");
+for( var j=0;j<upitbuttonclose.length;j++){
+    upitbuttonclose[j].addEventListener('click',function(){
+        success.classList.toggle("active-upit");
+    });
+    
+}
 //Accordation
 
 const acordation=document.getElementsByClassName('faq');
-for(i=0;i<acordation.length;i++){
+for( var i=0;i<acordation.length;i++){
   
     acordation[i].addEventListener('click',function(){
     var faqa=this.classList.contains("active");
@@ -91,16 +161,7 @@ upitup.onclick=upitupf;
 upitback.onclick=upitupf;
 //Success popup
 
-const success=document.querySelector(".success");
-const upitbutton=document.querySelectorAll(".upit-button , .background-s");
-for(j=0;j<upitbutton.length;j++){
-    upitbutton[j].addEventListener('click',function(){
-        success.classList.toggle("active-upit");
-        upit.classList.remove("up-upit");
-        upitback.classList.remove("up-upitb");
-    });
-    
-}
+
 
 //Menu dropdown
 
@@ -160,5 +221,4 @@ more.classList.toggle("show-more");
   }
 }
 showmore.addEventListener("click", morepressed);
-
-
+     }))})();

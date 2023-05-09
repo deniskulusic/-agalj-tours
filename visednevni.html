@@ -55,7 +55,7 @@
                 <h4>Vaš upit je poslan</h4>
                 <div class="plarge">Uskoro ćemo vam se povratno javiti s najboljom
                     ponudom za odabrani izlet.</div>
-                <button class="upit-button" enabled>Zatvori</button>
+                <button class="upit-button-close" enabled>Zatvori</button>
             </div>
     </div>
 </div>
@@ -77,10 +77,10 @@
 </div>
 <div class="maxw container grid">
 <div class="menu-mobile">
-    <div class="menu-text" onClick="location.href='izlet.html'"><u class="underline-menu"> Jednodnevni izleti</u></div>
-        <div class="menu-text" onClick="location.href='adventi.html'"><u class="underline-menu"> Adventi</u></div>
-        <div class="menu-text" onClick="location.href='vozila.html'"><u class="underline-menu">Najam vozila</u></div>
-        <div class="menu-text" onClick="location.href='kontakt.html'"><u class="underline-menu">Kontakt</u></div>
+    <div class="menu-text" onClick="location.href='izlet.html'"> Jednodnevni izleti</div>
+    <div class="menu-text" onClick="location.href='adventi.html'"> Adventi</div>
+    <div class="menu-text" onClick="location.href='vozila.html'">Najam vozila</div>
+    <div class="menu-text" onClick="location.href='kontakt.html'">Kontakt</div>
     <div class="lng"><img src="assets/img/Language.svg" alt=""> HR</div>
     <div class="lng-mobile">
         <div class="lng-mobile-text"> <img src="assets/img/Chevron Down.svg" alt="">
@@ -367,25 +367,37 @@
                     <div class="two-input-box" >
                         <div>
                             <label>Datum</label>
-                            <input type="text" required placeholder="Odaberi" id="datepicker">
+                            <input type="text" required placeholder="Odaberi" id="date">
+                            <div class="error-text">
+                                Nevaljan datum
+                            </div>
                         </div>
                         <img src="assets/img/Calendar.svg" alt="">
                     </div>
                     <div class="two-input-box">
                         <div>
                             <label>Broj osoba</label>
-                            <input type="text" required placeholder="Odaberi" >
+                            <input type="text" required placeholder="Odaberi" id="brojosoba">
+                            <div class="error-text">
+                                Nevaljan broj osoba
+                            </div>
                         </div>
                         
                     </div>
                 </div>
                 <div class="input">
                     <label>Ime i prezime</label>
-                    <input type="text" placeholder="Upišite ime i prezime">
+                    <input type="text" placeholder="Upišite ime i prezime" id="name">
+                    <div class="error-text">
+                        Potrebno je ime
+                    </div>
                 </div>
                 <div class="input">
                     <label>Email</label>
-                    <input type="text" placeholder="Upiši svoj email">
+                    <input type="text" placeholder="Upiši svoj email" id="email">
+                    <div class="error-text">
+                        Nevaljan email
+                    </div>
                 </div>
                 <div class="checkbox">
                     <input type="checkbox">
@@ -446,7 +458,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/jednodnevni_izlet.js"></script>
     <script>
-        flatpickr("#datepicker", {});
+        flatpickr("#date", {});
     </script>
 </body>
 </html>

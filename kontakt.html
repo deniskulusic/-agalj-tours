@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/general.css">
     <link rel="stylesheet" type="text/css" href="./css/kontakt.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     
     <title>Document</title>
 </head>
@@ -39,7 +40,7 @@
                 <h4>Vaš upit je poslan</h4>
                 <div class="plarge">Uskoro ćemo vam se povratno javiti s najboljom
                     ponudom za odabrani izlet.</div>
-                    <button class="upit-button" enabled>Zatvori</button>
+                    <button class="upit-button-close" enabled>Zatvori</button>
             </div>
     </div>
 </div>
@@ -61,9 +62,9 @@
 </div>
 <div class="maxw container grid">
 <div class="menu-mobile">
-    <div class="menu-text" onClick="location.href='izlet.html'"><u class="underline-menu"> Jednodnevni izleti</u></div>
-        <div class="menu-text" onClick="location.href='adventi.html'"><u class="underline-menu"> Adventi</u></div>
-        <div class="menu-text" onClick="location.href='vozila.html'"><u class="underline-menu">Najam vozila</u></div>
+    <div class="menu-text" onClick="location.href='izlet.html'"> Jednodnevni izleti</div>
+        <div class="menu-text" onClick="location.href='adventi.html'"> Adventi</div>
+        <div class="menu-text" onClick="location.href='vozila.html'">Najam vozila</div>
         <div class="menu-text" onClick="location.href='kontakt.html'"><u class="underline-menu">Kontakt</u></div>
     <div class="lng"><img src="assets/img/Language.svg" alt=""> HR</div>
     <div class="lng-mobile">
@@ -111,25 +112,36 @@
                 <h6>Izlet</h6>
                 <div class="prituzba-box-input-1">
                     <div class="prituzba-box-dropdown">
-                    <input type="text" placeholder="Tip izleta" >
+                    <input type="text" placeholder="Tip izleta" id="tipizleta">
                     <span class="arrow"></span>
-                    
+                    <div class="error-text">
+                        Nevaljan tip izleta
+                    </div>
                 </div>
                 <div class="prituzba-box-dropdown">
-                    <input type="text" placeholder="Odaberi izlet" >
+                    <input type="text" placeholder="Odaberi izlet" id="izlet">
                     <span class="arrow"></span>
+                    <div class="error-text">
+                        Nevaljan izlet
+                    </div>
                     
                 </div>
                 </div>
                 <div class="prituzba-box-input-1">
                     <div class="prituzba-box-dropdown">
-                    <input type="text" placeholder="Broj osoba" >
+                    <input type="text" placeholder="Broj osoba" id="brojosoba">
                     <span class="arrow"></span>
+                    <div class="error-text">
+                        Nevaljan broj osoba
+                    </div>
                     
                 </div>
                 <div class="prituzba-box-dropdown">
-                    <input type="text" placeholder="Odaberi datum" >
+                    <input type="text" placeholder="Odaberi datum" id="date">
                     <img src="assets/img/Calendar.svg" alt="">
+                    <div class="error-text">
+                        Nevaljan datum
+                    </div>
                     
                 </div>
                 </div>
@@ -137,17 +149,23 @@
                 <div class="prituzba-box-input-1">
                     <div>
                     <Label>Ime i prezime</Label>
-                    <input type="text" placeholder="Upišite ime i prezime" >
+                    <input type="text" placeholder="Upišite ime i prezime" id="name">
+                    <div class="error-text">
+                        Nevaljano ime
+                    </div>
                     
                 </div>
                 <div>
                     <Label>email</Label>
-                    <input type="text" placeholder="Upišite email" >
+                    <input type="text" placeholder="Upišite email" id="email" >
+                    <div class="error-text">
+                        Nevaljan email
+                    </div>
                 </div>
                 </div>
                 <div class="prituzba-box-input-2">
                     <label>Vaša poruka</label>
-                    <textarea placeholder="Unesite vaš pisani prigovor"></textarea>
+                    <textarea placeholder="Unesite vaš pisani prigovor" id="text"></textarea>
                 </div>
                 <div class="checkbox">
                     <input type="checkbox">
@@ -226,6 +244,11 @@
         </div>
     </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/kontakt.js"></script>
+    <script>
+        flatpickr("#date", {});
+    </script>
+
 </body>
 </html>

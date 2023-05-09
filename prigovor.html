@@ -39,7 +39,7 @@
                 <h4>Vaš upit je poslan</h4>
                 <div class="plarge">Uskoro ćemo vam se povratno javiti s najboljom
                     ponudom za odabrani izlet.</div>
-                <button class="upit-button" enabled>Zatvori</button>
+                <button class="upit-button-close" enabled>Zatvori</button>
             </div>
     </div>
 </div>
@@ -77,10 +77,10 @@
 </div>
 <div class="maxw container grid">
 <div class="menu-mobile">
-    <div class="menu-text" onClick="location.href='izlet.html'"><u class="underline-menu"> Jednodnevni izleti</u></div>
-        <div class="menu-text" onClick="location.href='adventi.html'"><u class="underline-menu"> Adventi</u></div>
-        <div class="menu-text" onClick="location.href='vozila.html'"><u class="underline-menu">Najam vozila</u></div>
-        <div class="menu-text" onClick="location.href='kontakt.html'"><u class="underline-menu">Kontakt</u></div>
+    <div class="menu-text" onClick="location.href='izlet.html'"> Jednodnevni izleti</div>
+    <div class="menu-text" onClick="location.href='adventi.html'"> Adventi</div>
+    <div class="menu-text" onClick="location.href='vozila.html'">Najam vozila</div>
+    <div class="menu-text" onClick="location.href='kontakt.html'">Kontakt</div>
     <div class="lng"><img src="assets/img/Language.svg" alt=""> HR</div>
     <div class="lng-mobile">
         <div class="lng-mobile-text"> <img src="assets/img/Chevron Down.svg" alt="">
@@ -136,16 +136,22 @@
                 <div class="prituzba-box-input-1">
                     <div>
                     <Label>Ime i prezime</Label>
-                    <input type="text" placeholder="Upišite ime i prezime" >
+                    <input type="text" placeholder="Upišite ime i prezime" id="name" >
+                    <div class="error-text">
+                        Potrebno je ime
+                    </div>
                 </div>
                 <div>
                     <Label>email</Label>
-                    <input type="text" placeholder="Upišite email" >
+                    <input type="text" placeholder="Upišite email" id="email" >
+                    <div class="error-text">
+                        Potrebno je ime
+                    </div>
                 </div>
                 </div>
                 <div class="prituzba-box-input-2">
                     <label>Vaša poruka</label>
-                    <textarea placeholder="Unesite vaš pisani prigovor"></textarea>
+                    <textarea placeholder="Unesite vaš pisani prigovor" id="text1"></textarea>
                 </div>
                 <div class="checkbox">
                     <input type="checkbox">

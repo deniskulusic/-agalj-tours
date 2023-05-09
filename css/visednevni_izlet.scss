@@ -449,8 +449,38 @@ grid-column: span 7;
         flex-direction: column;
         width: 70%;
         margin-left: 16px;
-        
+        .error-text{
+            font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        top:calc(100% + 8px);
+        /* Primary/Orange */
+        position: absolute ;
+        width: auto ;
+        display: none;
+        padding: 0px ;
+        margin: 0px;
+        background-color: transparent ;
+        border-radius: 4px;
+        color: #FC6536;
+        }
     }
+    div[error] {
+        .error-text{
+        display: flex;
+        left: -16px;
+        }
+        label{
+            color:#FC6536
+        }
+        input::placeholder{
+            color:#FC6536;
+            opacity: 1;
+        }
+      }
     div:first-of-type{
         border-left: none;
     }
@@ -490,6 +520,24 @@ opacity: 0.8;
 }
 
 .input{
+    position: relative;
+    .error-text{
+        font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    top:calc(100% + 8px);
+    /* Primary/Orange */
+    position: absolute ;
+    width: auto ;
+    display: none;
+    padding: 0px ;
+    background-color: transparent ;
+    border-radius: 4px;
+    color: #FC6536;
+    }
     display: flex;
     flex-direction: column;
     margin-left: 32px;
@@ -510,7 +558,19 @@ opacity: 0.8;
         line-height: 20px;
     }
 }
-
+.input[error]{
+    margin-bottom: 32px;
+        .error-text{
+        display: flex;
+        }
+        label{
+            color:#FC6536
+        }
+        input::placeholder{
+            color:#FC6536;
+            opacity: 1;
+        }
+}
 .checkbox{
     display: flex;
     align-items: center;

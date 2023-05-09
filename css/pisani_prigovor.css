@@ -44,6 +44,10 @@ u::before {
   margin-top: -19px;
 }
 
+.underline-menu::before {
+  margin-top: 0px;
+}
+
 .text {
   z-index: 2;
   margin-top: 256px;
@@ -90,11 +94,46 @@ u::before {
   grid-gap: 24px;
 }
 .prituzba-box-input-1 div {
+  position: relative;
   width: calc(50% - 12px);
   flex-direction: column;
   padding: 8px;
   background-color: #FFFFFF;
   border-radius: 8px;
+}
+.prituzba-box-input-1 .error-text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  top: calc(100% + 8px);
+  /* Primary/Orange */
+  position: absolute;
+  width: auto;
+  display: none;
+  padding: 0px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #FC6536;
+}
+.prituzba-box-input-1 div[error] {
+  margin-bottom: 8px;
+}
+.prituzba-box-input-1 div[error] .error-text {
+  display: flex;
+}
+.prituzba-box-input-1 div[error] label {
+  color: #FC6536;
+}
+.prituzba-box-input-1 div[error] input::-moz-placeholder {
+  color: #FC6536;
+  opacity: 1;
+}
+.prituzba-box-input-1 div[error] input::placeholder {
+  color: #FC6536;
+  opacity: 1;
 }
 .prituzba-box-input-1 input {
   height: 24px;

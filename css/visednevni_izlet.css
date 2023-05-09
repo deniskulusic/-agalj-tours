@@ -452,6 +452,39 @@
   width: 70%;
   margin-left: 16px;
 }
+.two-input-box div .error-text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  top: calc(100% + 8px);
+  /* Primary/Orange */
+  position: absolute;
+  width: auto;
+  display: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #FC6536;
+}
+.two-input-box div[error] .error-text {
+  display: flex;
+  left: -16px;
+}
+.two-input-box div[error] label {
+  color: #FC6536;
+}
+.two-input-box div[error] input::-moz-placeholder {
+  color: #FC6536;
+  opacity: 1;
+}
+.two-input-box div[error] input::placeholder {
+  color: #FC6536;
+  opacity: 1;
+}
 .two-input-box div:first-of-type {
   border-left: none;
 }
@@ -506,6 +539,7 @@ label {
 }
 
 .input {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-left: 32px;
@@ -516,6 +550,23 @@ label {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.input .error-text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  top: calc(100% + 8px);
+  /* Primary/Orange */
+  position: absolute;
+  width: auto;
+  display: none;
+  padding: 0px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #FC6536;
+}
 .input label {
   margin-left: 16px;
 }
@@ -525,6 +576,24 @@ label {
   padding: 0;
   font-size: 16px;
   line-height: 20px;
+}
+
+.input[error] {
+  margin-bottom: 32px;
+}
+.input[error] .error-text {
+  display: flex;
+}
+.input[error] label {
+  color: #FC6536;
+}
+.input[error] input::-moz-placeholder {
+  color: #FC6536;
+  opacity: 1;
+}
+.input[error] input::placeholder {
+  color: #FC6536;
+  opacity: 1;
 }
 
 .checkbox {

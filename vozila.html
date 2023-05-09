@@ -23,7 +23,7 @@
                 <h4>Vaš upit je poslan</h4>
                 <div class="plarge">Uskoro ćemo vam se povratno javiti s najboljom
                     ponudom za odabrani izlet.</div>
-                    <button class="upit-button" enabled>Zatvori</button>
+                    <button class="upit-button-close" enabled>Zatvori</button>
             </div>
     </div>
 </div>
@@ -65,29 +65,41 @@
                 <div class="input">
                     <div>
                     <label>Ime i prezime</label>
-                    <input type="text" placeholder="Upišite ime i prezime">
+                    <input type="text" placeholder="Upišite ime i prezime" id="name">
+                    <div class="error-text">
+                        Potrebno je ime
+                    </div>
                 </div>
-                <span class="arrow"></span>
+                
                 </div>
                 <div class="input">
                     <div>
                     <label>Broj putnika</label>
-                    <input type="text" placeholder="Upišite broj putnika">
+                    <input type="text" placeholder="Upišite broj putnika" id="brojosoba">
+                    <div class="error-text">
+                        Potreban je broj osoba
+                    </div>
                 </div>
-                <span class="arrow"></span>
+                
                 </div>
                 <div class="two-input">
                     <div class="two-input-box" >
                         <div>
                             <label>Datum polaska</label>
-                            <input type="text" required placeholder="Odaberi" id="datepicker">
+                            <input type="text" required placeholder="Odaberi" id="date1">
+                            <div class="error-text">
+                                Potreban je datum
+                            </div>
                         </div>
                         <img src="assets/img/Calendar.svg" alt="">
                     </div>
                     <div class="two-input-box" >
                         <div>
                             <label>Datum povratka</label>
-                            <input type="text" required placeholder="Odaberi" id="datepicker">
+                            <input type="text" required placeholder="Odaberi" id="date2">
+                            <div class="error-text">
+                                Potreban je datum
+                            </div>
                         </div>
                         <img src="assets/img/Calendar.svg" alt="">
                     </div>
@@ -96,35 +108,44 @@
                 <div class="input">
                     <div>
                     <label>Tip vozila</label>
-                    <input type="text" class="tip-vozila" placeholder="Upišite tip vozila">
+                    <input type="text" class="tip-vozila" placeholder="Upišite tip vozila" id="tipvozila">
+                    <div class="error-text">
+                        Potreban je tip vozila
+                    </div>
                 </div>
                 <span class="arrow"></span>
                 </div>
                 <div class="input">
                     <div>
                     <label>Vaš email</label>
-                    <input type="text" placeholder="Upišite email">
+                    <input type="text" placeholder="Upišite email" id="email">
+                    <div class="error-text">
+                        Potreban je email
+                    </div>
                 </div>
                 
                 </div>
                 <div class="input">
                     <div>
                     <label>Mjesto polaska</label>
-                    <input type="text" placeholder="Upišite mjesto polaska">
+                    <input type="text" placeholder="Upišite mjesto polaska" id="mjestopolaska">
+                    <div class="error-text">
+                        Potrebno je mjesto polaska
+                    </div>
                 </div>
                 <span class="arrow"></span>
                 </div>
                 <div class="prituzba-box-input-2">
                     <label>Destinacija</label>
-                    <textarea placeholder="Napišite vašu napomenu"></textarea>
+                    <textarea placeholder="Napišite vašu napomenu" id="text1"></textarea>
                 </div>
                 <div class="prituzba-box-input-2">
                     <label>Ostale napomene</label>
-                    <textarea placeholder="Napišite vašu napomenu"></textarea>
+                    <textarea placeholder="Napišite vašu napomenu" id="text2"></textarea>
                 </div>
             </div>
             <div class="button-div">
-                <button class="upit-button back-vozilo">Pošalji upit</button>
+                <button class="upit-button">Pošalji upit</button>
             </div>
             <div class="close-lng-v">
             </div>
@@ -138,7 +159,10 @@
         <div class="menu">
             <div class="menu-line"></div>
         </div>
-        <div class="logo" onClick="location.href='index.html'"><img src="assets/img/logo.svg" alt="logo"></div>
+        <div class="logo" onClick="location.href='index.html'">
+            <img src="assets/img/logo.svg" alt="">
+ 
+        </div>
         <div class="menu-placeholder"></div>
         <div class="nav-right">
             <div class="pbold" onClick="location.href='Izlet.html'">Jednodnevni izlet</div>
@@ -150,10 +174,10 @@
     </div>
     <div class="maxw container grid">
     <div class="menu-mobile">
-        <div class="menu-text" onClick="location.href='izlet.html'"><u class="underline-menu"> Jednodnevni izleti</u></div>
-        <div class="menu-text" onClick="location.href='adventi.html'"><u class="underline-menu"> Adventi</u></div>
+        <div class="menu-text" onClick="location.href='izlet.html'">Jednodnevni izleti</div>
+        <div class="menu-text" onClick="location.href='adventi.html'">Adventi</div>
         <div class="menu-text" onClick="location.href='vozila.html'"><u class="underline-menu">Najam vozila</u></div>
-        <div class="menu-text" onClick="location.href='kontakt.html'"><u class="underline-menu">Kontakt</u></div>
+        <div class="menu-text" onClick="location.href='kontakt.html'">Kontakt</div>
         <div class="lng"><img src="assets/img/Language.svg" alt=""> HR</div>
         <div class="lng-mobile">
             <div class="lng-mobile-text"> <img src="assets/img/Chevron Down.svg" alt="">
@@ -401,7 +425,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut tincidunt nequ
   
     <script src="js/vozila.js"></script>
     <script>
-        flatpickr("#datepicker", {});
+        flatpickr("#date1", {});
+        flatpickr("#date2", {});
     </script>
 </body>
 </html>

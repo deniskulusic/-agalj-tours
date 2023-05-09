@@ -52,6 +52,9 @@ u::before{
   top:100%;
   margin-top: -19px;
 }
+.underline-menu::before{
+    margin-top:0px;
+}
 .text{
     z-index: 2;
     margin-top: 256px;
@@ -93,13 +96,44 @@ u::before{
 .prituzba-box-input-1{
     grid-gap: 24px;
     div{
+        position: relative;
     width: calc(50% - 12px);
     flex-direction: column;
     padding: 8px;
     background-color: $White;
     border-radius: 8px;
     }
+    .error-text{
+        font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    top:calc(100% + 8px);
+    /* Primary/Orange */
+    position: absolute ;
+    width: auto ;
+    display: none;
+    padding: 0px ;
+    background-color: transparent ;
+    border-radius: 4px;
+    color: #FC6536;
+    }
     
+    div[error] {
+        margin-bottom: 8px;
+        .error-text{
+        display: flex;
+        }
+        label{
+            color:#FC6536
+        }
+        input::placeholder{
+            color:#FC6536;
+            opacity: 1;
+        }
+      }
     input{
         height: 24px;
         width: 100%;
