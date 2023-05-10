@@ -83,24 +83,20 @@
         const vozilopopup=document.querySelector(".vozila-popup");
         const vozilopopbutton=document.querySelectorAll(" .background-v , .close-lng-v, .back-vozilo ");
         const tipvozila=document.querySelector(".tip-vozila");
-        for(j=0;j<vozilopopbutton.length;j++){
-          
-          if(j==2){
-            vozilopopbutton[j].addEventListener('click',function(){
+        const yo=document.querySelectorAll(".vozni-park h4");
+        for( var j=0;j<vozilopopbutton.length;j++){
+          if(j>=2){
+            vozilopopbutton[j].addEventListener('click',(event)=>{
+              var h=0;
+              for(h=0;h<vozilopopbutton.length;h++){
+                if(event.target==vozilopopbutton[h]){
+                  break;
+                }
+              }
+              
               vozilopopup.classList.toggle("active-vozila");
-              tipvozila.value="Mazda 3";
-          });
-          }
-          else if(j==3){
-            vozilopopbutton[j].addEventListener('click',function(){
-              vozilopopup.classList.toggle("active-vozila");
-              tipvozila.value="Citroen Jumper";
-          });
-          }
-          else if(j==4){
-            vozilopopbutton[j].addEventListener('click',function(){
-              vozilopopup.classList.toggle("active-vozila");
-              tipvozila.value="Setra 411";
+              tipvozila.value=yo[h-2].innerText;
+              
           });
           }
           else{
@@ -151,7 +147,7 @@ function scroll() {
 window.onscroll = scroll;
 const lngpopup=document.querySelector(".lng-popup");
 const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
-for(j=0;j<lngpopbutton.length;j++){
+for(var j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");
   });
@@ -168,10 +164,11 @@ for(j=0;j<lngpopbuttonmobile.length;j++){
 }
 
 
+
 const lngbutton=document.querySelectorAll(".buttons button , .lng-mobile-button");
 lngbutton[1].setAttribute('disabled', 'true');
 lngbutton[3].setAttribute('disabled', 'true');
-for(i=0;i<lngbutton.length;i++){
+for(var i=0;i<lngbutton.length;i++){
   lngbutton[i].addEventListener('click',function(){
 [].forEach.call(lngbutton, function(el) {
   el.removeAttribute('disabled');
