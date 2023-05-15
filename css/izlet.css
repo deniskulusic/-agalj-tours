@@ -438,7 +438,7 @@ h5 {
 
 .imgnaslov {
   z-index: -2;
-  transform: translateZ(-3px) scale(4);
+  transform: translateZ(-3px) scale(4.1);
   position: sticky;
   transform-style: flat;
   height: 100vh;
