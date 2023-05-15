@@ -30,7 +30,6 @@ $LightGrey:#F8F8F8;
     padding-top: 148px;
     h2{
         grid-column: span 12;
-        margin-bottom: 48px;
     }
     h4{
         margin-top: 32px;
@@ -41,8 +40,10 @@ $LightGrey:#F8F8F8;
         left: 32px;
     }
     div{
+        row-gap: 48px;
         div{
-            
+           
+           
             position: relative;
             grid-column: span 3;
         }

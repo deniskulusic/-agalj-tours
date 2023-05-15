@@ -26,7 +26,6 @@
 }
 .city h2 {
   grid-column: span 12;
-  margin-bottom: 48px;
 }
 .city h4 {
   margin-top: 32px;
@@ -35,6 +34,9 @@
 .city h5 {
   top: 32px;
   left: 32px;
+}
+.city div {
+  row-gap: 48px;
 }
 .city div div {
   position: relative;
