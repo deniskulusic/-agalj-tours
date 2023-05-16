@@ -144,6 +144,28 @@
   margin-left: 16px;
 }
 
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  background-color: transparent;
+  border: 0px;
+  padding: 0;
+  color: #FFFFFF;
+  margin-left: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
 .two-input-box {
   display: flex;
   width: 50%;
@@ -160,7 +182,7 @@
   color: #FFFFFF;
   opacity: 1;
 }
-.two-input-box input::placeholder {
+.two-input-box input::placeholder, .two-input-box select {
   color: #FFFFFF;
   opacity: 1;
 }
@@ -170,6 +192,10 @@
   padding: 0;
   color: #FFFFFF;
   margin-left: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
 .two-input-box .arrow::before,
 .two-input-box .arrow::after {

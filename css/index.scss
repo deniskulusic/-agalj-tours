@@ -153,6 +153,26 @@ backdrop-filter: blur(50px);
         margin-left: 16px;
     }
 }
+select::-ms-expand{
+    display:none;
+  }
+  select{
+    background-color: transparent;
+    border: 0px;
+    padding:0;
+    color:$White;
+    margin-left: 8px;
+    -webkit-appearance:none;
+-moz-appearance:none;
+-o-appearance:none;
+appearance:none; 
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color:$White
+}
 .two-input-box{
     display:flex;
     width: 50%;
@@ -164,16 +184,20 @@ backdrop-filter: blur(50px);
     label{
         color:$White;
     }
-    input::placeholder{
+    input::placeholder,select{
         color:$White;
         opacity: 1;
     }
-    input{
+    input {
         background-color: transparent;
         border: 0px;
         padding:0;
         color:$White;
         margin-left: 8px;
+        -webkit-appearance:none;
+  -moz-appearance:none;
+  -o-appearance:none;
+   appearance:none; 
     }
     .arrow::before,
 .arrow::after {
