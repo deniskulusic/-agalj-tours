@@ -1211,7 +1211,14 @@ input[type='checkbox'] {
         margin: 16px;
     }
     .choose{
-        
+        label{
+            display: none;
+        }
+        input{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-left: 0;
+        }
         .pbold{
             display: none;
         }
@@ -1387,6 +1394,13 @@ input[type='checkbox'] {
         text-align: left;
       }
       .dotted-line{
+        display: none;
+      }
+      .mobile{
+        display: flex;
+
+      }
+      .desktop{
         display: none;
       }
       

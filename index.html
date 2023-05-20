@@ -25,8 +25,8 @@
         <div>
         <label>Tip izleta</label>
         <select name="" id="">
-            <option value="">Odaberi</option>
-            <option value="">AAdvent</option>
+            <option value="" selected="selected" disabled="disabled">Odaberi</option>
+            <option value="">Advent</option>
         </select>
     </div>
     <span class="arrow"></span>
@@ -113,10 +113,12 @@
                     <div class="input-button">
                     <div class="two-input">
                         <div class="two-input-box">
-                            <img src="assets/img/Compass.svg" alt="">
+                            <img class="desktop" src="assets/img/Compass.svg" alt="">
+                            <img class="mobile" src="assets/img/Interface Search.svg" alt="">
                             <div>
                                 <label>Tip izleta</label>
-                                <input type="text" placeholder="Odaberi tip izleta" id="name">
+                                <input type="text" class="desktop" placeholder="Odaberi tip izleta" id="name">
+                                <input type="text" class="mobile" placeholder="Pretraži izlete" id="name">
                             </div>
                             <span class="arrow"></span>
                         </div>
