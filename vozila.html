@@ -75,7 +75,13 @@
                 <div class="input">
                     <div>
                     <label>Broj putnika</label>
-                    <input type="text" placeholder="Upišite broj putnika" id="brojosoba">
+                    <select name="" id="brojosoba">
+                        <option value="" selected="selected" disabled="disabled" >Odaberi broj osoba</option>
+                        <option value="1-5">1-5</option>
+                            <option value="5-10">5-10</option>
+                            <option value="10-25">10-25</option>
+                            <option value="25+">25+</option>
+                    </select>
                     <div class="error-text">
                         Potreban je broj osoba
                     </div>
@@ -108,7 +114,13 @@
                 <div class="input">
                     <div>
                     <label>Tip vozila</label>
-                    <input type="text" class="tip-vozila" placeholder="Upišite tip vozila" id="tipvozila">
+                    
+                    <select class="tip-vozila" placeholder="Upišite tip vozila" id="tipvozila">
+                        <option value="" selected="selected" disabled="disabled">Odaberi tip vozila</option>
+                        <option value="Mazda 3">Mazda 3</option>
+                        <option value="Citroen Jumper">Citroen Jumper</option>
+                        <option value="Setra 411 + vozač">Setra 411 + vozač</option>
+                    </select>
                     <div class="error-text">
                         Potreban je tip vozila
                     </div>
@@ -128,7 +140,13 @@
                 <div class="input">
                     <div>
                     <label>Mjesto polaska</label>
-                    <input type="text" placeholder="Upišite mjesto polaska" id="mjestopolaska">
+                   
+                    <select placeholder="Upišite mjesto polaska" id="mjestopolaska">
+                        <option value="" selected="selected" disabled="disabled">Odaberi mjesto polaska</option>
+                        <option value="Mjesto 1">Mjesto 1</option>
+                        <option value="Mjesto 2">Mjesto 2</option>
+                 
+                    </select>
                     <div class="error-text">
                         Potrebno je mjesto polaska
                     </div>
@@ -408,7 +426,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut tincidunt nequ
         <div class="footer-middle">
             <div class="pbold">Prati nas</div>
             <div class="socials">
-                <img src="assets/img/Facebook.svg" alt="" onClick="location.href='https://www.Facebook.com/'">
+                <img src="assets/img/Facebook.svg" alt="" onClick="location.href='https://www.Facebook.com/';location.target='_blank'" target="_blank">
                 <img src="assets/img/Instagram.svg" alt="" onClick="location.href='https://www.Instagram.com/'">
                 <img src="assets/img/Youtube.svg" alt="" onClick="location.href='https://www.Youtube.com/'">
             </div>

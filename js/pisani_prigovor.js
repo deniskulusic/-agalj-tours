@@ -48,7 +48,10 @@
       if(m){
         success.classList.toggle("active-upit");
         d.sendEmail();
-       
+        r[0].value="";
+        n[0].value="";
+        f[0].value="";
+        c[0].value="";
       }
   }
   document.addEventListener("DOMContentLoaded",(
@@ -95,7 +98,7 @@
         //Language
         
         const lngpopup=document.querySelector(".lng-popup");
-        const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
+        const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background, .buttons button");
         for(j=0;j<lngpopbutton.length;j++){
           lngpopbutton[j].addEventListener('click',function(){
               lngpopup.classList.toggle("active-lng");

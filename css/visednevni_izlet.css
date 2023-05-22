@@ -421,7 +421,7 @@
   border-radius: 8px;
   margin-top: 24px;
 }
-.two-input input {
+.two-input input, .two-input select {
   font-size: 16px;
   line-height: 20px;
 }
@@ -494,7 +494,7 @@
 .two-input-box input::-moz-placeholder {
   opacity: 0.5;
 }
-.two-input-box input::placeholder {
+.two-input-box input::placeholder, .two-input-box select {
   opacity: 0.5;
 }
 
@@ -508,7 +508,7 @@ input::-moz-placeholder {
   opacity: 0.2;
 }
 
-input::placeholder {
+input::placeholder, select {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
@@ -518,12 +518,12 @@ input::placeholder {
   opacity: 0.2;
 }
 
-input {
+input, select {
   border: 0px;
   padding: 0;
 }
 
-input:focus {
+input:focus, select {
   outline: none;
 }
 
@@ -570,7 +570,7 @@ label {
 .input label {
   margin-left: 16px;
 }
-.input input {
+.input input, .input select {
   margin-left: 16px;
   height: 24px;
   padding: 0;
@@ -704,6 +704,14 @@ input[type=checkbox] {
   object-fit: cover;
 }
 
+select {
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
 .main::-webkit-scrollbar {
   width: 0 !important;
 }
@@ -718,6 +726,10 @@ input[type=checkbox] {
 
 .active-gal {
   display: flex;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 @media only screen and (max-width: 1250px) {

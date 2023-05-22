@@ -52,8 +52,12 @@
       u[e[1]]?e[0].parentElement.removeAttribute("error"):(e[0].parentElement.setAttribute("error",""),m=false);
       if(m){
         success.classList.toggle("active-upit");
+      
         d.sendEmail();
-       
+        n[0].value="";
+        r[0].value="";
+        s[0].value="";
+        l[0].value="";
       }
   }
   document.addEventListener("DOMContentLoaded",(
@@ -69,6 +73,11 @@ for( var j=0;j<upitbuttonclose.length;j++){
     
 }
 //Accordation
+var select=document.getElementById("brojosoba");
+
+select.addEventListener('change',function(){
+  select.style.opacity="1";
+});
 
 const acordation=document.getElementsByClassName('faq');
 for( var i=0;i<acordation.length;i++){
@@ -177,7 +186,7 @@ button2.addEventListener("click", buttonPressed2);
 //Language
 
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background , .buttons button");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");

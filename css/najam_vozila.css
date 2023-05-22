@@ -461,7 +461,7 @@ input[type=radio]:checked::before {
   background-color: #F8F8F8;
   border-radius: 8px;
 }
-.two-input input {
+.two-input input, .two-input select {
   font-size: 16px;
   line-height: 24px;
 }
@@ -542,7 +542,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 0.5;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder, textarea::placeholder, select {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
@@ -552,13 +552,13 @@ input::placeholder, textarea::placeholder {
   opacity: 0.5;
 }
 
-input, textarea {
+input, textarea, select {
   border: 0px;
   padding: 0;
   background-color: #F8F8F8;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
@@ -643,7 +643,7 @@ label {
   margin-left: 16px;
   color: #0F141E;
 }
-.input input {
+.input input, .input select {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
@@ -658,6 +658,7 @@ label {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 .input div .error-text {
   font-family: "Manrope";
@@ -704,6 +705,17 @@ label {
 
 .active-vozila {
   display: flex;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 @media only screen and (max-width: 950px) {

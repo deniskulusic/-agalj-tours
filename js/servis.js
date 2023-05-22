@@ -51,7 +51,7 @@ function reportWindowSize() {
 window.onresize = reportWindowSize;
 
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background, .buttons button");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");

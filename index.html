@@ -24,9 +24,10 @@
         <img src="assets/img/Compass.svg" alt="">
         <div>
         <label>Tip izleta</label>
-        <select name="" id="">
-            <option value="" selected="selected" disabled="disabled">Odaberi</option>
+        <select name="" id="" >
+            <option value="" selected="selected" disabled="disabled">Odaberite tip izleta</option>
             <option value="">Advent</option>
+            <option value="">Jednodnevno</option>
         </select>
     </div>
     <span class="arrow"></span>
@@ -35,7 +36,11 @@
         <img src="assets/img/Pin.svg" alt="">
         <div>
         <label>Destinacija</label>
-        <input type="text" placeholder="Upišite destinaciju">
+        <select name="" id="">
+            <option value="" selected="selected" disabled="disabled">Odaberite destinaciju</option>
+            <option value="">Destinacija 1</option>
+            <option value="">Destinacija 2</option>
+        </select>
     </div>
     <span class="arrow"></span>
     </div>
@@ -117,16 +122,26 @@
                             <img class="mobile" src="assets/img/Interface Search.svg" alt="">
                             <div>
                                 <label>Tip izleta</label>
-                                <input type="text" class="desktop" placeholder="Odaberi tip izleta" id="name">
-                                <input type="text" class="mobile" placeholder="Pretraži izlete" id="name">
+                                <select name=""class="desktop" id="Select1">
+                                    <option value="" selected="selected" disabled="disabled">Odaberi Tip izleta</option>
+                                    <option value="">Advent</option>
+                                    <option value="">Jednodnevno</option>
+                                </select>
+                                
+                                <div class="pretrazi-izlete mobile">Pretraži izlete</div>
                             </div>
-                            <span class="arrow"></span>
+                            <span class="arrow" ></span>
                         </div>
                         <div class="two-input-box">
                             <img src="assets/img/Pin.svg" alt="">
                             <div>
                                 <label>Destinacija</label>
-                                <input type="text" placeholder="Odaberi destinaciju" id="email">
+                                
+                                <select name="" id="">
+                                    <option value="" selected="selected" disabled="disabled">Odaberi destinaciju</option>
+                                    <option value="">Destinacija 1</option>
+                                    <option value="">Destinacija 2</option>
+                                </select>
                             </div>
                             <span class="arrow"></span>
                         </div>
