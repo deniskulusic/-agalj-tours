@@ -625,13 +625,13 @@ font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         color: $DarkBlue;
-        
+        width: 90%;
     }
     div{
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         .error-text{
             font-family: 'Manrope';
         font-style: normal;

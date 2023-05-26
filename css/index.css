@@ -251,6 +251,9 @@ select {
   flex-direction: column;
   width: 80%;
 }
+.two-input-box select {
+  width: 100%;
+}
 .two-input-box span {
   margin-right: 16px;
 }
@@ -1003,6 +1006,10 @@ input[type=checkbox] {
   }
   .input div {
     flex-direction: column;
+    width: 90%;
+  }
+  .input select {
+    width: 100%;
   }
   .input label {
     margin-left: 8px;

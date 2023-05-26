@@ -253,7 +253,9 @@ color:$White
         width: 80%;
         
     }
-    
+    select{
+        width: 100%;
+    }
     span{
         margin-right: 16px;
     }
@@ -1011,6 +1013,10 @@ input[type='checkbox'] {
     }
     div{
         flex-direction: column;
+        width: 90%;
+    }
+    select{
+        width: 100%;
     }
     label{
         margin-left: 8px;
