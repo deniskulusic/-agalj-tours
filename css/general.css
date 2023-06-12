@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 @font-face {
   src: url(fonts/Gazpacho-Thin.otf);
   font-family: Gazpacho;
@@ -38,18 +48,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: "Lora";
+  font-family: Gazpacho;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 61px;
   line-height: 72px;
-  text-align: center;
   letter-spacing: -0.02em;
   color: #0F141E;
 }
 
 h2 {
-  font-family: "Lora";
+  font-family: Gazpacho;
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
@@ -59,7 +68,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Lora";
+  font-family: Gazpacho;
   font-style: normal;
   font-weight: 700;
   font-size: 42px;
@@ -86,7 +95,7 @@ h5 {
 }
 
 h6 {
-  font-family: "Lora";
+  font-family: Gazpacho;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -192,28 +201,6 @@ nav {
   background-color: #FFFFFF;
 }
 
-.colors {
-  width: 100%;
-  height: 16px;
-  display: flex;
-}
-.colors div {
-  width: 25%;
-  height: 100%;
-}
-.colors .orange {
-  background-color: #FC6536;
-}
-.colors .yello {
-  background-color: #F4A61E;
-}
-.colors .purple {
-  background-color: #7D2E83;
-}
-.colors .blue {
-  background-color: #283A7E;
-}
-
 .navbar {
   margin-left: 80px;
   margin-right: 80px;
@@ -236,9 +223,6 @@ nav {
        column-gap: 64px;
   align-items: center;
 }
-.nav-right .pbold {
-  text-transform: uppercase;
-}
 .nav-right .pbold:hover {
   position: relative;
   cursor: pointer;
@@ -256,7 +240,8 @@ nav {
   cursor: pointer;
 }
 .logo img {
-  height: 53px;
+  width: 149.64px;
+  height: 32px;
 }
 
 .lng {
@@ -343,23 +328,10 @@ nav {
   top: 30px;
 }
 
-.before-footer {
-  margin-top: 204px;
-}
-.before-footer div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 48px;
-}
-.before-footer div img {
-  height: 44px;
-}
-
 footer {
   width: 100%;
-  background-color: #28397E;
-  margin-top: 42px;
+  background-color: #0F141E;
+  margin-top: 256px;
 }
 footer u {
   text-decoration: none;
@@ -376,7 +348,7 @@ footer u:hover {
   margin-top: 120px;
 }
 .footer-top h6 {
-  color: #F8F8F8 !important;
+  color: #F1F1F1 !important;
 }
 
 .footer-middle {
@@ -384,15 +356,21 @@ footer u:hover {
   grid-column: span 3;
 }
 .footer-middle .pbold {
-  color: white;
+  color: #F1F1F1;
   margin-bottom: 24px;
 }
 .footer-middle .psmall {
-  color: #F8F8F8;
+  color: #6F7785;
 }
 
 .vlinks {
   line-height: 32px !important;
+}
+
+.UHPA {
+  margin-top: 56px;
+  height: 20px;
+  width: auto;
 }
 
 .socials {
@@ -414,15 +392,14 @@ footer u:hover {
   justify-content: space-between;
   align-items: center;
   margin-top: 111px;
-  border-top: #F8F8F8 solid 1px;
+  border-top: #2C3038 solid 1px;
 }
 .footer-bottom img {
   height: 20px;
   width: auto;
-  filter: brightness(10000%);
 }
 .footer-bottom .psmall {
-  color: #F8F8F8;
+  color: #6F7785;
 }
 
 button {
@@ -443,6 +420,10 @@ button {
   color: #FFFFFF;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+button:focus {
+  background: #FF9979;
 }
 
 button:hover {
@@ -674,13 +655,13 @@ button:disabled {
   background-color: #0F141E;
 }
 .inverted nav .logo img {
-  filter: brightness(100000%);
+  filter: brightness(10000%);
 }
 .inverted nav .lng-mobile-text {
   color: #FFFFFF;
 }
 .inverted nav .lng-mobile-text img {
-  filter: brightness(100000%);
+  filter: brightness(10000%);
 }
 .inverted nav .menu-line {
   background-color: #FFFFFF;
@@ -703,7 +684,7 @@ button:disabled {
   transition: 0.5s;
 }
 .transparent .logo img {
-  filter: brightness(100000%);
+  filter: brightness(10000%);
 }
 .transparent .menu-line {
   background-color: #FFFFFF;
@@ -802,12 +783,6 @@ input[type=checkbox]:checked::before {
 }
 
 @media only screen and (max-width: 950px) {
-  .before-footer {
-    margin-top: 104px;
-  }
-  .before-footer div {
-    justify-content: center;
-  }
   .nav-right {
     display: none;
   }
@@ -896,11 +871,14 @@ input[type=checkbox]:checked::before {
   .navbar {
     height: 72px;
   }
-  .logo img {
-    height: 42px;
-  }
   .menu-active .menu-mobile {
     height: calc(100dvh - 72px);
+  }
+  .logo img {
+    height: 28px;
+  }
+  footer {
+    margin-top: 104px;
   }
   .footer-top {
     margin-top: 104px;

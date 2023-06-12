@@ -54,9 +54,13 @@ object-fit: cover;
   z-index: -1!important;
   width: 100%;
   top:100%;
-  margin-top: -20px;
+  margin-top: -17px;
 }
-
+.underline-mobile{
+    text-decoration: none;
+    position: relative;
+    
+}
 
 .acordation{
     z-index: 2;
@@ -176,10 +180,6 @@ object-fit: cover;
     .full-img{
         height: 800px;
     }
-    .underline::before{
-      margin-top: -13px;
-      height: 10px;
-    }
     .naslov{
         margin-top: 232px;
         div{
@@ -191,7 +191,23 @@ object-fit: cover;
             display: none;
         }
     }
-    
+    .underline::before{
+        display: none;
+    }
+    .underline-mobile{
+        white-space: nowrap;
+    }
+    .underline-mobile::before{
+        content: "";
+      position: absolute;
+
+      height: 8px;
+      background: $Orange;
+      z-index: -1!important;
+      width: 100%;
+      top:100%;
+      margin-top: -9px;
+    }
     .acordation{
         margin-top: 170px;
         div{

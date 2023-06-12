@@ -46,7 +46,12 @@ nav { /* Safari */
   z-index: -1 !important;
   width: 100%;
   top: 100%;
-  margin-top: -20px;
+  margin-top: -17px;
+}
+
+.underline-mobile {
+  text-decoration: none;
+  position: relative;
 }
 
 .acordation {
@@ -149,10 +154,6 @@ nav { /* Safari */
   .full-img {
     height: 800px;
   }
-  .underline::before {
-    margin-top: -13px;
-    height: 10px;
-  }
   .naslov {
     margin-top: 232px;
   }
@@ -161,6 +162,22 @@ nav { /* Safari */
   }
   .naslov .plarge {
     display: none;
+  }
+  .underline::before {
+    display: none;
+  }
+  .underline-mobile {
+    white-space: nowrap;
+  }
+  .underline-mobile::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    background: #FC6536;
+    z-index: -1 !important;
+    width: 100%;
+    top: 100%;
+    margin-top: -9px;
   }
   .acordation {
     margin-top: 170px;

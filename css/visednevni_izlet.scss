@@ -6,8 +6,6 @@ $MidnightGrey:#6F7785;
 $MiddleGrey:#626262;
 $MediumGrey:#F1F1F1;
 $LightGrey:#F8F8F8;
-
-
 .menu-active{
     z-index: 20;
 }
@@ -146,113 +144,23 @@ div{
     }
     
 }
-.dani{
+.raspored{
     margin-top: 40px;
     padding-bottom: 40px;
     border-bottom: $MediumGrey 1px solid;
-    .dani-naslov{
+    h4{
         grid-column: span 7;
-        font-family: 'Lora';
-font-style: normal;
-font-weight: 500;
-font-size: 40px;
-line-height: 72px;
-/* or 180% */
-display: flex;
-align-items: center;
-letter-spacing: 0.25px;
-
-color: #212529;
+    }
+    .psmall{
+        grid-column: span 7;
+        color:$MiddleGrey;
+    }
+    .pbold{
+        margin-top: 16px;
+        grid-column: span 7;
+        margin-bottom: 16px;
     }
     
-    .dani-grid{
-        grid-column: span 7;
-        display: flex;
-        gap: 12px;
-        margin-top: 24px;
-        margin-bottom: 70px;
-        div{
-            cursor: pointer;
-            width: 100px;
-            height: 62px;
-            background-color:  #ECF4F8;
-            font-family: 'Barlow';
-            display: flex;
-            align-items: center;
-            justify-content: center;
-font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 22px;
-/* identical to box height, or 150% */
-display: flex;
-align-items: center;
-letter-spacing: 0.25px;
-
-color: #7C838B;
-        }
-    }
-    .dani-content{
-        grid-column: span 7;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        gap: 24px;
-        scroll-behavior: smooth;
-        .dani-content-element{
-            min-width: 100%;
-            
-        }
-        .eyebrow
-        {
-
-        
-        font-family: 'Barlow';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 12px;
-/* identical to box height, or 100% */
-display: flex;
-align-items: center;
-letter-spacing: 0.25px;
-text-transform: uppercase;
-
-color: #7C838B}
-    }
-    .dani-head
-        {
-            width: 70%;
-            margin-top: 10px;
-        font-family: 'Lora';
-font-style: normal;
-font-weight: 500;
-font-size: 40px;
-line-height: 48px;
-/* identical to box height, or 120% */
-display: flex;
-align-items: center;
-letter-spacing: 0.25px;
-
-color: #212529;
-        }
-        .dani-text
-        {
-            width: 75%;
-            margin-top: 70px;
-            font-family: 'Barlow';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 20px;
-            line-height: 34px;
-            /* identical to box height, or 170% */
-            display: flex;
-            align-items: center;
-            letter-spacing: 0.25px;
-            
-            color: #212529;
-        }
-        
 }
 .more{
     grid-column: span 7;
@@ -487,7 +395,7 @@ grid-column: span 7;
 }
 .price{
     padding: 8px 16px;
-    background-color: #B4282C;
+    background-color: $Orange;
     border-radius: 58px;
     
     margin-left: 32px;
@@ -506,10 +414,11 @@ grid-column: span 7;
     background-color: $White;
     border-radius: 8px;
     margin-top: 24px;
-    input{
+    input , select{
         font-size: 16px;
         line-height: 20px;
     }
+
     span{
         margin-right: 16px;
 
@@ -580,11 +489,12 @@ grid-column: span 7;
     img{
         margin-right: 16px;
     }
-    input::placeholder {
+    input::placeholder ,select{
     opacity: 0.5;
     }
 }
-input::placeholder {
+
+input::placeholder , select{
     font-family: 'Manrope';
 font-style: normal;
 font-weight: 500;
@@ -593,11 +503,12 @@ line-height: 24px;
 color: $DarkBlue;
 opacity: 0.2;
 }
-input{
+
+input, select{
     border: 0px; 
     padding: 0;
 }
-input:focus{
+input:focus ,select{
     outline: none;
 }
 label{
@@ -642,7 +553,7 @@ opacity: 0.8;
     label{
         margin-left: 16px;
     }
-    input{
+    input , select{
         margin-left: 16px;
         height: 24px;
         padding: 0;
@@ -765,6 +676,14 @@ object-fit: cover;
     }
     
 }
+select{
+    background-color: $White;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -o-appearance:none;
+    appearance:none; 
+}
+
 .main::-webkit-scrollbar {
     width: 0 !important;
     }
@@ -779,10 +698,9 @@ object-fit: cover;
 .active-gal{
     display: flex;
 }
-.active-slider
-{
-    background-color: $White !important;
-}
+select::-ms-expand{
+    display:none;
+  }
 @media only screen and (max-width: 1250px) {
 .icons{
     div{
@@ -828,10 +746,12 @@ object-fit: cover;
     }
     .input{
         background-color: $LightGrey;
-        input{
+        input {
             background-color: $LightGrey;
         }
     }
+   
+     
     .mobile-upit{
         
         align-items: center;
@@ -993,26 +913,6 @@ object-fit: cover;
         top: 24px;;
         right: 24px;
     }
-    .dani{
-        .dani-head
-        {
-            width: 100%;
-         
-        }
-        .dani-text
-        {
-            width: 100%;
-          margin-top: 24px;
-        }
-        .dani-naslov
-        {
-            line-height: 56px;
-        }
-        .dani-grid{
-            margin-bottom: 48px;
-        }
-    }
-    
 }
 @media only screen and (max-width: 450px) {
     .galery-big{

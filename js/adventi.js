@@ -8,7 +8,10 @@ const buttonPressed = (e) => {
 button.addEventListener("click", buttonPressed);
 
 const wrap=document.querySelector(".wrapper");
-
+const dark=document.querySelector(".dark");
+var pageyoff=wrap.scrollTop;
+var darkfromtop=pageyoff + dark.getBoundingClientRect().top;
+var darkheight=dark.offsetHeight;
 const paralax=document.getElementById("naslov");
 
 function scroll() {
@@ -19,7 +22,17 @@ function scroll() {
   else{
     paralax.style.position="sticky"
   }
-  
+    if(wrap.scrollTop+70>(darkfromtop + darkheight)){
+        body.classList.remove("inverted");
+        
+    }
+    else if((wrap.scrollTop+70>darkfromtop)){
+        body.classList.add("inverted");
+    }
+    
+    else{
+        body.classList.remove("inverted");
+    }
     if(wrap.scrollTop+70>wrap.offsetHeight){
       navbar.classList.remove("transparent");
     }
@@ -33,13 +46,14 @@ function reportWindowSize() {
       navbar.classList.remove("menu-active");
   }
   pageyoff=wrap.scrollTop;
-
+  darkfromtop=pageyoff + dark.getBoundingClientRect().top;
+  darkheight=dark.offsetHeight;
 }
 
 window.onresize = reportWindowSize;
 
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background, .buttons button");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");

@@ -170,7 +170,7 @@ object-fit: cover;
             opacity: 1;
         }
       }
-    input{
+    input, select{
         height: 24px;
         width: 100%;
         z-index: 1;
@@ -182,10 +182,10 @@ object-fit: cover;
         flex-direction: row;
         align-items: center;
         position: relative;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         padding-right: 16px;
-        input::placeholder{
+        input::placeholder , select{
             opacity: 0.5;
         }
         
@@ -218,10 +218,10 @@ object-fit: cover;
   transform: rotate(-45deg);
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:focus ,select:focus{
     outline: none;
 }
-input,textarea{
+input,textarea , select{
     font-family: 'Manrope';
 font-style: normal;
 font-weight: 500;
@@ -229,7 +229,7 @@ font-size: 16px;
 line-height: 24px;
 color:$DarkBlue
 }
-input::placeholder,textarea::placeholder {
+input::placeholder,textarea::placeholder ,select{
     font-family: 'Manrope';
 font-style: normal;
 font-weight: 500;
@@ -253,7 +253,16 @@ color: $DarkBlue;
 opacity: 0.8;
 }
 
-
+select{
+    background-color: $White;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -o-appearance:none;
+    appearance:none; 
+}
+select::-ms-expand{
+    display:none;
+  }
 .prituzba-box-input-2{
     padding-left: 16px;
     padding-top: 16px;

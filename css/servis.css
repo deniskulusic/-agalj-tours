@@ -1,5 +1,5 @@
 .wrapper {
-  height: 100vh;
+  height: 100dvh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 1px;
@@ -35,7 +35,7 @@
   position: sticky;
   transform-style: flat;
   transform: translateZ(-3px) scale(4.1);
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   top: 0;
   overflow: hidden;

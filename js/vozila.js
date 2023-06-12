@@ -74,8 +74,17 @@
       if(m){
         success.classList.toggle("active-upit");
         vozilopopup.classList.toggle("active-vozila");
+        
         d.sendEmail();
-       
+        n[0].value="";
+        r[0].value="";
+        ra[0].value="";
+        rs[0].value="";
+        rd[0].value="";
+        rf[0].value="";
+        rg[0].value="";
+        rh[0].value="";
+        rj[0].value="";
       }
   }
   document.addEventListener("DOMContentLoaded",(
@@ -146,7 +155,7 @@ function scroll() {
 }
 window.onscroll = scroll;
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background, .buttons button");
 for(var j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");
@@ -162,8 +171,17 @@ for(j=0;j<lngpopbuttonmobile.length;j++){
   });
   
 }
+var mjesto=document.getElementById("mjestopolaska");
+var select=document.getElementById("brojosoba");
+var tip=document.getElementById("tipvozila");
+mjesto.addEventListener('change',function(){
+  mjesto.style.opacity="1";
+});
 
-
+  tip.style.opacity="1";
+  select.addEventListener('change',function(){
+    select.style.opacity="1";
+  });
 
 const lngbutton=document.querySelectorAll(".buttons button , .lng-mobile-button");
 lngbutton[1].setAttribute('disabled', 'true');

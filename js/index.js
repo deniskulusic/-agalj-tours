@@ -76,7 +76,7 @@ function scroll() {
   }
   wrap.onscroll = scroll;
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background, .buttons button");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");
@@ -125,14 +125,32 @@ if(faqa) {
     })
 }
 
+const slider =document.querySelector(" .slider-holder");
+const left = document.querySelector(".arrow-before");
+const right = document.querySelector(".arrow-after");
+const elems=document.querySelectorAll(".arwelm");
 
 const sliderd =document.querySelector(".slider-dark .slider-holder");
 const leftd = document.querySelector(" .dark .arrow-before");
 const rightd = document.querySelector(".dark .arrow-after");
 const elemsd=document.querySelectorAll(".arwelmd");
-
+slider.scrollTo(0,0)
 sliderd.scrollTo(0,0)
+var count=0;
 var countd=0;
+const leftpress = (e) => {
+    if(count!=0){count--}
+  slider.scrollTo(elems[count].offsetLeft-int,0 );
+
+  
+}
+const rightpress = (e) => {
+    if(count!=(elems.length-1)){count++}
+    slider.scrollTo(elems[count].offsetLeft-int,0 );
+    
+  }
+right.addEventListener("click", rightpress);
+left.addEventListener("click", leftpress);
 
 
 const leftpressd = (e) => {
