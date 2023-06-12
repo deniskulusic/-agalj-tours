@@ -7,15 +7,6 @@ $MiddleGrey:#626262;
 $MediumGrey:#F1F1F1;
 $LightGrey:#F8F8F8;
 $SeparatorBlue:#2C3038;
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
 @font-face {
     src: url(fonts/Gazpacho-Thin.otf);
     font-family: Gazpacho;
@@ -55,16 +46,17 @@ h1, h2, h3, h4, h5, h6
     margin: 0;
 }
 h1{
-font-family: Gazpacho;
-font-style: normal;
-font-weight: 900;
-font-size: 61px;
-line-height: 72px;
-letter-spacing: -0.02em;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 72px;
+    text-align: center;
+    letter-spacing: -0.02em;
 color: $DarkBlue;
 }
 h2{
-    font-family: Gazpacho;
+    font-family: 'Lora';
     font-style: normal;
     font-weight: 900;
     font-size: 48px;
@@ -73,7 +65,7 @@ h2{
     color: $DarkBlue;
 }
 h3{
-    font-family: Gazpacho;
+    font-family: 'Lora';
 font-style: normal;
 font-weight: 700;
 font-size: 42px;
@@ -97,7 +89,7 @@ line-height: 24px;
 color: $DarkBlue;
 }
 h6{
-    font-family: Gazpacho;
+    font-family: 'Lora';
 font-style: normal;
 font-weight: 700;
 font-size: 25px;
@@ -193,6 +185,28 @@ nav{
     position: fixed;
     background-color: $White;
 }
+.colors{
+    width: 100%;
+    height: 16px;
+    display: flex;
+    div{
+        width: 25%;
+        height: 100%;
+
+    }
+    .orange{
+        background-color: #FC6536;
+    }
+    .yello{
+        background-color: #F4A61E;;
+    }
+    .purple{
+        background-color: #7D2E83;
+    }
+    .blue{
+        background-color: #283A7E;;
+    }
+}
 .navbar{
     
     margin-left: 80px;
@@ -213,7 +227,9 @@ align-items: center;
 display: flex;
 column-gap: 64px;
 align-items: center;
-
+.pbold{
+    text-transform: uppercase;
+}
 .pbold:hover{
     position: relative;
     cursor: pointer;
@@ -233,8 +249,8 @@ align-items: center;
 .logo{
     cursor: pointer;
     img{
-        width: 149.64px;
-height: 32px;
+        
+height: 53px;
     }
 }
 .lng{
@@ -316,10 +332,22 @@ margin-top: 60px;
   width: 0;
   top:30px;
 }
+.before-footer{
+    margin-top: 204px;
+    div{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 48px;
+        img{
+            height: 44px;
+        }
+    }
+}
 footer{
     width: 100%;
-    background-color:$DarkBlue;
-    margin-top: 256px;
+    background-color:#28397E;
+    margin-top: 42px;
     u{
         text-decoration: none;
         cursor: pointer;
@@ -334,28 +362,23 @@ footer{
     grid-column: span 12;
     margin-top: 120px;
     h6{
-        color: $MediumGrey !important;
+        color: $LightGrey !important;
     }
 }
 .footer-middle{
     margin-top: 140px;
     grid-column: span 3;
     .pbold{
-        color:$MediumGrey;
+        color:white;
         margin-bottom: 24px;
     }
     .psmall{
-        color:$MidnightGrey;
+        color:$LightGrey;
     }
 
 }
 .vlinks{
     line-height: 32px !important;
-}
-.UHPA{
-    margin-top: 56px;
-    height: 20px;
-    width: auto;
 }
 .socials{
     display: flex;
@@ -374,13 +397,14 @@ footer{
     justify-content: space-between;
     align-items: center;
     margin-top: 111px;
-    border-top: $SeparatorBlue solid 1px;
+    border-top: $LightGrey solid 1px;
     img{
         height: 20px;
         width: auto;
+        filter: brightness(10000%);
     }
     .psmall{
-        color:$MidnightGrey;
+        color:$LightGrey;
         
     }
 }
@@ -402,9 +426,7 @@ letter-spacing: 0.01em;
 color: $White;
 width: fit-content;
 }
-button:focus{
-    background: #FF9979;
-}
+
 button:hover{
     background: #F24E1B;
 }
@@ -630,13 +652,13 @@ margin-left: 32px;
     background-color: $DarkBlue;
     .logo{
         img{
-            filter:  brightness(10000%) ; 
+            filter:  brightness(100000%) ; 
         }
     }
     .lng-mobile-text{
     color:$White;
     img{
-        filter:  brightness(10000%) ; 
+        filter:  brightness(100000%) ; 
     }
     }
     .menu-line{
@@ -666,7 +688,7 @@ background-color: rgba(15, 20, 30,0);
 transition: 0.5s;
 .logo{
     img{
-        filter:  brightness(10000%) ; 
+        filter:  brightness(100000%) ; 
     }
     
 }
@@ -775,7 +797,14 @@ border-radius: 4px;
   }
 @media only screen and (max-width: 950px) {
 
+   
+    .before-footer{
+        margin-top: 104px;
+        div{
+            justify-content: center;
 
+        }
+    }
     .nav-right{
         display: none;
     }
@@ -876,20 +905,21 @@ line-height: 24px;
       .navbar{
         height: 72px;
     }
+    .logo{
+       
+        img{
+            
+    height: 42px;
+        }
+    }
     .menu-active {
 
       .menu-mobile{
         height: calc(100dvh - 72px);
       }
     }
-    .logo{
-        img{
-            height: 28px;
-        }
-    }     
-    footer{
-        margin-top: 104px;
-    }
+        
+    
     .footer-top{
         margin-top: 104px;
         margin-bottom: 40px;

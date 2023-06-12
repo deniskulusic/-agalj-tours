@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <link rel="stylesheet" type="text/css" href="./css/form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="success">
+        <div class="background-s"></div>
+        <div class="maxw container">
+            <div class="maxw-inner">
+            <div class="img-holder">
+                <img src="assets/img/PaperPlane.png" alt="">
+                </div> 
+                <h4>Vaš upit je poslan</h4>
+                <div class="plarge">Uskoro ćemo vam se povratno javiti s najboljom
+                    ponudom za odabrani izlet.</div>
+                
+                <button class="upit-button-close" enabled>Zatvori</button>
+            </div>
+    </div>
+</div>
+<div class="lng-popup">
+    <div class="background"></div>
+    <div class="maxw container">
+        <div class="maxw-inner">
+            <div class="inner-title-lng">Odaberite jezik</div>
+            <div class="buttons">
+            
+            <button enabled>English</button>
+            <button disabled>Hrvatski</button>
+        </div>
+        <div class="close-lng">
+        </div>
+        </div>
+        
+</div>
+</div>
+<nav >
+    <div class="colors">
+        <div class="orange"></div>
+        <div class="yello"></div>
+        <div class="purple"></div>
+        <div class="blue"></div>
+    </div>
+        <div class="navbar">
+    <div class="menu">
+        <div class="menu-line"></div>
+    </div>
+    <div class="logo" onClick="location.href='index.html'"><img src="assets/image/logo.svg" alt="logo"></div>
+    <div class="menu-placeholder"></div>
+    <div class="nav-right">
+        <div class="pbold" onClick="location.href='izlet.html'">Školska putovanja</div>
+        <div class="pbold" onClick="location.href='adventi.html'">Ostala putovanja</div>
+        <div class="pbold" onClick="location.href='vozila.html'">O nama</div>
+        <div class="pbold " onClick="location.href='kontakt.html'">Kontakt</div>
+        <div class="lng lng-desktop"> <img src="assets/img/Language.svg" alt="">HR </div>
+    </div>
+</div>
+<div class="maxw container grid">
+<div class="menu-mobile">
+    <div class="menu-text" onClick="location.href='izlet.html'"> Školska putovanja</div>
+    <div class="menu-text" onClick="location.href='adventi.html'"> Ostala putovanja</div>
+    <div class="menu-text" onClick="location.href='vozila.html'">O nama</div>
+    <div class="menu-text" onClick="location.href='kontakt.html'">Kontakt</div>
+    <div class="lng"><img src="assets/img/Language.svg" alt=""> HR</div>
+    <div class="lng-mobile">
+        <div class="lng-mobile-text"> <img src="assets/img/Chevron Down.svg" alt="">
+            Odaberite jezik</div>
+        <button class="lng-mobile-button">English</button>
+            <button class="lng-mobile-button">Hrvatski</button>
+    </div>
+</div>
+</div>
+</nav>
+<section>
+<form id="regForm" action="" class="maxw grid container">
+    <h2 class="form-check-flex">PROVJERA PODATAKA</h2>
+    <p class="full bold form-check-flex"><b>*Ugovaratelj/Putnik je odgovoran za ispravnost popunjenih podataka*</b></p>
+    <p class="full blue form-check-flex">Molimo Vas provjerite ispravnost prethodno popunjenih podataka.</p>
+    <p class="full blue form-check-flex">Ako ste suglasni sa popunjenim podacima označite na dnu stranice Pošalji prijavu.</p>
+    <h2 class="form-check-none">Prijava za školsko putovanje</h2>
+    <div class="steps form-check-none">
+    <div class="step">Korak 1</div>
+    <div class="step">Korak 2</div>
+    <div class="step">Korak 3</div>
+    <div class="step">Korak 4</div>  
+</div>
+    
+    <!-- One "tab" for each step in the form: -->
+    
+    
+    <div class="tab grid">
+        <p class="full"><label for="sifra">Šifra aranžmana <u>*</u></label><input placeholder="Popunite šifru aranžmana i potvrdite „enter/OK“" name="sifra" oninput="this.className = ''"></p>
+        
+    </div>
+    <div class="tab tab-background grid">
+        
+        <p>
+            <label for="skola">Škola</label>
+            <select name="skola">
+                <option value="" selected="selected" disabled="disabled">Odaberite Školu</option>
+                <option value="Škola 1">Škola 1</option>
+                <option value="Škola 2">Škola 2</option>
+            </select>
+            <span class="arrow"></span>
+        </p>
+        <p><label for="odrediste">Aranžman / odredište</label>
+            <select name="odrediste" >
+                <option value="" selected="selected" disabled="disabled">Odaberite Aranžman / odredište</option>
+                <option value="Odredište 1">Odredište 1</option>
+                <option value="Odredište 2">Odredište 2</option>
+            </select>
+            <span class="arrow"></span>
+        </p>
+        <p><label for="razred">Razred <u>*</u></label>
+            <select name="razred">
+                <option value="" selected="selected" disabled="disabled">Odaberite Razred</option>
+                <option value="Razred 1">Razred 1</option>
+                <option value="Razred 2">Razred 2</option>
+            </select>
+            <span class="arrow"></span>
+        </p>
+        <p><label for="voditelj">Razrednik / voditelj</label>
+            <select name="voditelj"  >
+                <option value="" selected="selected" disabled="disabled">Odaberite Razrednik / voditelj</option>
+                <option value="Voditelj 1">Voditelj 1</option>
+                <option value="Voditelj 2">Voditelj 2</option>
+            </select>
+            <span class="arrow"></span>
+        </p>
+        <div class="checkbox">
+            <a target="_blank" id="checklink"  href="https://destinationsftours-my.sharepoint.com/:b:/g/personal/marko_f-tours_hr/Ef5kKJ9k9dxPq6s_tQhyAP0B0HNNE9zvTKGWX4zbm5ybvg?e=ToaHIL">
+            <input type="checkbox" >
+        </a>
+            <div class="psmall">Označite polje i pročitajte/preuzmite program putovanja</div>
+        </div>
+      </div>
+      <div class="tab grid">
+        <div class="grid tab-background">
+        <h6>Podatci ugovaratelja</h6>
+        <p><label for="rprezime">Prezime ugovaratelja putovanja (roditelj/staratelj) <u>*</u></label><input  name="rprezime" placeholder="Popunite Prezime (npr. Horvat)" oninput="this.className = ''"></p>
+        <p><label for="rime">Ime ugovaratelja putovanja (roditelj/staratelj) <u>*</u></label><input name="rime" placeholder="Popunite Ime (npr. Ante)" oninput="this.className = ''"></p>
+        <p><label for="rtel">Mobitel ugovaratelja putovanja <u>*</u></label><input type="tel" value="" name="rtel" onclick="this.className = ''" class="mt-1" data-role="input-mask" data-mask="+385(0)__-___-____"></p>
+        <p><label for="remail">E-mail ugovaratelja putovanja <u>*</u></label><input name="remail" placeholder="Popunite E-mail (npr. ivo.ivic@gmail.com)" oninput="this.className = ''"></p>
+    </div>
+    <div class="grid tab-background tab-background2">
+        <h6 >Podatci putnika</h6>
+        <p><label for="prezime">Prezime putnika <u>*</u></label><input name="pprezime" placeholder="Popunite prezime (npr. HORVAT)" oninput="this.className = ''"></p>
+        <p><label for="pime">Ime putnika <u>*</u></label><input name="pime" placeholder="Popunite ime (npr. ANTE)" oninput="this.className = ''"></p>
+        <p><label for="padresa">Adresa putnika <u>*</u></label><input name="padresa" placeholder="Popunite svoju adresu (npr. Horvatova 1)"oninput="this.className = ''"></p>
+        <p><label for="pgrad">Grad/mjesto putnika <u>*</u></label><input name="pgrad" placeholder="Popunite svoj grad"oninput="this.className = ''"></p>
+        <p><label for="ppostanski">Poštanski broj putnika <u>*</u></label><input name="ppostanski" placeholder="Popunite svoj poštanski broj"oninput="this.className = ''"></p>
+        <p><label for="pdrzava">Država putnika<u>*</u></label><input name="odrzava" placeholder="Popunite svoju državu"oninput="this.className = ''"></p>
+        <p><label for="prođenje">Datum rođenja putnika<u>*</u></label><input id="date" type="text" name="prođenje" placeholder="Dodajte datum rođenja"oninput="this.className = ''"></p>
+        <div class="radio">
+            <label for="">Spol <u>*</u></label>
+            <div class="big">
+            <div>
+            <input type="radio" name="spol" >
+            <label for="html" class="pmedium">M</label>
+        </div>
+        <div>
+            <input type="radio" name="spol" >
+            <label class="pmedium">Ž</label>
+            
+        </div>
+    </div>
+        </div>
+    </div>
+      </div>
+      <div class="tab grid">
+        <div class="radio full">
+            <label for="">Vrsta putne isprave putnika </label>
+            <div class="big">
+            <div>
+            <input type="radio" name="fav_language" >
+            <label for="html" class="pmedium">Putovnica</label>
+        </div>
+        <div>
+            <input type="radio" name="fav_language" >
+            <label class="pmedium">Osobna iskaznica</label>
+            
+        </div>
+    </div>
+        </div>
+        <p><label for="brojputneisprave">Broj putne isprave putnika</label><input placeholder="Popunite broj putne isprave" name="brojputneisprave" oninput="this.className = ''"></p>
+        <p><label for="datumputneisprave">Putna isprava vrijedi do</label><input type="text" id="date" name="datumputneisprave" placeholder="Dodajte datum " oninput="this.className = ''"></p>
+        <p class="full blue form-check-none">Za putovanja u inozemstvo potrebno dostaviti broj važeće putne isprave s kojom će se putovati i do kada vrijedi
+          <br>  (najkasnije 30 dana prije polaska!)</p>
+          <p><label for="tputnika">Telefon putnika</label><input type="tel" name="tputnika" onclick="this.className = ''" class="mt-1" data-role="input-mask" data-mask="+385(0)__-___-____"></p>
+          <p><label for="mputnika">Mobitel putnika <u>*</u></label><input name="mputnika" type="tel" value="" onclick="this.className = ''" class="mt-1" data-role="input-mask" data-mask="+385(0)__-___-____"></p> 
+          <p class="full"><label for="eputnika">E-mail putnika <u>*</u></label><input name="eputnika" placeholder="Popunite E-mail (npr. ivo.ivic@gmail.com)" oninput="this.className = ''"></p> 
+          <p class="full">
+            <label for="">Način plaćanja <u>*</u></label> </p>
+           <div class="opis"> <b>A (cijena s popustom)</b>-Uplata cjelokupnog iznosa aranžmana jednokratno novčanicama, internet/mobilnim bankarstvom ili uplatnicom koju dostavlja agencija (elektronskom poštom) s datumom dospijeća naznačenim na aranžmanu <br>
+            <b>B (cijena s popustom)</b>-Uplata rezervacije, te ostatka iznosa na mjesečne obroke uplatnicama koje dostavlja agencija (elektronskom poštom) s datumom dospijeća naznačenim na aranžmanu <br>
+            <b>C (osnovna cijena)</b>-Uplata cjelokupnog iznosa aranžmana jednokratno ili obročno debitnim ili kreditnim karticama (max 12 obroka) do datuma naznačenog na aranžmanu</div>
+            <p class="full">
+                
+                <select name="nacinplacanja" id="" oninput="this.className = ''">
+                    <option value="" selected="selected" disabled="disabled">Odaberite način plaćanja</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+                <span class="arrow"></span>
+            </p>
+            <div class="opis form-check-none"> 
+                <h6>RODITELJSKA PRIVOLA ZA UPRAVLJANJE OSOBNIM PODACIMA</h6>
+                Ja, kao nositelj roditeljske skrbi maloljetnika suglasan sam da Agencija obrađuje osobne podatke putnika (ime i prezime, datum rođenja, broj putnog dokumenta) mog djeteta u slučaju kada je to neophodno za realizaciju usluge smještaja, prijevoza, osiguranja i ulaznica za posjete muzejima, te da se osobni podaci: ime, prezime i datum rođenja mogu proslijediti društvima navedenim u paket aranžmanu. Osobni podaci će se koristiti samo u prethodno navedene svrhe i čuvat će se sukladno zakonskim i regulatornim propisima Opće uredbe o zaštiti osobnih podataka (GDPR 2016/679), odnosno u trajanju od 5 godina od završetka usluge, osim ako dulji vremenski period čuvanja osobnih podataka nije određen važećim nacionalnim ili europskim propisima. <br>
+<b> Izjavljujem da privolu dajem dobrovoljno, da mi je detaljno pojašnjena namjera korištenja osobnih podataka djeteta u svrhe iz ove privole kao i moje pravo da se predmetnoj obradi usprotivim te da ova privola predstavlja izričitu privolu sukladno važećim zakonskim propisima koji uređuju zaštitu osobnih podataka te da je uporaba osobnih podataka djeteta dozvoljena na opisani način i u zadanom opsegu. </b>
+            </div>
+            <div class="checkbox checkbox3 form-check-none">
+                
+                <input type="checkbox">
+           
+                <div class="psmall">Slažem se s privolom za upravljanje osobnim podatcima</div>
+            </div>
+            <div class="opis form-check-none"> 
+                Opoziv suglasnosti je moguće ostvariti na način da se pošalje obavijest o opozivu na e-mail adresu desk@f-tours.hr ili na adresu Destinations F-tours d.o.o., Trg Hrvatske bratske zajednice 2, 21000 Split.  
+            </div>
+            <div class="radio full form-check-none">
+             <b>   Suglasan sam da se fotografije/video snimke/audio snimke mog djeteta sa putovanja objave na društvenim mrežama Agencije</b>
+                <div class="big">
+                <div>
+                <input type="radio" name="suglas" >
+                <label for="html" class="pmedium">Da</label>
+            </div>
+            <div>
+                <input type="radio" name="suglas" >
+                <label class="pmedium">Ne</label>
+                
+            </div>
+        </div>
+            </div>
+            <div class="checkbox checkbox3 form-check-none">
+                
+                <input type="checkbox">
+           
+                <div class="psmall"> <a target="_blank" href="https://destinationsftours-my.sharepoint.com/:b:/g/personal/marko_f-tours_hr/EWBqFJPE7BNDs8qvAv1Ho7EBePKgdFSrqZXg2hMhtkPWNA?e=KKhopx">Pročitao/la sam i prihvaćam opće uvjete </a></div>
+            </div>
+            <div class="opis form-check-none"> 
+                <b>Slanjem ove prijave Pošiljatelj je potvrdio da je upoznat sa detaljima aranžmana i Općim uvjetima poslovanja putničke agencije Destinations F-tours d.o.o. i dao je osobnu/roditeljsku privolu za upravljanje osobnim podacima te je potvrdio da su dostavljeni podaci istiniti.</b>
+                        </div>
+        </div>
+       
+    
+    
+    <div class="buttons">
+      
+        <button type="button" id="prevBtn" class="previous"onclick="nextPrev(-1)">Prethodni korak</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Sljedeći korak</button>
+      
+    </div>
+    
+    <!-- Circles which indicates the steps of the form: -->
+   
+    
+    </form>
+</section>
+    <section class="before-footer">
+        <div class="maxw container">
+            <img src="assets/image/Layer_x0020_1.png" alt="">
+            <img src="assets/image/logo_sigurna-kupnja_2.png" alt="">
+            <img src="assets/image/MC-IDC-864x864-1-655x437.png" alt="">
+            <img src="assets/image/mastercard.5450f163.png" alt="">
+            <img src="assets/image/monri_footer.png" alt="">
+            <img src="assets/image/visa.png" alt="">
+            <img src="assets/image/di.png" alt="">
+            <img src="assets/image/maestro.png" alt="">
+        </div>
+    </section>
+    <footer>
+        <div class="maxw container grid">
+        <div class="footer-top">
+            <h6>+38521344842 <br>
+                desk@f-tours.hr</h6>
+        </div>
+        
+            <div class="footer-middle">
+                <div class="pbold">Radno vrijeme</div>
+                <div class="psmall">
+                    Pon-Pet: 9.00-17.00 <br>
+                    Trg Hrvatske bratske zajednice 2  <br>
+                    21000 Split</div>
+                    
+
+
+            </div>
+            <div class="footer-middle">
+                <div class="pbold">Usluge</div>
+                <div class="psmall vlinks">
+                    <u onClick="location.href='izlet.html'">Jednodnevni izleti</u> <br> 
+                    <u onClick="location.href='jednodnevni.html'">adrenalinski izleti</u>  <br>
+                    <u onClick="location.href='adventi.html'">advent</u>  <br>
+                    <u onClick="location.href='vozila.html'"> Najam vozila</u>  <br>
+                    <u onClick="location.href='servis.html'">Servis gospodarskih vozila</u> </div>
+            </div>
+            <div class="footer-middle">
+                <div class="pbold ">Informacije</div>
+                <div class="psmall vlinks">
+                    <u onClick="location.href='faq.html'">Česta pitanja</u> <br><u onClick="location.href='onama.html'">O nama</u> <br><u onClick="location.href='prigovor.html'">Pisani prigovor</u> <br><u onClick="location.href='informacije.html'">Pravilnik privatnosti</u> <br><u onClick="location.href='informacije.html'">Pravne informacije</u>  </div>
+            </div>
+            <div class="footer-middle">
+                <div class="pbold">Prati nas</div>
+                <div class="socials">
+                    <img src="assets/img/Facebook.svg" alt="" onClick="location.href='https://www.Facebook.com/'">
+                    <img src="assets/img/Instagram.svg" alt="" onClick="location.href='https://www.Instagram.com/'">
+                    <img src="assets/img/Youtube.svg" alt="" onClick="location.href='https://www.Youtube.com/'">
+                </div>
+            </div>
+            
+        
+        <div class="footer-bottom">
+            <div class="psmall"> © 2023 Destination F-tours tours d.o.o. </div>
+            <img src="assets/img/Pragmatic.svg" alt="">
+        </div>
+    </div>
+    </footer>
+    <script src="https://cdn.korzh.com/metroui/v4.5.1/js/metro.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/form.js"></script>
+    <script>
+        flatpickr("#date", {});
+    </script>
+    
+</body>
+</html>

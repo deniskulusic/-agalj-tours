@@ -447,7 +447,7 @@ align-items: center;
     background-color: $LightGrey;
     border-radius: 8px;
 
-    input ,select{
+    input{
         font-size: 16px;
         line-height: 24px;
     }
@@ -520,7 +520,7 @@ align-items: center;
 .two-input-box:first-of-type{
     border-left: none;
 }
-input::placeholder ,textarea::placeholder ,select{
+input::placeholder ,textarea::placeholder{
     font-family: 'Manrope';
 font-style: normal;
 font-weight: 500;
@@ -529,12 +529,12 @@ line-height: 24px;
 color: $DarkBlue;
 opacity: 0.5;
 }
-input, textarea, select{
+input, textarea{
     border: 0px; 
     padding: 0;
     background-color: $LightGrey;
 }
-input:focus, textarea:focus , select:focus{
+input:focus, textarea:focus{
     outline: none;
 }
 
@@ -615,7 +615,7 @@ opacity: 0.8;
         margin-left: 16px;
         color:$DarkBlue
     }
-    input , select{
+    input{
         font-family: "Manrope";
 font-style: normal;
 font-weight: 500;
@@ -625,13 +625,11 @@ font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         color: $DarkBlue;
-        width: 90%;
     }
     div{
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 100%;
         .error-text{
             font-family: 'Manrope';
         font-style: normal;
@@ -684,16 +682,7 @@ div[error] {
 .active-vozila{
     display: flex;
 }
-select{
 
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -o-appearance:none;
-    appearance:none; 
-}
-select::-ms-expand{
-    display:none;
-  }
 @media only screen and (max-width: 950px) {
     .naslov{
         h1{

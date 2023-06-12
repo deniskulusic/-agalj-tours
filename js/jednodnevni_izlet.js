@@ -52,16 +52,37 @@
       u[e[1]]?e[0].parentElement.removeAttribute("error"):(e[0].parentElement.setAttribute("error",""),m=false);
       if(m){
         success.classList.toggle("active-upit");
-      
         d.sendEmail();
-        n[0].value="";
-        r[0].value="";
-        s[0].value="";
-        l[0].value="";
+       
       }
   }
   document.addEventListener("DOMContentLoaded",(
       function(){
+        const slider=document.querySelector(" .dani-content");
+        const sliderof=document.querySelectorAll(" .dani-content-element");
+        const vozilopopbutton=document.querySelectorAll(" .dani-grid div");
+        for( var j=0;j<vozilopopbutton.length;j++){
+        
+            vozilopopbutton[j].addEventListener('click',(event)=>{
+              var h=0;
+              for(h=0;h<vozilopopbutton.length;h++){
+                if(event.target==vozilopopbutton[h]){
+                  break;
+                }
+              }
+              
+              slider.scrollTo(sliderof[h].offsetLeft,0 );
+              for( var z=0;z<vozilopopbutton.length;z++){
+                vozilopopbutton[z].classList.remove("active-slider");
+              }
+            vozilopopbutton[h].classList.add("active-slider");
+              
+          });
+          
+         
+        }
+
+
         const upitbutton=document.querySelector(".upit-button");
         upitbutton.addEventListener("click",a);
       const success=document.querySelector(".success");
@@ -73,11 +94,6 @@ for( var j=0;j<upitbuttonclose.length;j++){
     
 }
 //Accordation
-var select=document.getElementById("brojosoba");
-
-select.addEventListener('change',function(){
-  select.style.opacity="1";
-});
 
 const acordation=document.getElementsByClassName('faq');
 for( var i=0;i<acordation.length;i++){
@@ -186,7 +202,7 @@ button2.addEventListener("click", buttonPressed2);
 //Language
 
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background , .buttons button");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");
@@ -219,15 +235,5 @@ for(j=0;j<lngpopbuttonmobile.length;j++){
 
 //Show more
 
-const more=document.querySelector(".more");
-var showmore=document.querySelector(".text-underline");
-const morepressed = (e) => {
-more.classList.toggle("show-more");
-  if (showmore.innerHTML === "Prikaži više") {
-    showmore.innerHTML = "Prikaži manje";
-  } else {
-    showmore.innerHTML = "Prikaži više";
-  }
-}
-showmore.addEventListener("click", morepressed);
+
      }))})();

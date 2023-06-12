@@ -1,43 +1,28 @@
 const button = document.querySelector(".menu");
-const body=document.querySelector("body");
 const navbar=document.querySelector("nav");
 const buttonPressed = (e) => {
   navbar.classList.toggle("menu-active");
-  
 }
 button.addEventListener("click", buttonPressed);
 
-const wrap=document.querySelector(".wrapper");
-
-const paralax=document.getElementById("naslov");
-
-function scroll() {
-  if(wrap.scrollTop>wrap.clientHeight){
-    
-    paralax.style.position="relative"
-  }
-  else{
-    paralax.style.position="sticky"
-  }
-  
-    if(wrap.scrollTop+70>wrap.offsetHeight){
-      navbar.classList.remove("transparent");
-    }
-    else{
-        navbar.classList.add("transparent");
-    }
-  }
-  wrap.onscroll = scroll;
 function reportWindowSize() {
   if(window.innerWidth>950){
       navbar.classList.remove("menu-active");
   }
-  pageyoff=wrap.scrollTop;
-
 }
 
 window.onresize = reportWindowSize;
 
+function scroll() {
+  if(window.pageYOffset>0){
+    navbar.style.backgroundColor="#FFFFFF";
+    
+  }
+  else{
+    navbar.style.backgroundColor="transparent";
+  }
+}
+window.onscroll = scroll;
 const lngpopup=document.querySelector(".lng-popup");
 const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
 for(j=0;j<lngpopbutton.length;j++){
@@ -67,3 +52,48 @@ for(i=0;i<lngbutton.length;i++){
       this.setAttribute('disabled', 'true');
   })
 }
+const ButtonLoadMore=document.querySelector(".button-div button");
+const LoadMoreContent=document.querySelector(".load-more-content");
+const wrap=document.querySelector(".wrapper");
+const paralax=document.getElementById("naslov");
+var ButtonCound=1;
+
+      ButtonLoadMore.addEventListener('click',function(){
+        LoadMoreContent.classList.toggle("load-more-content-active");
+        if(ButtonCound%2==0){
+          wrap.scrollTo(0,wrap.offsetHeight)
+        }
+        ButtonCound++;
+    });
+
+
+
+
+function scroll() {
+  if(wrap.scrollTop>wrap.clientHeight){
+    
+    paralax.style.position="relative"
+  }
+  else{
+    paralax.style.position="sticky"
+  }
+  
+    if(wrap.scrollTop+70>wrap.offsetHeight){
+      navbar.classList.remove("transparent");
+    }
+    else{
+        navbar.classList.add("transparent");
+    }
+  }
+  wrap.onscroll = scroll;
+function reportWindowSize() {
+  if(window.innerWidth>950){
+      navbar.classList.remove("menu-active");
+  }
+  pageyoff=wrap.scrollTop;
+
+}
+
+window.onresize = reportWindowSize;
+
+

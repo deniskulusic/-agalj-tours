@@ -41,7 +41,6 @@
               t.open("POST",config.ajaxurl,!0),
               t.setRequestHeader("enctype","multipart/form-data"),
               t.send(e)
-            
           }
           
           
@@ -66,13 +65,7 @@
       if(m){
         success.classList.toggle("active-upit");
         d.sendEmail();
-        n[0].value="";
-        r[0].value="";
-        ra[0].value="";
-        rs[0].value="";
-        rd[0].value="";
-        rf[0].value="";
-        rh[0].value="";
+       
       }
   }
   document.addEventListener("DOMContentLoaded",(
@@ -119,26 +112,13 @@ window.onscroll = scroll;
 //Language
 
 const lngpopup=document.querySelector(".lng-popup");
-const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background, .buttons button");
+const lngpopbutton=document.querySelectorAll(".lng-desktop , .close-lng , .background");
 for(j=0;j<lngpopbutton.length;j++){
   lngpopbutton[j].addEventListener('click',function(){
       lngpopup.classList.toggle("active-lng");
   });
   
 }
-var tip=document.getElementById("tipizleta");
-var izlet=document.getElementById("izlet");
-izlet.addEventListener('change',function(){
- izlet.style.opacity="1";
-});
-tip.addEventListener('change',function(){
-  tip.style.opacity="1";
- });
- var select=document.getElementById("brojosoba");
- select.addEventListener('change',function(){
-  select.style.opacity="1";
-});
-
 const lngbutton=document.querySelectorAll(".buttons button , .lng-mobile-button");
 lngbutton[1].setAttribute('disabled', 'true');
 lngbutton[3].setAttribute('disabled', 'true');
