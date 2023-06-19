@@ -126,6 +126,7 @@ nav { /* Safari */
 
 .prituzba-box-input-1 {
   grid-gap: 24px;
+  position: relative;
 }
 .prituzba-box-input-1 div {
   position: relative;
@@ -177,6 +178,7 @@ nav { /* Safari */
   padding: 0px;
   padding-left: 8px;
   border: 0px;
+  background-color: transparent;
 }
 .prituzba-box-input-1 .prituzba-box-dropdown {
   flex-direction: row;
@@ -184,13 +186,21 @@ nav { /* Safari */
   position: relative;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-right: 16px;
+  padding-right: 8px;
 }
 .prituzba-box-input-1 .prituzba-box-dropdown input::-moz-placeholder {
   opacity: 0.5;
 }
 .prituzba-box-input-1 .prituzba-box-dropdown input::placeholder, .prituzba-box-input-1 .prituzba-box-dropdown select {
   opacity: 0.5;
+}
+.prituzba-box-input-1 .arrow {
+  position: absolute;
+  right: 16px;
+}
+.prituzba-box-input-1 img {
+  position: absolute;
+  right: 16px;
 }
 
 .arrow::before,

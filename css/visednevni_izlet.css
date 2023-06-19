@@ -444,12 +444,14 @@
   align-items: center;
   justify-content: space-between;
   border-left: #F8F8F8 solid 1px;
+  position: relative;
 }
 .two-input-box div {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
+  z-index: 2;
   margin-left: 16px;
 }
 .two-input-box div .error-text {
@@ -489,7 +491,9 @@
   border-left: none;
 }
 .two-input-box img {
-  margin-right: 16px;
+  position: absolute;
+  right: 16px;
+  z-index: 1;
 }
 .two-input-box input::-moz-placeholder {
   opacity: 0.5;
@@ -771,7 +775,7 @@ select::-ms-expand {
     background-color: #F8F8F8;
   }
   .two-input input {
-    background-color: #F8F8F8;
+    background-color: transparent;
   }
   .input {
     background-color: #F8F8F8;

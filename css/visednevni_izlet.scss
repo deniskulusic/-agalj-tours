@@ -442,13 +442,14 @@ grid-column: span 7;
     align-items: center;
     justify-content: space-between;
     border-left: $LightGrey solid 1px;
-
+    position: relative;
 
     div{
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
+        z-index: 2;
         margin-left: 16px;
         .error-text{
             font-family: 'Manrope';
@@ -487,11 +488,14 @@ grid-column: span 7;
     }
     
     img{
-        margin-right: 16px;
+        position: absolute;
+        right: 16px;
+        z-index: 1;
     }
     input::placeholder ,select{
     opacity: 0.5;
     }
+    
 }
 
 input::placeholder , select{
@@ -741,7 +745,7 @@ select::-ms-expand{
     .two-input{
         background-color: $LightGrey;
         input{
-            background-color: $LightGrey;
+            background-color: transparent;
         }
     }
     .input{

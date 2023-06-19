@@ -131,6 +131,7 @@ object-fit: cover;
 }
 .prituzba-box-input-1{
     grid-gap: 24px;
+    position: relative;
     div{
         position: relative;
     width: calc(50% - 12px);
@@ -177,6 +178,7 @@ object-fit: cover;
         padding: 0px;
         padding-left: 8px; 
         border: 0px;    
+        background-color: transparent;
     }
     .prituzba-box-dropdown{
         flex-direction: row;
@@ -184,13 +186,20 @@ object-fit: cover;
         position: relative;
         padding-top: 8px;
         padding-bottom: 8px;
-        padding-right: 16px;
+        padding-right: 8px;
         input::placeholder , select{
             opacity: 0.5;
         }
         
     }
-    
+    .arrow{
+        position: absolute;
+        right: 16px;
+    }
+    img{
+        position: absolute;
+        right: 16px;
+    }
     
 }
 

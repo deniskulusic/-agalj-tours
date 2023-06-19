@@ -474,13 +474,18 @@ input[type=radio]:checked::before {
   align-items: center;
   justify-content: space-between;
   border-left: #FFFFFF solid 1px;
+  position: relative;
 }
 .two-input-box div {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   margin-left: 16px;
+  z-index: 2;
+}
+.two-input-box div input {
+  background-color: transparent;
 }
 .two-input-box div .error-text {
   font-family: "Manrope";
@@ -519,7 +524,9 @@ input[type=radio]:checked::before {
   border-left: none;
 }
 .two-input-box img {
-  margin-right: 16px;
+  right: 16px;
+  position: absolute;
+  z-index: 1;
 }
 .two-input-box input::-moz-placeholder {
   color: #626262;
@@ -638,6 +645,7 @@ label {
   border-radius: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
+  position: relative;
 }
 .input label {
   margin-left: 16px;
@@ -653,7 +661,9 @@ label {
   font-size: 16px;
   line-height: 24px;
   color: #0F141E;
-  width: 90%;
+  width: calc(100% - 16px);
+  z-index: 2;
+  background-color: transparent;
 }
 .input div {
   position: relative;
@@ -694,7 +704,9 @@ label {
   opacity: 1;
 }
 .input span {
-  margin-right: 16px;
+  position: absolute;
+  right: 16px;
+  z-index: 1;
 }
 .input .arrow::after {
   width: 10px;

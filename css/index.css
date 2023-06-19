@@ -202,8 +202,8 @@ select {
   padding-top: 7px;
   padding-bottom: 7px;
   align-items: center;
-  justify-content: space-between;
   border: 1px solid white;
+  position: relative;
 }
 .two-input-box label {
   color: #FFFFFF;
@@ -249,13 +249,15 @@ select {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
+  margin-left: 16px;
 }
 .two-input-box select {
   width: 100%;
 }
 .two-input-box span {
-  margin-right: 16px;
+  position: absolute;
+  right: 16px;
 }
 
 .paralax {
@@ -1006,7 +1008,7 @@ input[type=checkbox] {
   }
   .input div {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
   }
   .input select {
     width: 100%;
@@ -1041,7 +1043,7 @@ input[type=checkbox] {
   .input .arrow {
     position: absolute;
     right: 16px;
-    top: 25px;
+    top: 28px;
   }
   .input .arrow::before {
     width: 10px;

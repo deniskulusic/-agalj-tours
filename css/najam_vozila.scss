@@ -462,13 +462,17 @@ align-items: center;
     align-items: center;
     justify-content: space-between;
     border-left: $White solid 1px;
+    position: relative;
     div{
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
         margin-left: 16px;
-    
+        z-index: 2;
+        input{
+            background-color: transparent;
+        }
             .error-text{
                 font-family: 'Manrope';
             font-style: normal;
@@ -511,7 +515,9 @@ align-items: center;
     }
     
     img{
-        margin-right: 16px;
+        right: 16px;
+        position: absolute;
+        z-index: 1;
     }
     input::placeholder {
     color:$MiddleGrey;
@@ -611,6 +617,7 @@ opacity: 0.8;
     border-radius: 8px;
     padding-top: 8px;
     padding-bottom: 8px;
+    position: relative;
     label{
         margin-left: 16px;
         color:$DarkBlue
@@ -625,7 +632,9 @@ font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         color: $DarkBlue;
-        width: 90%;
+        width: calc(100% - 16px);
+        z-index: 2;
+        background-color: transparent;
     }
     div{
         position: relative;
@@ -668,8 +677,9 @@ div[error] {
     }
   }
     span{
-        margin-right: 16px;
-
+        position: absolute;
+        right: 16px;
+        z-index: 1;
     }
     .arrow::after{
         width: 10px;

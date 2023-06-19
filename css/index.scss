@@ -206,8 +206,8 @@ color:$White
     padding-top: 7px;
     padding-bottom: 7px;
     align-items: center;
-    justify-content: space-between;
     border:1px solid white;
+    position: relative;
     label{
         color:$White;
     }
@@ -250,14 +250,15 @@ color:$White
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 80%;
-        
+        width: 90%;
+        margin-left: 16px;
     }
     select{
         width: 100%;
     }
     span{
-        margin-right: 16px;
+        position: absolute;
+        right: 16px;
     }
 }
 
@@ -1013,7 +1014,7 @@ input[type='checkbox'] {
     }
     div{
         flex-direction: column;
-        width: 90%;
+        width: 100%;
     }
     select{
         width: 100%;
@@ -1044,7 +1045,7 @@ input[type='checkbox'] {
     .arrow{
         position: absolute;
         right: 16px;
-        top:25px;
+        top:28px;
     }
     .arrow::before{
         width: 10px;
